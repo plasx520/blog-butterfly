@@ -1,0 +1,154 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: 怕冷爱上雪
+subtitle: '晋天杰' # 副标题
+description: '这是一个博客丫'
+keywords: 怕冷爱上雪,博客,blog,book
+author: 晋天杰
+language: zh-CN
+timezone: 'Asia/Shanghai'
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: http://blog.4t.pw
+permalink: posts/:abbrlink.html
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+  pagination_dir: page
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: butterfly
+
+# Deployment
+## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: ''
+lazyload:
+  enable: false
+  loadingImg: /img/404.webp 
+  
+search:
+  path: search.xml
+  field: post # post:文章范围、page:页面范围、all:覆盖所有
+  content: true # 内容是否包含每一篇文章的全部内容
+  template:  # ./search.xml 指定定制的XML模板
+aplayer:
+  meting: true
+  asset_inject: false
+# 启用 - 启用或禁用此插件。默认启用。地图
+# type- 源类型。指定输出这两种类型。（默认值：atomrss2['atom', 'rss2']atom)
+feed:
+  enable: true
+  # 生成原子馈送
+  #生成atom和rss2提要
+  type: 
+     - atom
+     - rss2
+  path: 
+     - atom.xml
+     - rss2.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
+# 链接简化
+# abbrlink config
+abbrlink:
+  alg: crc32      #支持crc16（默认）和crc32
+  rep: hex        #支持dec（默认）和 hex
+  drafts: false   #（true）处理草稿，（false）不处理草稿。false（默认）
+#从目录树生成类别
+#depth：要生成的目录树的max_depth，应该大于0
+  auto_category:
+     enable: true  #true(默认)
+     depth:        #3(默认)
+     over_write: false 
+  auto_title: false #启用自动标题，它可以按路径自动填充标题
+  auto_date: false #启用自动日期，它可以按今天的时间自动填充日期
+  force: false #启用强制模式，在这种模式下，插件将忽略缓存，并计算每个帖子的abbrlink，即使它已经有了abbrlink。这只更新abbrlink而不是其他前端变量。
+# 文章排序

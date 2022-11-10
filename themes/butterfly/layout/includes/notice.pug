@@ -1,0 +1,13 @@
+.container.recent-post-item(onclick=`window.open('https://4t.pw/','_self')`)
+    .div-card
+        each i in site.data.notice
+            .div-name= i.dbt
+            .div-wechat= i.cswz
+            .div-description= i.xbt 
+            .div-bar-type(style='--i: 0; --w: 1;')
+            .div-bar-type(style='--i: 1; --w: 2;')
+            .div-bar-type(style='--i: 2; --w: 3;')
+            .div-bar-type(style='--i: 3; --w: 4;')
+            .div-bar-type(style='--i: 4; --w: 5;')
+            .f= i.tdwz
+style(type='text/css') #ggl {transform: translateX(10px);}
