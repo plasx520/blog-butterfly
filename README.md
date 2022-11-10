@@ -10,11 +10,14 @@
 如果这两个软件都不会安装你就放弃吧
 
 ----
-
+# 感谢
+- [主题：](https://github.com/jerryc127/hexo-theme-butterfly)
+- [内核：](https://hexo.io/zh-cn/index.html)
 
 
 # 安装
-
+如果你是小白你就使用安装工具按数字就行
+5秒搭建部署完成
 
 
 默认在桌面上创建一个blog文件夹
