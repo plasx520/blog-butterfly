@@ -1,0 +1,198 @@
+#about-page 
+  .author-box
+    .author-img.touying
+      img.no-lightbox(src='https://s2.loli.net/2022/11/12/YBMzJhbXEPprU87.webp')
+    .image-dot
+  p.p.center.logo.large 关于我
+  p.p.center.small 生活明朗，万物可爱✨
+  .author-content
+    .author-content-item.myInfoAndSayHello.touying
+      .title1 你好，很高兴认识你👋
+      .title2
+        | 我叫
+        span.inline-word 晋天杰
+      .title1
+        | 是一名 菜的不能在菜的铁憨憨、
+        span.inline-word 博主
+    .aboutsiteTips.author-content-item.touying
+      .author-content-item-tips 追求
+      h2
+        | 美女
+        br
+        | 无爱
+        span.inline-word 即使神
+        .mask
+          span.first-tips 逆天改命
+          |
+          span 众里寻他
+          |
+          span(data-up) 千百度
+          |
+          span(data-show) 蓦然回首
+
+  .hello-about.touying
+    .cursor(style='translate:none;rotate:none;scale:none;transform:translate(721px,180px)')
+    .shapes
+      .shape.shape-1(style='translate:none;rotate:none;scale:none;transform:translate(721px,180px)')
+      .shape.shape-2(style='translate:none;rotate:none;scale:none;transform:translate(721px,180px)')
+      .shape.shape-3(style='translate:none;rotate:none;scale:none;transform:translate(721px,180px)')
+    .content
+      h1 怕冷爱上雪
+
+  .author-content
+    .author-content-item.skills.touying
+      .card-content
+        .author-content-item-tips 技能
+        span.author-content-item-title 开启创造力
+        .skills-style-group
+          .tags-group-all
+            .tags-group-wrapper
+              each i in site.data.creativity
+                - const evenNum = i.creativity_list.filter((x, index) => index % 2 === 0);
+                - const oddNum = i.creativity_list.filter((x, index) => index % 2 === 1);
+                each item, index in i.creativity_list
+                  if ((index+1 <= evenNum.length) && (index+1 <= oddNum.length))
+                    .tags-group-icon-pair
+                      .tags-group-icon(style=`background: ${evenNum[index].color}`)
+                        img.no-lightbox(title=evenNum[index].name, src=evenNum[index].icon)
+                      .tags-group-icon(style=`background: ${oddNum[index].color}`)
+                        img.no-lightbox(title=oddNum[index].name, src=oddNum[index].icon)
+          .skills-list
+            each i in site.data.creativity
+              each item, index in i.creativity_list
+                .skill-info
+                  .skill-icon(style=`background: ${item.color}`)
+                    img.no-lightbox(title=item.name, src=item.icon)
+                  .skill-name
+                    span=item.name
+            .etc ...
+    .author-content-item.careers.touying
+      .card-content
+        .author-content-item-tips 生涯
+        span.author-content-item-title 无限进步
+        .careers-group
+          .careers-item
+            .circle(style='background:#357ef5')
+            .name 快如闪电
+        img.author-content-img.no-lightbox(alt='生涯', src='https://s2.loli.net/2022/11/12/mePc3rG9a72Ynvu.webp')
+
+  .author-content
+    .about-statistic.author-content-item.touying
+      .card-content
+        .author-content-item-tips 归档
+        span.author-content-item-title 文章归档
+        .post-tips
+          | 如果上天不给我机会 那我就自己创造机会
+        .banner-button-group
+          a.banner-button(onclick='pjax.loadUrl("/archives/")', data-pjax-state)
+            i.fas.fa-circle-arrow-up-right
+            |
+            span.banner-button-text 文章隧道
+    .author-content-item-group.column.mapAndInfo
+      .author-content-item.map.single.touying
+        span.map-title
+          | 我现在住在
+          b 中国，张掖市
+      .author-content-item.selfInfo.single.touying
+        div
+          span.selfInfo-title 生于
+          |
+          span.selfInfo-content#selfInfo-content-year(style='color:#43a6c6') 1993
+        div
+          span.selfInfo-title 个人爱好
+          |
+          span.selfInfo-content(style='color:#c69043') 编程计算机
+        div
+          span.selfInfo-title 现在职业
+          |
+          span.selfInfo-content(style='color:#b04fe6') 无业游民
+
+  .author-content
+    .author-content-item.personalities.touying
+      .author-content-item-tips 性格
+      span.author-content-item-title 温柔可爱
+      .title2(style='color:#ac899c') 可爱个屁
+      .post-tips
+        | 在了解
+        a(href='https://4t.pw/', target='_blank', rel='noopener nofollow') 更多
+      .image
+        img.no-lightbox(src='https://npm.elemecdn.com/anzhiyu-blog@2.0.8/img/svg/ESFJ-A.svg')
+    .author-content-item.myphoto.touying
+      img.author-content-img.no-lightbox(alt='自拍', src='https://s2.loli.net/2022/11/12/CxopIR6v87yXqeu.webp')
+  .author-content
+    .create-site-post.author-content-item.single.touying
+      .author-content-item-tips 心路历程
+      | 欢迎来到我的博客 😝，这里是我记笔记的地方 🙌，目前就读于长沙
+      .site-card-group
+        a.site-card(target='_blank', href='https://v.douyin.com/rjwtY8V/', data-title='紫罗兰的永恒花园')
+          .wrapper.cover
+            img.cover.fadeIn(src='https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/violet.jpg')
+          .info
+            img.flink-avatar(src='https://s2.loli.net/2022/11/12/YBMzJhbXEPprU87.webp')
+            span.site-title 紫罗兰的永恒花园
+      | 因为这部番，2018 年的一个夏天我看完以后心情久久不能释怀，为薇尔莉特与爱感到一种说不上来的味道，多年以后在看这部番，才明白原来这就是爱，喜欢这部番不仅仅是因为它制作的用心，不论是人物细节还是场景细节，不管是 op 还是 ed 都非常好听，最后的结局或许才是让我不能忘怀的原因，薇尔莉特，希望收到来自家人，朋友，恋人的那封 "信" ~
+
+      
+  .author-content
+    .author-content-item.single.reward.touying
+      .author-content-item-tips 致谢
+      span.author-content-item-title 赞赏名单
+      .author-content-item-description 感谢因为有你们，让我更加有创作的动力。
+        each i in site.data.reward
+          - let rawData = [...i.reward_list]
+          .reward-list-all
+            - let reward_list_amount = i.reward_list.sort((a,b)=>b.amount -  a.amount)
+            each item, index in reward_list_amount
+              .reward-list-item.touying
+                .reward-list-item-name=item.name
+                .reward-list-bottom-group
+                  if item.amount >= 50
+                    .reward-list-item-money(style='background:var(--heo-pink)')=`¥${item.amount}`
+                  else
+                    .reward-list-item-money=`¥${item.amount + (item.suffix ? item.suffix : "")}`
+                  .datatime.reward-list-item-time(datatime=item.datatime)=new Date(item.datatime).toISOString().slice(0, -14)
+          .reward-list-updateDate
+            | 最新更新时间：
+            time.datatime.reward-list-updateDate-time(datatime=rawData[0].datatime)=new Date(rawData[0].datatime).toISOString().slice(0, -14)
+
+script(src=url_for(theme.CDN.option.countup_js))
+script(src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/gsap/3.9.1/gsap.min.js")
+script.
+  (() => {
+       var pursuitInterval = null;
+      pursuitInterval = setInterval(function () {
+        const show = document.querySelector('span[data-show]')
+        const next = show.nextElementSibling || document.querySelector('.first-tips')
+        const up = document.querySelector('span[data-up]')
+
+        if (up) {
+          up.removeAttribute('data-up')
+        }
+
+        show.removeAttribute('data-show')
+        show.setAttribute('data-up', '')
+
+        next.setAttribute('data-show', '')
+      }, 2000)
+
+      document.addEventListener('pjax:send', function(){
+        clearInterval(pursuitInterval);
+      });
+
+      var helloAboutEl = document.querySelector('.hello-about')
+      helloAboutEl.addEventListener("mousemove", evt => {
+        const mouseX = evt.offsetX;
+        const mouseY = evt.offsetY;
+        gsap.set(".cursor", {
+          x: mouseX,
+          y: mouseY,
+        })
+
+        gsap.to(".shape", {
+          x: mouseX,
+          y: mouseY,
+          stagger: -0.1
+        })
+      })
+  })()
+link(rel='stylesheet', href='/css/guanyu.css')

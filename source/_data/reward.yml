@@ -1,0 +1,31 @@
+- class_name: 赞赏
+  reward_list:
+    - name: 鹿啵包
+      amount: 10
+      datatime: 2022-11-08
+    - name: 疾速k
+      amount: 50
+      datatime: 2022-09-20
+    - name: 伴舟先生大霖子
+      amount: 500
+      datatime: 2022-10-27
+      suffix: 贝壳
+    - name: Magica_0x0
+      amount: 3.36
+      datatime: 2022-10-07
+      suffix: 贝壳
+    - name: 名字就是要短像这样
+      amount: 3.36
+      datatime: 2022-08-25
+      suffix: 贝壳
+    - name: Leviathan520
+      amount: 1.34
+      datatime: 2022-08-23
+      suffix: 贝壳
+    - name: 托马斯
+      amount: 10
+      datatime: 2022-08-19
+    - name: 哇是猫猫欸
+      amount: 1.34
+      datatime: 2022-08-19
+      suffix: 贝壳

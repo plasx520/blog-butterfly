@@ -1,0 +1,192 @@
+@charset "UTF-8";
+ /* 滚动右边隧道css */
+
+.about-statistic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	min-height: 280px;
+	background: url(https://s2.loli.net/2022/11/12/dpLblwfDFJmjXhW.webp) no-repeat top;
+	background-size: cover;
+	box-shadow: -47px -100px 224px 29px #001521 inset;
+	color: #fff;
+	content: "";
+}
+
+.banner-button-group {
+	position: absolute;
+	right: 2rem;
+	bottom: 1.5rem;
+}
+
+.author-content-item-title {
+	margin-bottom: 0.5rem;
+}
+
+.banner-button {
+	z-index: 1;
+	display: flex;
+	width: 124px;
+	height: 40px;
+	border-bottom: 0 !important;
+	border-radius: 20px;
+	background: var(--recent-post-bgcolor);
+	color: var(--font-color);
+	cursor: pointer;
+	transition: 0.3s;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner-button:hover {
+	background: rgb(28 172 168 / 90%);
+	color: #ffffff;
+}
+
+.author-content-item2 {
+	position: relative;
+	overflow: hidden;
+	padding: 1rem 2rem;
+	width: 100%;
+	border-radius: 12px;
+}
+
+.categoryGroup {
+	display: flex;
+	width: 100%;
+	height: 24%;
+	min-width: 200px;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.bannerGroup {
+	display: flex;
+	margin-right: 0.5rem;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+/* 作者文章列表链接 */
+:root {
+	--heo-shadow-blue: 0 8px 12px -3px rgba(40, 109, 234, .20);
+	--heo-shadow-red: 0 8px 12px -3px #ee7d7936;
+	--heo-shadow-green: 0 8px 12px -3px #87ee7936;
+}
+
+.categoryItem {
+	overflow: hidden;
+	height: 48%;
+	border-radius: 12px;
+	transition: all 0.8s cubic-bezier(0.65, 0.15, 0.37, 1.19);
+	transform: scale(1);
+}
+
+a.categoryButton {
+	display: inline-block;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	border-radius: 12px;
+	background: var(--heo-card-bg);
+	color: var(--heo-white);
+	text-align: left;
+	font-weight: bold;
+	font-size: 0.9rem;
+	font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei;
+	line-height: 4em;
+	transition: all 0.8s cubic-bezier(0.39, 0.575, 0.565, 1);
+	transform: scale(1);
+}
+
+a.categoryButton:after {
+	position: absolute;
+	top: 50px;
+	left: 21px;
+	width: 1rem;
+	height: 2px;
+	border-radius: 1px;
+	background: var(--heo-white);
+	content: "";
+}
+
+.categoryButtonText {
+	padding-left: 21px;
+}
+
+a.categoryButton i {
+	position: absolute;
+	top: 20%;
+	right: 0%;
+	width: 100px;
+	text-align: center;
+	font-size: 5rem;
+	opacity: 0.2;
+	transition: 0.3s;
+	filter: blur(2px);
+}
+
+.categoryItem:hover i {
+	font-size: 2.5rem;
+	opacity: 0.8;
+	transition: 0.8s;
+	transition-delay: 0.15s;
+	transform: scale(1.03) rotate(0deg);
+	filter: blur(0px);
+}
+
+@media screen and (min-width:1300px) {
+	.categoryItem {
+		margin-right: 0.5rem;
+		width: calc(100% / 3 - 0.33rem);
+		height: 100%;
+	}
+
+	.categoryItem:last-child {
+		margin-right: 0;
+	}
+
+	.categoryItem:hover {
+		width: 50%;
+	}
+}
+
+a.categoryButton.bikan {
+	background: linear-gradient(to right, #358bff, #15c6ff);
+	background-size: 200%;
+}
+
+a.categoryButton.remen {
+	background: linear-gradient(to right, #ff6655, #ffbf37);
+	background-size: 200%;
+}
+
+a.categoryButton.shiyong {
+	background: linear-gradient(to right, #18e7ae, #1eebeb);
+	background-size: 200%;
+}
+
+details:not(.tk-admin-config-group) summary::marker {
+	color: var(--heo-main);
+	transition: 0.3s;
+}
+
+details[open]:not(.tk-admin-config-group) summary::marker {
+	color: var(--heo-white);
+}
+
+details:not(.tk-admin-config-group) summary:hover::marker {
+	color: var(--heo-white);
+}
+
+@media screen and (max-width:1300px) {
+
+  .author-content,
+  .categoryGroup {
+      display: none
+  }
+}
+
