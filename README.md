@@ -13,6 +13,9 @@
 # 感谢
 - [主题：](https://github.com/jerryc127/hexo-theme-butterfly)https://github.com/jerryc127/hexo-theme-butterfly
 - [内核：](https://hexo.io/zh-cn/index.html)https://hexo.io/zh-cn/index.html
+- 魔改教程 -https://anzhiy.cn/
+           -https://akilar.top/
+           -https://blog.zhheo.com/
 
 
 # 安装
