@@ -7,8 +7,8 @@ categories: Demo
 keywords: 'hexo,butterfly,主題,doc,教程,文檔,Tag Plugins,Plugins'
 description: Hexo Built-in Tag Plugins
 top_img:
-cover: https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/Hexo-Built-in-Tag-Plugins-COVER.png
-comments: false
+cover: https://cdn1.tianli0.top/gh/jerryc127/CDN/img/Hexo-Built-in-Tag-Plugins-COVER.png
+comments: true
 ---
 
 Tag plugins are different from post tags. They are ported from Octopress and provide a useful way for you to quickly add specific content to your posts.

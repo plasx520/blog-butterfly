@@ -91,9 +91,12 @@ function createWinbox() {
     // 每一类我放了一个演示，直接往下复制粘贴 a标签 就可以，需要注意的是 函数里面的链接 冒号前面需要添加反斜杠\进行转义
     winbox.body.innerHTML = `
     <div id="article-container" style="padding:10px;">
-    
+
     <p><button onclick="localStorage.removeItem('blogbg');location.reload();" style="background:#5fcdff;display:block;width:100%;padding: 15px 0;border-radius:6px;color:white;"><i class="fa-solid fa-arrows-rotate"></i> 点我恢复默认背景</button></p>
-	
+    <div class="bgbox"><button onclick="javascript:loadScript('https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js');" style="background:#fc8cff;display:block;width:32%;padding: 15px 0;border-radius:6px;color:white;"></i> 樱花飘落</button>
+    <button onclick="javascript:loadScript('/js/xh1.js');" style="background:#3cf4ff;display:block;width:32%;padding: 15px 0;border-radius:6px;color:white;"></i> 雪花飘落</button>
+    <button onclick="javascript:loadScript('/js/xh2.js');" style="background:#ff6224;display:block;width:32%;padding: 15px 0;border-radius:6px;color:white;"></i> 秋叶飘落</button>
+    </div>
     <h2 id="图片（手机）"><a href="#图片（手机）" class="headerlink" title="图片（手机）"></a>图片（手机）</h2>
     <div class="bgbox">
     <a href="javascript:;" rel="noopener external nofollow" style="background-image:url(https://img.xjh.me/random_img.php?return=302)" class="pimgbox" onclick="changeBg('url(https\://img.xjh.me/random_img.php?return=302)')"></a>
@@ -149,41 +152,42 @@ function toggleWinbox() {
     if (document.querySelector('#changeBgBox')) winbox.toggleClass('hide');
     else createWinbox();
 }
-// F12显示文字
-// 控制台打印自定义内容
-if (window.console) {
-    var getTimeState_console = function () {
-      var t = new Date().getHours(),
-        e = "";
-      return (
-        4 >= t || t > 22
-          ? (e = "Good Night 🛌<br>")
-          : 4 < t && t <= 10
-          ? (e = "Good Morning 🌮")
-          : 10 < t && t <= 12
-          ? (e = "Good Noon 🍱")
-          : 12 < t && t <= 17
-          ? (e = "Good Afternoon ☕")
-          : 17 < t && t <= 22 && (e = "Good Evening 🍇"),
-        e
-      );
-    };
-    Function.prototype.makeMulti = function () {
-      let l = new String(this);
-      l = l.substring(l.indexOf("/*") + 3, l.lastIndexOf("*/"));
-      return l;
-    };
-    let string = function () {
-      /*
-能看到这句话说明我们有缘分，记得别再熬夜了我的程序员朋友。  
-      */
-    };
-    console.log('\n' + ' %c 如果可以 交个朋友吧' + ' %c http://4t.pw ' + '\n', 'color: #fadfa3; background: #002d54; padding:5px 0;', 'background: #00ebff; padding:5px 0;');
-    console.log(string.makeMulti());
-    console.log(getTimeState_console());
-    console.log("禁止代码%c不是我的风格", "color:#1fc7b6;font-weight:bold");
-    console.log("在这里相遇很幸运 💛💙");
+// 按钮加载雪花
+function loadScript(url){ 
+  //查找带有“canvas_sakura”ID的<canvas>标记
+  var canvas = document.querySelector('canvas#canvas_sakura');
+  var script = document.querySelector('script#luoye');
+  // Check if the tags exist
+  if (canvas != null && script != null) {
+    // Remove the tags
+    canvas.remove();
+    script.remove();
+        // The tags do not exist, do something else
+        var script = document.createElement("script");
+        script.setAttribute('id', 'luoye');
+        script.type = "text/javascript"; 
+        script.src = url;
+        if (script.readyState){//IE 
+           script.onreadystatechange = function(){ 
+              if (script.readyState ==  "loaded" || script.readyState == "complete"){ 
+                 script.onreadystatechange = null;
+              } 
+           }; 
+        }
+  } else {
+    // The tags do not exist, do something else
+    var script = document.createElement("script");
+    script.setAttribute('id', 'luoye');
+    script.type = "text/javascript"; 
+    script.src = url;
+    if (script.readyState){//IE 
+       script.onreadystatechange = function(){ 
+          if (script.readyState ==  "loaded" || script.readyState == "complete"){ 
+             script.onreadystatechange = null;
+          } 
+       }; 
+    }
   }
-if (GLOBAL_CONFIG.Snackbar) {
-    btf.snackbarShow('欢迎光临')
+  document.body.appendChild(script);
 }
+

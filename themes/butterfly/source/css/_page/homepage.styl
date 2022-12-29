@@ -1,351 +1,289 @@
 //default color:
 :root
-  --recent-post-bgcolor: rgba(255, 255, 255, 0.9)
-  --article-content-bgcolor: #49b1f5
-  --recent-post-triangle: #fff
-  --recent-post-cover-shadow: #ffffff
+  --recent-post-bgcolor: rgba(255, 255, 255, 0.9)  //默认背景
+  --article-content-bgcolor: var(--heo-theme) //描述版块背景
+  --recent-post-arrow: rgb(255, 136, 0)//箭头配色
+  --recent-post-transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17)  //动画效果。不了解的不要改动
 [data-theme="dark"]
-  --recent-post-bgcolor: rgb(32 32 32)
-  --article-content-bgcolor: #63637b
-  --recent-post-triangle: #37e2dd
-  --recent-post-cover-shadow: #232323
+  --recent-post-bgcolor: rgba(37, 37, 42, 0.5)
+  --article-content-bgcolor:var(--heo-zhuti)
+  --recent-post-arrow: #37e2dd
+// 默认的首页卡片容器布局
 .recent-posts
   padding 0 15px 0 15px
-
+  .recent-post-item .recent-post-info .recent-post-meta > .article-meta-wrap .sticky 
+    color: #ff7242
   .recent-post-item
     margin-bottom 15px
     width 100%
     background var(--recent-post-bgcolor)
     overflow hidden
     border-radius 15px
-    .recent-post-info
-      .article-title-link
-        display -webkit-box
-        -webkit-box-orient vertical
-        -webkit-line-clamp 2
-        overflow hidden
-    .article-content
-      background var(--article-content-bgcolor)
-      position relative
+    .recent-post-content
       display flex
-      align-items: center;
-      justify-content: center;
-      .article-content-text
-        transition: all .8s cubic-bezier(0.59, 0.01, 0.48, 1.17)
-        display -webkit-box
-        -webkit-box-orient vertical
-        -webkit-line-clamp 4
-        text-overflow: ellipsis
-        overflow hidden
-        color #fff
-        text-shadow: 1px 2px 3px #000;
-    .recent-post-cover
-      position relative
-      background transparent
-      img
-        &.article-cover
-          height 100%
-          width 100%
-          object-fit cover
-
-    .recent-post-info
-      align-items center
-      flex-direction column
-      position relative
       background var(--recent-post-bgcolor)
-      display flex
-      color #000000
-      .article-title
-        height 50%
-        font-size 24px
-        display: flex
-        align-items: center
-        justify-content: flex-end
-        flex-direction: column
-        .article-title-link
-          color: var(--text-highlight-color)
-          transition: all .2s ease-in-out
-          &:hover
-            color: $text-hover
-      .recent-post-meta
-        height 50%
-        display: flex
-        align-items: center
-        justify-content: flex-start
-        flex-direction: column
-      .article-meta-wrap
-        font-size 12px
-        color #969797
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
-        overflow: hidden;
-        a
-          color: var(--text-highlight-color)
-          transition: all .2s ease-in-out
-          color #969797
-          &:hover
-            color: $text-hover
+      position relative
+      .recent-post-cover
+        display flex
+        background transparent
+      .recent-post-info
+        display flex
+        background transparent
+        flex-direction column
+        justify-content center
+        align-items center
+        .article-title
+          height 55%
+          display: flex
+          align-items: center
+          justify-content: flex-end
+          flex-direction: column
+          .article-title-zhaiyao
+            font-size: 14px
+            -webkit-line-clamp: 2;
+          .article-title-link
+            color: var(--text-highlight-color)
+            transition: all .2s ease-in-out
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            &:hover
+              color: $text-hover
+        .recent-post-meta
+          height 45%
+          display: flex
+          align-items: center
+          justify-content: flex-start
+          flex-direction: column
+          .article-meta-wrap
+            color #969797
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            a
+              color: var(--text-highlight-color)
+              transition: all .2s ease-in-out
+              color #969797
+              &:hover
+                color: $text-hover
+      .article-content
+        display flex
+        flex-direction row
+        align-items center
+        justify-content center
+        .article-content-text
+          display -webkit-box
+          -webkit-box-orient vertical
+          text-overflow: ellipsis
+          overflow hidden
+          color #fff
+          text-shadow 1px 2px 3px #000
     &.ads-wrap
       display: block !important
       height: auto !important
-@media screen and (min-width:600px)
-  .recent-post-item
-    &:hover
+// PC端滑动卡片样式
+@media screen and (min-width:1069px)
+  .recent-posts
+    padding 0 15px 0 15px
+    .recent-post-item
       .recent-post-content
+        position relative
+        height 200px
+        width 100%
+        transition var(--recent-post-transition)
+        &:hover
+          .recent-post-cover-shadow
+            width 10.1%
+            transition var(--recent-post-transition)
+          .recent-post-cover
+            width 10%
+            transition var(--recent-post-transition)
+          .article-content
+            width calc(30% + 80px)
+            transition var(--recent-post-transition)
+            .article-content-text
+              opacity 1
+          .recent-post-arrow
+            transition var(--recent-post-transition)
+        .recent-post-cover-shadow
+          z-index: 1
+          transition var(--recent-post-transition)
+          position: absolute
+          height 200px
+          width 40%
+        .recent-post-cover
+          height 200px
+          width 40%
+          transition var(--recent-post-transition)
+          img
+            height 100%
+            width 100%
+            object-fit cover
+
+        .recent-post-info
+          height 200px
+          width calc(60% - 80px)
+          .article-title
+            margin: 0px 40px
+            font-size 24px
+            .article-title-link
+              -webkit-line-clamp: 1;
+          .recent-post-meta
+            margin: 0px 20px
+            .article-meta-wrap
+              font-size 14px
+              -webkit-line-clamp: 3;
+        .article-content
+          height 200px
+          width 90px
+          background var(--article-content-bgcolor)
+          transition var(--recent-post-transition)
+          .article-content-text
+            -webkit-line-clamp 4
+            transition: var(--recent-post-transition)
+            opacity 0
+        .recent-post-arrow
+          transition var(--recent-post-transition)
+          display block
+          position absolute
+          height 20px
+          width 8px
+          background var(--recent-post-arrow)
         &.both,
         &.right
-          transform translateX(21%)
-          transition: all .8s cubic-bezier(0.59, 0.01, 0.48, 1.17)
-          &::before
-            transition: all .8s cubic-bezier(0.59, 0.01, 0.48, 1.17)
-            left: 50px;
-          .article-content-text
-            margin 20px 20px 20px 60px
+          .recent-post-cover-shadow
+            left 0
+          .recent-post-cover
+            order: 1
+            -webkit-mask-image: linear-gradient(266deg, transparent 10%, #fff 60%)
+          .recent-post-info
+            order: 2
+          .article-content
+            order: 3
+            clip-path polygon(0 50%, 80px 0, 100% 0, 100% 100%, 80px 100%)
+            .article-content-text
+              margin 20px 40px 20px 80px
+          .recent-post-arrow
+            order: 4
+            left calc(100% - 80px)
+            top calc(50% - 10px)
+            clip-path polygon(0 10px, 8px 0, 8px 20px)
+          &:hover
+            .recent-post-arrow
+              left calc(100% - 40px)
         &.left
-          transform translateX(-21%)
-          transition: all .8s cubic-bezier(0.59, 0.01, 0.48, 1.17)
-          &::before
-            transition: all .8s cubic-bezier(0.59, 0.01, 0.48, 1.17)
-            right: 50px;
-          .article-content-text
-            margin 20px 60px 20px 20px
-
-
-    .recent-post-content
-      background var(--recent-post-bgcolor)
-      position relative
-      height 240px
-      width 130%
-      z-index 0
-      display flex
+          .recent-post-cover-shadow
+            right 0
+          .recent-post-cover
+            order: 4
+            -webkit-mask-image: linear-gradient(93deg, transparent 10%, #fff 60%)
+          .recent-post-info
+            order: 3
+          .article-content
+            order: 2
+            clip-path polygon(100% 50%,calc(100% - 80px) 100%,0 100%,0 0,calc(100% - 80px) 0)
+            .article-content-text
+              margin 20px 80px 20px 40px
+          .recent-post-arrow
+            order: 1
+            left 72px
+            top calc(50% - 10px)
+            clip-path polygon(0 0, 8px 10px, 0 20px)
+          &:hover
+            .recent-post-arrow
+              left 32px
+// 双栏布局卡片自适应适配
+@media screen and (min-width:572px) and (max-width:1068px)
+  .tags
+  .article-title-zhaiyao
+    display: none
+  .recent-posts
+    padding 0 15px 0 15px
+    display flex
+    flex-direction row
+    flex-wrap wrap
+    .recent-post-item
+      border-radius 15px
       overflow hidden
-      border 0px solid
-      &::before
-        content: "";
-        width: 0;
-        height: 0;
-        background: transparent;
-        position: absolute;
-        z-index: 3;
-        top: calc(50% - 10px);
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        transition: all .5s cubic-bezier(0.59, 0.01, 0.48, 1.17)
-      &.both,
-      &.right
-        flex-direction: row;
-        left calc(-30% - -8px)
-        transition: all .5s cubic-bezier(0.59, 0.01, 0.48, 1.17)
-        &::before
-          left: calc(23.07% + 40px);
-          border-left: 6px solid var(--recent-post-triangle);
+      width 47%
+      margin 0px 3% 20px 0px
+      .recent-post-content
+        height 350px
+        width 100%
+    nav#pagination
+      width: 100%
+// 手机端单栏布局自适应适配
+@media screen and (max-width:572px)
+  .recent-posts
+    padding 0 15px 0 15px
+    .recent-post-item
+      border-radius 15px
+      overflow hidden
+      .recent-post-content
+        height 350px
+        width 100%
+// 手机端及双栏卡片样式
+@media screen and (max-width:1068px)
+  .recent-posts
+    .recent-post-item
+      .recent-post-content
+        flex-direction column
+        flex-wrap nowrap
+        align-items center
+        .recent-post-cover
+          width 100%
+          height 200px
+          clip-path polygon(0 130px,0 0,100% 0,100% 130px,50% 100%)
+          img
+            height 200px
+            width 100%
+            object-fit cover
         .recent-post-info
-          &::before
-            background linear-gradient(to right, var(--recent-post-cover-shadow), transparent)
-            left calc(100% - 1px)
+          height 150px
+          width 100%
+          padding 0px 25px 5px 25px
+          .article-title
+            margin: 0px 40px
+            font-size 18px
+            .article-title-link
+              -webkit-line-clamp: 2;
+          .recent-post-meta
+            margin: 0px 20px
+            .article-meta-wrap
+              font-size 12px
+              -webkit-line-clamp: 3;
         .article-content
-          &::before
-            right -59px
-            border-left 60px solid var(--article-content-bgcolor)
-        .article-content-text
-          margin 20px 20px 20px 0px
-        .article-title
-          padding 0px 30px 0px 70px
-        .recent-post-meta
-          padding 0px 20px 0px 70px
-      &.left
-        flex-direction: row-reverse;
-        right 9px
-        transition: all .5s cubic-bezier(0.59, 0.01, 0.48, 1.17)
-        &::before
-          right: calc(23.07% + 40px);
-          border-right: 6px solid var(--recent-post-triangle);
-        .recent-post-info
-          &::before
-            background linear-gradient(to left, var(--recent-post-cover-shadow), transparent)
-            right calc(100% - 1px)
-        .article-content
-          &::before
-            left -59px
-            border-right 60px solid var(--article-content-bgcolor)
-        .article-content-text
-          margin 20px 0px 20px 20px
-        .article-title
-          padding 0px 70px 0px 30px
-        .recent-post-meta
-          padding 0px 70px 0px 20px
-
-    .article-content
-      width 37%
-      height 240px
-      left 0
-      align-items center
-      &::before
-        content ""
-        width 0
-        height 0
-        background transparent
-        position absolute
-        z-index 2
-        top 0
-        border-top 120px solid transparent
-        border-bottom 120px solid transparent
-    .recent-post-info
-      width 80%
-      height 240px
-      &::before
-        content ""
-        width 200px
-        height 240px
-        position absolute
-        z-index 1
-        top 0
-      .recent-post-meta
-        & > .article-meta-wrap
-          margin: 6px 0
-          color: $theme-meta-color
-          font-size: 90%
-
-          & > .post-meta-date
-            cursor: default
-
-          .sticky
-            color: $sticky-color
-
-          i
-            margin: 0 4px 0 0
-
-          .article-meta-label
-            if hexo-config('post_meta.page.label')
-              padding-right: 4px
-            else
-              display: none
-
-          .article-meta-separator
-            margin: 0 6px
-
-          .article-meta-link
-            margin: 0 4px
-
-          if hexo-config('post_meta.page.date_format') == 'relative'
-            time
-              display: none
-
-          a
-            color: $theme-meta-color
-
-            &:hover
-              color: $text-hover
-              text-decoration: underline
-    .recent-post-cover
-      width 40%
-      height 240px
-@media screen and (max-width:600px)
-  .recent-post-item
-    height 400px
-    .recent-post-content
-      display flex
-      flex-direction: column
-      height 400px
-      .article-content
-        pointer-events none
-        order: 1;
-        height: 200px;
-        position: absolute;
-        width: calc(100% - 0px);
-        z-index: 3;
-        background: rgba(22,22,22,0.5);
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+          position absolute
+          height 200px
+          width 100%
+          background rgba(25,25,25,0.5)
+          clip-path polygon(0 130px,0 0,100% 0,100% 130px,50% 100%)
+          .article-content-text
+            -webkit-line-clamp 3
+            font-size 16px
+            margin 0px 25px 30px 25px
+            &::before
+              content "❝"
+              font-size 20px
+            &::after
+              content "❞"
+              font-size 20px
+        .recent-post-arrow
+          display block
+          background var(--article-content-bgcolor)
+          position absolute
+          height 10px
+          width 20px
+          clip-path polygon(0 0,100% 0,50% 100%)
+          top 20px
+@media screen and (max-width:1200px) 
+    .aside-content 
         display: none
-        opacity: 0
-        .article-content-text
-          height 120px
-          color: white;
-          width: 80%
+    .layout > div:first-child 
+        width: 100%;
+@media screen and (max-width:1390px) 
+    .card-info
+        display: none
+    #aside-content .card-widget
+        margin: 0px 0px 20px !important
 
-      .recent-post-cover
-        order: 2
-        height 200px
-        transition: all .5s
-      .recent-post-info
-        order: 3
-        height 240px
-        &::before
-          content: '';
-          width: 0;
-          height: 0;
-          position: absolute;
-          z-index: 3;
-          bottom: calc(100% - 4px);
-          left: 0;
-          border-bottom: 50px solid var(--recent-post-bgcolor);
-          border-right: 300px solid transparent;
-        &::after
-          content: '';
-          width: 0;
-          height: 0;
-          position: absolute;
-          z-index: 3;
-          bottom: calc(100% + 150px);
-          right: 0;
-          border-top: 50px solid var(--recent-post-bgcolor);
-          border-left: 300px solid transparent;
-        .article-title
-          padding: 0px 35px 0px 35px
-        .recent-post-meta
-          padding: 0px 30px 0px 30px
-    &:hover
-      .article-content
-        display: flex !important;
-        animation: shutter-effect-content 0.5s 2 forwards linear
-      .recent-post-info
-        &::before
-          animation: shutter-effect-left 0.5s 1 ease-in-out
-        &::after
-          animation: shutter-effect-right 0.5s 1 ease-in-out
-      .recent-post-cover
-        filter blur(2px)
-@keyframes shutter-effect-right  {
-  0%{
-    bottom: calc(100% + 150px);
-    border-top: 50px solid var(--recent-post-bgcolor);
-    border-left: 300px solid transparent;
-  }
-  50%{
-    bottom: 100%;
-    border-top: 200px solid var(--recent-post-bgcolor);
-    border-left: 600px solid transparent;
-  }
-  100%{
-    bottom: calc(100% + 150px);
-    border-top: 50px solid var(--recent-post-bgcolor);
-    border-left: 300px solid transparent;
-  }
-}
-@keyframes shutter-effect-left  {
-  0%{
-    bottom: calc(100% - 4px);
-    border-bottom: 50px solid var(--recent-post-bgcolor);
-    border-right: 300px solid transparent;
-  }
-  50%{
-    bottom: calc(100% - 4px);
-    border-bottom: 200px solid var(--recent-post-bgcolor);
-    border-right: 600px solid transparent;
-  }
-  100%{
-    bottom: calc(100% - 4px);
-    border-bottom: 50px solid var(--recent-post-bgcolor);
-    border-right: 300px solid transparent;
-  }
-}
-@keyframes shutter-effect-content {
-  from {
-    opacity: 0
-  }
-  to {
-    opacity: 1
-  }
-}

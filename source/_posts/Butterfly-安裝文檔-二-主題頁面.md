@@ -10,9 +10,9 @@ categories:
 - Docs文檔
 keywords: 'hexo,butterfly,主題,doc,教程,文檔'
 description: Butterfly安裝文檔-主題頁面
-cover: https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/Butterfly-docs-02-cover.png
+cover: https://cdn1.tianli0.top/gh/jerryc127/CDN/img/Butterfly-docs-02-cover.png
 abbrlink: dc584b87
-comments: false
+comments: true
 ---
 
 {% note blue 'fas fa-bullhorn' %}
@@ -387,6 +387,6 @@ error_404:
   background: 
 ```
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-error404.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-error404.png)
 
 {% btn '/posts/4aa8abbe/',🛠 Butterfly 安裝文檔(三) 主題配置,far fa-hand-point-right,block pink right larger %}

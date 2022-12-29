@@ -92,17 +92,17 @@
 
   // post
   &.post-bg
-    height: 400px
+    height: 500px
 
     +maxWidth768()
       height: 360px
 
     &:before
-      background-color: alpha($dark-black, .5)
+      background-color: alpha($dark-black, .3)
 
   #post-info
     position: absolute
-    bottom: 100px
+    bottom: 120px
     padding: 0 8%
     width: 100%
     text-align: center
@@ -181,10 +181,13 @@
   .post-title
     @extend .limit-more-line
     margin-bottom: 8px
+    font-weight: 700
     color: var(--white)
-    font-weight: normal
-    font-size: 2.5em
+    font-size: 3.5em
+    margin: 1rem 0 1rem 0 !important
+    text-align: left
     line-height: 1.5
+    padding: 0
     -webkit-line-clamp: 3
 
     +maxWidth768()
@@ -195,7 +198,9 @@
 
   #post-meta
     color: var(--light-grey)
-    font-size: 95%
+    margin-top: 0.4rem
+    transition: 0.3s
+    display: flex
 
     +minWidth768()
       > .meta-secondline

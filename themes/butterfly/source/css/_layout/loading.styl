@@ -1,95 +1,53 @@
-if hexo-config('preloader.enable') && hexo-config('preloader.source') == 1
+if hexo-config('preloader')
+  @font-face {
+    font-family: "iconfont"; /* Project id 3784380 */
+    src: url('//at.alicdn.com/t/c/font_3784380_kc4cbj7voqm.woff2?t=1669036181909') format('woff2'),
+        url('//at.alicdn.com/t/c/font_3784380_kc4cbj7voqm.woff?t=1669036181909') format('woff'),
+        url('//at.alicdn.com/t/c/font_3784380_kc4cbj7voqm.ttf?t=1669036181909') format('truetype');
+        font-display: swap;
+  }
+
+
+
+  .icon-apple-fill:before {
+    content: "\e881";
+    font-size: 150px;
+  }
+
+  .icon-jiazai:before {
+    content: "\e617";
+    font-size: 25px;
+  }
+
   .loading-bg
-    position: fixed
-    z-index: 1000
-    width: 50%
-    height: 100%
-    background-color: var(--preloader-bg)
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: var(--anzhiyu-card-bg);
+    z-index: 1001;
+    opacity: 1;
+    transition: .3s;
 
   #loading-box
-    .loading-left-bg
-      @extend .loading-bg
-
-    .loading-right-bg
-      @extend .loading-bg
-      right: 0
-
-    .spinner-box
-      position: fixed
-      z-index: 1001
-      display: flex
-      justify-content: center
-      align-items: center
-      width: 100%
-      height: 100vh
-
-      .configure-border-1
-        position: absolute
-        padding: 3px
-        width: 115px
-        height: 115px
-        background: #ffab91
-        animation: configure-clockwise 3s ease-in-out 0s infinite alternate
-
-      .configure-border-2
-        left: -115px
-        padding: 3px
-        width: 115px
-        height: 115px
-        background: rgb(63, 249, 220)
-        transform: rotate(45deg)
-        animation: configure-xclockwise 3s ease-in-out 0s infinite alternate
-
-      .loading-word
-        position: absolute
-        color: var(--preloader-color)
-        font-size: 16px
-
-      .configure-core
-        width: 100%
-        height: 100%
-        background-color: var(--preloader-bg)
-
+    .loading-img
+      margin: auto;
+    .loading-image-dot
+      margin: -40px auto;
+      width: 25px;
+      animation: avatar_turn_around 1s linear infinite;
     &.loaded
-      .loading-left-bg
-        transition: all .5s
-        transform: translate(-100%, 0)
+      .loading-bg
+        opacity: 0;
+        z-index: -1000;
+        display: flex;
+        flex-direction: column;
 
-      .loading-right-bg
-        transition: all .5s
-        transform: translate(100%, 0)
+  @keyframes loadingAction
+    0% {
+        opacity: 1;
+    }
 
-      .spinner-box
-        display: none
-
-  @keyframes configure-clockwise
-    0%
-      transform: rotate(0)
-
-    25%
-      transform: rotate(90deg)
-
-    50%
-      transform: rotate(180deg)
-
-    75%
-      transform: rotate(270deg)
-
-    100%
-      transform: rotate(360deg)
-
-  @keyframes configure-xclockwise
-    0%
-      transform: rotate(45deg)
-
-    25%
-      transform: rotate(-45deg)
-
-    50%
-      transform: rotate(-135deg)
-
-    75%
-      transform: rotate(-225deg)
-
-    100%
-      transform: rotate(-315deg)
+    100% {
+        opacity: .4;
+    }

@@ -1,12 +1,12 @@
-# Hexo Configuration
+  # Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
 title: 怕冷爱上雪
 subtitle: '晋天杰' # 副标题
-description: '这是一个博客丫'
-keywords: 怕冷爱上雪,博客,blog,book
+description: 'UI设计、静态博客、个人博客、互联网干货分享、学习笔记记录。你可以在这里面找到很多关于UI设计相关的工具教程、思维技巧。还可以找到一些开发的小技巧。'
+keywords: 怕冷爱上雪,博客,blog,晋天杰,hexo,hexo静态博客,hexo教程,hexo美化教程,hexo博客主题,hexo开源主题
 author: 晋天杰
 language: zh-CN
 timezone: 'Asia/Shanghai'
@@ -60,9 +60,13 @@ prismjs:
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
+#主页设置
+#path：博客索引页的根路径。（默认值=“”）
+#per_page：每页显示的帖子。（0=禁用分页）
+#order_by：发布订单。（默认情况下按日期降序排列）
 index_generator:
   path: ''
-  per_page: 10
+  per_page: 12
   order_by: -date
   pagination_dir: page
 # Category & Tag
@@ -90,6 +94,9 @@ pagination_dir: page
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
+#包含/排除文件
+
+##include:/exclude:选项仅适用于“source/”文件夹
 include:
 exclude:
 ignore:
@@ -152,3 +159,22 @@ abbrlink:
   auto_date: false #启用自动日期，它可以按今天的时间自动填充日期
   force: false #启用强制模式，在这种模式下，插件将忽略缓存，并计算每个帖子的abbrlink，即使它已经有了abbrlink。这只更新abbrlink而不是其他前端变量。
 # 文章排序
+sitemap:
+ path: sitemap.xml
+baidusitemap:
+ path: baidusitemap.xml
+plugins:
+  - hexo-algoliasearch
+algolia:
+  applicationID: ""
+  apiKey: ""
+  adminApiKey: ""
+  chunkSize: 5000
+  indexName: ""
+  fields:
+    - content:strip:truncate,0,200
+    - tags
+    - permalink
+    - excerpt:strip
+    - title
+    - categories

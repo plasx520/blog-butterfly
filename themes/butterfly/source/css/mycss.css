@@ -9,7 +9,7 @@
 	width: 100%;
 	height: 100%;
 	min-height: 280px;
-	background: url(https://s2.loli.net/2022/11/12/dpLblwfDFJmjXhW.webp) no-repeat top;
+	background: url(https://s2.loli.net/2022/11/21/Qv8CJ5f4Zhlca3W.webp) no-repeat top;
 	background-size: cover;
 	box-shadow: -47px -100px 224px 29px #001521 inset;
 	color: #fff;
@@ -18,8 +18,8 @@
 
 .banner-button-group {
 	position: absolute;
-	right: 2rem;
-	bottom: 1.5rem;
+	right: 1rem;
+	bottom: 1rem;
 }
 
 .author-content-item-title {
@@ -29,8 +29,8 @@
 .banner-button {
 	z-index: 1;
 	display: flex;
-	width: 124px;
-	height: 40px;
+	width: 98px;
+	height: 30px;
 	border-bottom: 0 !important;
 	border-radius: 20px;
 	background: var(--recent-post-bgcolor);
@@ -190,3 +190,53 @@ details:not(.tk-admin-config-group) summary:hover::marker {
   }
 }
 
+/* 闪电 */
+             
+.lightning {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	width: 100%;
+}
+.lightning div {
+	position: absolute;
+	overflow: hidden;
+}
+@keyframes flash_light {
+	0% {
+		height: 0px;
+		opacity: 0.5;
+	}
+	7.5% {
+		height: 230px;
+	}
+	8%, 12%, 16% {
+		opacity: 0.5;
+	}
+	10%,  14% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		height: 230px;
+		opacity: 0;
+	}
+}
+.lightning div img {
+	display: block;
+	margin: auto;
+	width: 100%;
+}
+.lightning .lightning1 {
+	position: absolute;
+	right: 11%;
+	animation: flash_light 5.7s infinite;
+}
+.lightning .lightning2 {
+	position: absolute;
+	left: 18%;
+	animation: flash_light 5.1s infinite;
+	animation-delay: -2.33s;
+}

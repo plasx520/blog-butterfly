@@ -1,7 +1,7 @@
 ---
 title: Marvel
 date: 2019-12-25 23:29:25
-comments: false
+comments: true
 reward: false
 description:
 top_img: https://i.loli.net/2019/12/25/8t97aVlp4hgyBGu.jpg

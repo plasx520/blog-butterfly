@@ -3,13 +3,14 @@
 # --------------------------------------
 
 menu:
-  首页: / || fa fa-home
+  主页: / || fas fa-home
   归档: /archives/ || fa fa-archive
   关于: /about/ || fa fa-sitemap
   娱乐 || fa fa-heartbeat:
-    音乐: /music/ || fas fa-music
+    音乐: /music/music.html || fas fa-music
     照片: /tuku/ || fas fa-images
     相册: /xiance/ || fas fa-video
+    视频: /video/ || fas fa-video
   菜单 || fa fa-list:
     标签: /tags/ || fa fa-tags
     分类: /categories/ || fa fa-folder-open    
@@ -37,7 +38,7 @@ copy:
   enable: true
   copyright:
     enable: true
-    limit_count: 150
+    limit_count: 2000
 
 # logo下面的社交链接 (社交圖標設置)
 # formal:
@@ -55,15 +56,16 @@ social:
 
 # 阿尔戈利亚搜索
 algolia_search:
-  enable: false
+  enable: true
   hits:
     per_page: 6
 
 # 本地搜索
 local_search:
-  enable: true
+  enable: false
   preload: false
-  CDN:
+  CDN: 
+  # https://cdn.jsdelivr.net/gh/plasx520/blog@main/search.xml
 
 # Math (數學)数学公式显示
 # --------------------------------------
@@ -89,23 +91,26 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）网站转圈logo
-favicon: /img/favicon.webp
+favicon: https://unpkg.com/plasx@1.0.3/img/favicon.webp # https://cdn2.tianli0.top/npm/plasx@1.0.3/img/favicon.webp
 
 # Avatar (頭像) true一直旋转
 avatar:
-  img: /img/favicon.webp
+  img: https://unpkg.com/plasx@1.0.3/img/favicon.webp # https://cdn2.tianli0.top/npm/plasx@1.0.3/img/favicon.webp
   effect: false
 # 禁用所有横幅图片
 disable_top_img: false
 
 # 首页横幅图片
 index_img: https://api.dujin.org/pic/yuanshen/
+# 视频地址
+index_video: https://www.wulihub.com.cn/gc/Q5ND2N/1920.js
+# https://api.ixiaowai.cn/api/api.php
 
 # 无横幅显示图片
-default_top_img: https://s2.loli.net/2022/11/04/GOKblJF1BMpWvYf.webp
+default_top_img: https://api.ixiaowai.cn/api/api.php
 
 # 存档页面的横幅图像
-archive_img: https://s2.loli.net/2022/11/04/GOKblJF1BMpWvYf.webp
+archive_img: https://api.ixiaowai.cn/api/api.php
 
 # 如果标签页面的横幅未设置，则会显示top_img
 # 注意：标记页，而不是标记页 (子标签页面的 top_img)
@@ -135,13 +140,18 @@ cover:
   position: both
   # 未设置封面时，将显示默认封面（遮沒有封面置盖，默認的封面顯示）
   default_cover:
-     - https://s2.loli.net/2022/10/28/PyKjf1CZ3ezUxSI.jpg
-     - https://s2.loli.net/2022/10/28/TqtKCUam3YFglbr.jpg
+    - https://s2.loli.net/2022/11/09/E9WRrMAYvmKDxnl.webp
+    - https://s2.loli.net/2022/11/09/UhA2W3QejrwzcLn.webp
+    - https://s2.loli.net/2022/11/09/SRi7l6jNZkD2Bmy.webp
+    - https://s2.loli.net/2022/11/09/95LaCNrd8BKXeSt.webp
+    - https://s2.loli.net/2022/11/09/VbopOwvGhfdmy1M.webp
+    - https://s2.loli.net/2022/11/09/Et3Yh7GslKX8FwA.webp
+    - https://s2.loli.net/2022/11/09/9getUWqvxTjHcbl.webp
 
 # 没图片时显示的图片
 error_img:
-  flink: /img/4041.webp
-  post_page: /img/404.webp
+  flink: https://unpkg.com/plasx@1.0.3/img/bj.webp # https://cdn2.tianli0.top/npm/plasx@1.0.3/img/bj.webp
+  post_page: https://unpkg.com/plasx@1.0.3/img/404.webp # https://cdn2.tianli0.top/npm/plasx@1.0.3/img/404.webp
 
 # 404页面
 error_404:
@@ -154,7 +164,7 @@ post_meta:
     date_type: created # 创建或更新或两者 主頁文章日期是創建日或者更新日或都顯示
     date_format: date # date/relative 显示日期还是相对日期
     categories: true # true or false 主页是否显示分类
-    tags: false # true or false 主页是否显示标签
+    tags: true # true or false 主页是否显示标签
     label: true # true or false 显示描述性文字
   post:
     date_type: both # created or updated or both 文章頁日期是創建日或者更新日或都顯示
@@ -179,7 +189,7 @@ wordcount:
 # false：不显示文章介绍
 index_post_content:
   method: 3
-  length: 500 # 如果你设置method为2或3，长度需要配置
+  length: 1500 # 如果你设置method为2或3，长度需要配置
 
 # 锚
 anchor:
@@ -264,13 +274,13 @@ addThis:
 # Share.js
 # https://github.com/overtrue/share.js
 sharejs:
-  enable: true
+  enable: false
   sites: facebook,twitter,wechat,weibo,qq
 
 # AddToAny
 # https://www.addtoany.com/
 addtoany:
-  enable: false
+  enable: true
   item: facebook,twitter,wechat,sina_weibo,facebook_messenger,email,copy_link
 
 # 评论系统
@@ -279,12 +289,12 @@ addtoany:
 comments:
   # 最多两个评论系统，第一个将显示为默认值
   # 系统选项: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
-  use: Twikoo,Livere # Valine,Disqus
+  use:  # Valine,Disqus
   text: true # 在按钮旁边显示注释名称
   # 延迟加载：当注释元素进入浏览器的视区时，注释系统将被加载。
   # 如果将其设置为 true，则注释计数将无效
-  lazyload: false
-  count: true # 在帖子top_img中显示评论计数
+  lazyload: true
+  count: false # 在帖子top_img中显示评论计数
   card_post_count: false # 在主页中显示评论计数
 
 # disqus
@@ -321,7 +331,7 @@ gitalk:
 valine:
   appId:  # leancloud application app id
   appKey:  # leancloud application app key
-  avatar: retro # gravatar style https://valine.js.org/#/avatar
+  avatar:  # gravatar style https://valine.js.org/#/avatar
   serverURLs: # 此配置适用于国内自定义域名用户，海外版本将自动检测（无需手动填写）
   bg: # valine 背景
   visitor: false #文章访问量统计
@@ -439,17 +449,17 @@ messenger:
 # --------------------------------------
 footer:
   owner:
-    enable: true
+    enable: false
     since: 1993
-  custom_text: 合抱之木，生于毫末；九层之台，起于累土；千里之行，始于足下。<a href="https://4t.pw/">blog</a>!
-  copyright: true # 主题和框架的版权
+  custom_text: JSD加速由Tianli提供
+  copyright: false # 主题和框架的版权
 
 # 分析统计
 # --------------------------------------
 
 # Baidu Analytics
 # https://tongji.baidu.com/web/welcome/login
-baidu_analytics:
+baidu_analytics: 
 
 # Google Analytics
 # https://analytics.google.com/analytics/web/
@@ -481,15 +491,15 @@ google_adsense:
 # 手动插入广告 (手動插入廣告)
 ad:
   index: 
-  aside: <br><br><div id="post-info"><h1 class="post-title notice">广告丫</h1></div><br><br><br>
-  post: <br><br><div id="post-info"><h1 class="post-title notice">广告丫</h1></div><br><br><br>
+  aside: 
+  post: 
 
 # Verification (站长验证)
 # --------------------------------------
 
 site_verification:
   # - name: google-site-verification
-  #  content: xxxxxx
+  #   content: xxxxxx
   # - name: baidu-site-verification
   #   content: xxxxxxx
 
@@ -498,36 +508,36 @@ site_verification:
 # 自定义主题颜色 
 # 注意：颜色值必须用双引号括起来，如“#000”否则可能会导致错误！
 
-theme_color:
-  enable: true
-  main: "#49B1F5"
-  paginator: "#00c4b6"
-  button_hover: "#FF7242"
-  text_selection: "#00c4b6"
-  link_color: "#99a9bf"
-  meta_color: "#858585"
-  hr_color: "#A4D8FA"
-  code_foreground: "#F47466"
-  code_background: "rgba(27, 31, 35, .05)"
-  toc_color: "#00c4b6"
-  blockquote_padding_color: "#49b1f5"
-  blockquote_background_color: "#49b1f5"
-  scrollbar_color: "#49b1f5"
-  meta_theme_color_light: "ffffff"
-  meta_theme_color_dark: "#0d0d0d"
+# theme_color:
+#   enable: true
+#   main: "#49B1F5"
+#   paginator: "#00c4b6"
+#   button_hover: "#FF7242"
+#   text_selection: "#00c4b6"
+#   link_color: "#99a9bf"
+#   meta_color: "#858585"
+#   hr_color: "#A4D8FA"
+#   code_foreground: "#F47466"
+#   code_background: "rgba(27, 31, 35, .05)"
+#   toc_color: "#00c4b6"
+#   blockquote_padding_color: "#49b1f5"
+#   blockquote_background_color: "#49b1f5"
+#   scrollbar_color: "#49b1f5"
+#   meta_theme_color_light: "ffffff"
+#   meta_theme_color_dark: "#0d0d0d"
 
 # 首页的top_img设置
 # 默认: top img - full screen, site info - middle (默認top_img全屏，site_info在中間)
 # 网站信息的位置, eg: 300px/300em/300rem/10% (主页标题距离离顶部距离)
 
-index_site_info_top:
+index_site_info_top: 
 # 主页图片高度, eg: 300px/300em/300rem (主頁top_img高度)
-index_top_img_height: 101vh
+index_top_img_height: 100vh
 
 # The user interface setting of category and tag page (category和tag頁的UI設置)
 # index - same as Homepage UI (index 值代表 UI將與首頁的UI一樣)
 # default - same as archives UI 默認跟archives頁面UI一樣
-category_ui: # 留空或 index
+category_ui:  # 留空或 index
 tag_ui: # 留空或 index
 
 # 网站背景 # 可以将其设置为颜色或图像  # 正式的图像： url（http://xxxxxx.com/xxx.jpg）
@@ -540,7 +550,7 @@ background:
 footer_bg: 'linear-gradient(-45deg,#00053f,#00c9ff,#23a6d5,#00cb6f);background-size: 400% 400%; animation: gradientBG 15s ease infinite;'
 
 # 右下按钮/默认值的位置 unit: px 
-rightside-bottom:
+rightside-bottom: 
 
 # (开启网页进入效果)
 enter_transitions: true
@@ -552,8 +562,8 @@ enter_transitions: true
 # See: https://github.com/hustcc/ribbon.js
 canvas_ribbon:
   enable: false
-  size: 150
-  alpha: 0.6
+  size: 1500
+  alpha: 0.2
   zIndex: -1
   click_to_change: true
   mobile: false
@@ -566,24 +576,24 @@ canvas_fluttering_ribbon:
 # 跟随漂浮粒子
 # https://github.com/hustcc/canvas-nest.js
 canvas_nest:
-  enable: true
+  enable: false
   color: '0,255,255' #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
   opacity: 1 # the opacity of line (0~1), default: 0.5.
   zIndex: -1 # z-index property of the background, default: -1.
-  count: 99 # the number of lines, default: 99.
+  count: 50 # the number of lines, default: 99.
   mobile: false
 
 # 打字机特效 (打字效果)
 # https://github.com/disjukr/activate-power-mode
 activate_power_mode:
-  enable: true
-  colorful: true # open particle animation (冒光特效)
-  shake: true #  open shake (抖動特效)
+  enable: false
+  colorful: false # open particle animation (冒光特效)
+  shake: false #  open shake (抖動特效)
   mobile: false
 
 # Mouse click effects: fireworks (鼠标点击效果： 烟火特效)
 fireworks:
-  enable: true
+  enable: false
   zIndex: 9999 # -1 or 9999
   mobile: false
 
@@ -594,14 +604,20 @@ click_heart:
 
 # Mouse click effects: words (鼠标点击效果： 文字)
 ClickShowText:
-  enable: false
+  enable: true
   text:
-    # - I
-    # - LOVE
-    # - YOU
+     - 我
+     - 喜
+     - 欢
+     - 你
+     - 你
+     - 喜
+     - 欢
+     - 我
+     - 不
   fontSize: 15px
   random: false
-  mobile: false
+  mobile: true
 
 # Default display mode (网站默认的显示模式)
 # light (默认浅色) / dark 深色
@@ -617,16 +633,19 @@ beautify:
 
 # 全局字体设置 # 除非您知道以下设置的工作原理，否则不要修改它们
 font:
-  global-font-size:
-  code-font-size:
-  font-family: 
-  code-font-family:
+  global-font-size: 16px
+  code-font-size: 
+  font-family:
+  code-font-family: 
 
 # 网站标题和网站副标题的字体设置
 # 左上角網站名字 主頁居中網站名字
 blog_title_font:
-  font_link:
-  font-family:
+  font_link: 
+  font-family: 
+
+
+
 
 # 分隔图标的设置（水平分隔圖標設置）
 hr_icon:
@@ -663,11 +682,12 @@ subtitle:
 preloader:
   enable: true
   # source # 源
-  # 1. fullpage-loading # 1。 Load full page
-  # 2. pace (progress bar)  # 2。速度（进度条）
-  source: 2
+  # 1. 为满屏加载无pace胶囊
+  # 2. 为pace胶囊无满屏动画 
+  # 3.是两者都启用
+  source: 3
   # 步伐主题(see https://codebyzach.github.io/pace/)
-  pace_css_url: https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/blue/pace-theme-minimal.css
+  pace_css_url: https://unpkg.com/plasx@1.0.3/css/progress_bar.css # https://cdn2.tianli0.top/npm/plasx@1.0.3/css/progress_bar.css
 
 # aside 侧边栏
 # --------------------------------------
@@ -682,21 +702,17 @@ aside:
     archive: true
     tag: true
     category: true
-  card_author:
+  card_author: 
     enable: true
     description: 众里寻他千百度
     button:
       enable: true
       icon: fab fa-github
-      text: 爱你呀
-      link: https://github.com/xxxxxx
+      text: 主题开源地址
+      link: https://github.com/plasx520/blog-butterfly
   card_announcement:
     enable: true
-    content: 如果你在使用中遇到問題，請到 <a href="https://github.com/jerryc127/hexo-theme-butterfly/issues" style="color:#49b1f5">Github Issues</a> 或者 <a href="/messageboard/" style="color:#49b1f5">留言板</a> 進行反饋，你也可以加入 QQ 群（由於 QQ 群只能有 500 人，會定時清理潛水的人，不要同時申請 2 个 QQ 群）<div class="social-button">
-      <a class="button--animated" href="https://jq.qq.com/?_wv=1027&k=KU9105XR" target="_blank">QQ 1 群 👍</a>
-      <a class="button--animated" href="https://jq.qq.com/?_wv=1027&k=r1nK0DQz" target="_blank">QQ 2 群 👍</a>
-      <a class="button--animated" href="https://t.me/bu2fly" target="_blank">Telegram 👍</a>
-      </div>
+    content: 主题以开源
   card_recent_post:
     enable: true
     limit: 5 # 如果设置为 0 将显示全部
@@ -726,21 +742,21 @@ aside:
     sort_order: # 除非您知道设置的工作原理，否则请勿修改该设置
 
 # busuanzi count for PV / UV in site
-# 訪問人數统计人数
+# 訪問人數统计人数（访问人数）
 busuanzi:
-  site_uv: true
-  site_pv: true
-  page_pv: true
+  site_uv: false
+  site_pv: false
+  page_pv: false
 
 # 建站时间(網頁運行時間)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
-  enable: true
+  enable: false
   publish_date: 06/18/1993 00:00:00
 
 # 旁白小部件 - 最新评论
 newest_comments:
-  enable: false
+  enable: true
   sort_order: # 除非您知道设置的工作原理，否则请勿修改该设置
   limit: 6
   storage: 10 # 单位：分钟，将数据保存到本地存储
@@ -751,7 +767,7 @@ newest_comments:
 
 # 繁体中文和简体中文之间的转换 (簡繁轉換)
 translate:
-  enable: true
+  enable: false
   # 按钮的文本
   default: 繁
   # 网站语言 （1 - 繁体中文/ 2 - 简体中文）
@@ -839,10 +855,10 @@ pjax:
   enable: true
   exclude:
     - /music/
-    - /no-pjax/
+    - /video/
     
 
-#注入css和脚本（aplayer/meting）
+#注入css和脚本播放器（aplayer/meting）
 aplayerInject:
   enable: true
   per_page: true
@@ -874,7 +890,7 @@ pangu:
 lazyload:
   enable: true
   field: site # site/post
-  placeholder: https://s2.loli.net/2022/11/04/GOKblJF1BMpWvYf.webp
+  placeholder: https://drfs.ctcontents.com/file/14237530/741480498/72a3ca/img/index/lazyload.webp
   blur: false
 
 # PWA
@@ -909,35 +925,34 @@ css_prefix: true
 inject:
   head:
       # 置顶公告栏
-      - <link rel="stylesheet" href="/css/notice.css">  
-       # 标签时间轴     
-      - <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/categoryBar/categoryBar.css">
-      - <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/mainColor/heoMainColor.css"> 
+      # - <link rel="stylesheet" type="text/css" href="https://npm.elemecdn.com/blog12.8@1.0.1/notice.css"> 
       # 导航必备
-      - <link rel="stylesheet" href="/css/nav_menu.css"> 
-    
-  bottom: # 音乐
-     - <div class="aplayer no-destroy" data-id="6886768100" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-theme="#3F51B5"> </div>
-     # 樱花漂亮
-     # - <script src="https://cdn.jsdelivr.net/gh/yremp/yremp-js@1.5/sakura.js"></script>
-     # 水波纹
-     # - <script defer src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"></script>
-     # - <script defer data-pjax src="https://cdn.jsdelivr.net/gh/sirxemic/jquery.ripples/dist/jquery.ripples.js"></script>
-     # - <script defer data-pjax src="/js/ripples.js"></script>
-     # 标签时间轴
-     - <script defer src="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/categoryBar/categoryBar.js"></script>
+      - <link rel="preload" href="https://npm.elemecdn.com/blog12.8@1.0.1/nav_menu.css" as="style" onload="this.rel='stylesheet'"> # https://unpkg.com/plasx@1.0.3/css/nav_menu.css
+      # - <link rel="stylesheet" href="https://unpkg.com/plasxhexo@1.0.2/css/tag-link.css"> # https://cdn.jsdelivr.net/gh/zhheo/JS-Heo@main/tag-link/tag-link.css
+      # 更新
+      - <link rel="stylesheet"  type="text/css" href="/css/notice.css">  
+      # 标签时间轴     
+      # - <link rel="stylesheet" type="text/css" href="https://unpkg.com/plasxhexo@1.0.2/css/categoryBar.css"> # https://cdn.jsdelivr.net/npm/js-heo@1.0.11/categoryBar/categoryBar.css
+      #- <link rel="stylesheet" type="text/css" href="https://unpkg.com/plasxhexo@1.0.2/css/heoMainColor.css"> # https://cdn.jsdelivr.net/npm/js-heo@1.0.11/mainColor/heoMainColor.css
+
+  bottom:
+     # 标签时间轴# 随机主题颜色
+     - <script defer src="https://npm.elemecdn.com/blog12.8@1.0.1/categoryBar.js"></script> # https://cdn.jsdelivr.net/npm/js-heo@1.0.11/categoryBar/categoryBar.js
      # 夜间模式切换，css后半段代码为背景切换
-     - <script src="/js/sun_moon.js" async></script>
+     - <script src="https://www.wulihub.com.cn/gc/QRKAMb/js/sun_moon.js" async></script> # https://cdn.cbd.int/plasx@1.0.3/js/sun_moon.js
      # 背景切换
-     - <script src="https://cdn.jsdelivr.net/gh/nextapps-de/winbox/dist/winbox.bundle.min.js"></script>
+     - <script src="https://unpkg.com/plasxhexo@1.0.2/js/winbox.bundle.min.js"></script> # https://cdn.jsdelivr.net/gh/nextapps-de/winbox/dist/winbox.bundle.min.js
      # 百度统计
      - <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?98d6c60617ee763b4f6708fedd7f50e5";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script>
-      # 小风车旋转
-     - "<style>#article-container.post-content h1:before, h2:before, h3:before, h4:before, h5:before, h6:before { -webkit-animation: avatar_turn_around 1s linear infinite; -moz-animation: avatar_turn_around 1s linear infinite; -o-animation: avatar_turn_around 1s linear infinite; -ms-animation: avatar_turn_around 1s linear infinite; animation: avatar_turn_around 1s linear infinite; }</style>"
+     # 导航必备
+     - <script charset="utf-8" data-pjax="" src="https://npm.elemecdn.com/blog12.8@1.0.1/nav_menu.js"></script> 
+     # 音乐
+     # - <div class="aplayer no-destroy" data-id="6886768100" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-theme="#3F51B5"> </div>
      # 复制提示
      - <script charset="utf-8" data-pjax="" src="/js/fuzhi.js"></script>
-     # 导航必备
-     - <script charset="utf-8" data-pjax="" src="/js/nav_menu.js"></script>
+
+
+
 
 
 # CDN
@@ -945,9 +960,9 @@ inject:
 # 非必要請不要修改
 CDN:
   # 首页轮播图
-  swiper_js: https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/js/swiper.min.js
-  swiper_css: https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.min.css
-  swiper_init: /js/swiper_init.js
+  swiper_js: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/4.1.6/js/swiper.min.js
+  swiper_css: https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/4.1.6/css/swiper.min.css
+  swiper_init: https://cdn.cbd.int/plasx@1.0.3/js/swiper_init.js
   # The CDN provider of internal scripts (主題內部 js 的 cdn 配置)
   # option: local/jsdelivr/unpkg/cdnjs/custom
   # Dev version can only choose. ( dev版的主題只能設置為 local )
@@ -963,28 +978,28 @@ CDN:
 # 将版本号添加到 CDN，无论真假 
   version: false
 
-  # Custom format
+  #自定义格式
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
-  custom_format:
+  custom_format: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
 
   option:
-    # main_css:
-    countup_js: /js/countup.js # countupJS关于页面
-    # main:
-    # utils:
-    translate: https://cdn.zhheo.com/JS-Heo/translate/tw_cn.js # https://cdn1.tianli0.top/npm/js-heo@1.0.6/translate/tw_cn.js
-    # local_search:
-    # algolia_js:
+    # main_css: 
+    countup_js: https://cdn.cbd.int/plasx@1.0.3/js/countup.js # countupJS关于页面
+    # main: 
+    # utils: 
+    translate: https://cdn.zhheo.com/JS-Heo/translate/tw_cn.js 
+    # local_search: 
+    # algolia_js: https://anzhiy.cn/js/search/algolia.js
     # algolia_search_v4:
-    # instantsearch_v4:
-    pjax: https://cdn.zhheo.com/public/pjax/pjax.min.js # https://lib.baomitu.com/pjax/0.2.8/pjax.min.js
+    instantsearch_v4: https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.49.1/instantsearch.production.min.js
+    pjax: https://cdn.bootcdn.net/ajax/libs/pjax/0.2.8/pjax.min.js # https://lib.baomitu.com/pjax/0.2.8/pjax.min.js
     # gitalk:
     # gitalk_css:
     # blueimp_md5:
     # valine:
     # disqusjs:
     # disqusjs_css:
-    twikoo: https://cdn2.tianli0.top/npm/twikoo@1.6.7/dist/twikoo.all.min.js
+    twikoo: https://npm.elemecdn.com/twikoo@1.6.8/dist/twikoo.all.min.js
     # waline_js:
     # waline_css:
     sharejs: https://lib.baomitu.com/social-share.js/1.0.16/js/social-share.min.js
@@ -1000,8 +1015,8 @@ CDN:
     # instantpage:
     typed: https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/typed.js/2.0.12/typed.min.js
     # pangu:
-    fancybox_css_v4: https://wuean.gitee.io/file/img/fancybox.css
-    fancybox_v4: https://wuean.gitee.io/file/img/fancybox.umd.js
+    # fancybox_css_v4: 
+    # fancybox_v4: 
     # medium_zoom:
     snackbar_css: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.css
     snackbar: https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.js
@@ -1014,10 +1029,10 @@ CDN:
     # flickr_justified_gallery_css:
     aplayer_css: https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-ms/aplayer/1.10.1/APlayer.min.css
     aplayer_js: https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-ms/aplayer/1.10.1/APlayer.min.js
-    meting_js: https://unpkg.com/meting@1.2.0/dist/Meting.min.js
-    prismjs_js: https://cdn1.tianli0.top/npm/prismjs@1.1.0/prism.js
-    prismjs_lineNumber_js: https://cdn1.tianli0.top/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
-    prismjs_autoloader: https://cdn1.tianli0.top/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
+    meting_js: https://unpkg.zhimg.com/meting@1.2.0/dist/Meting.min.js # https://unpkg.com/meting@1.2.0/dist/Meting.min.js
+    prismjs_js: https://npm.elemecdn.com/prismjs@1.1.0/prism.js
+    prismjs_lineNumber_js: https://npm.elemecdn.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js
+    prismjs_autoloader: https://npm.elemecdn.com/prismjs/plugins/autoloader/prism-autoloader.min.js
     # artalk_js:
     # artalk_css:
      
@@ -1037,19 +1052,11 @@ businesscard:
   back2: <a href="https://blog.4t.pw">银行卡签名：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;晋天杰</a>
   back3: 如果上天不给你机会，那你就自己创造机会，杀出重围 .
   back4: 再厉害的英雄也需要夫人的陪伴，所以我很爱我的夫人.
-
-# hexo-butterfly-categories-card
-# see https://akilar.top/posts/a9131002/
-categoryBar:
-  enable: true
-  column: odd # 显示列数,odd：3列 | even：4列
-  row: 1 #显示行数，默认两行，超过行数切换为滚动显示
-  cover:
-    - url('https://s2.loli.net/2022/11/09/E9WRrMAYvmKDxnl.webp')
-    - url('https://s2.loli.net/2022/11/09/UhA2W3QejrwzcLn.webp')
-    - url('https://s2.loli.net/2022/11/09/SRi7l6jNZkD2Bmy.webp')
-    - url('https://s2.loli.net/2022/11/09/95LaCNrd8BKXeSt.webp')
-    - url('https://s2.loli.net/2022/11/09/VbopOwvGhfdmy1M.webp')
-    - url('https://s2.loli.net/2022/11/09/Et3Yh7GslKX8FwA.webp')
-    - url('https://s2.loli.net/2022/11/09/9getUWqvxTjHcbl.webp')
-    - url('https://s2.loli.net/2022/11/09/9getUWqvxTjHcbl.webp')
+#主页设置
+#path：博客索引页的根路径。（默认值=“”）
+#per_page：每页显示的帖子。（0=禁用分页）
+#order_by：发布订单。（默认情况下按日期降序排列）
+index_generator:
+  path: ''
+  per_page: 14
+  order_by: -date

@@ -1,50 +1,86 @@
 - class_name: 开启创造力
   creativity_list:
-    - name: Vue
-      color: "#b8f0ae"
-      icon: https://image.anzhiy.cn/adminuploads/1/2022/09/25/633001374747b.png
-    - name: React
-      color: "#222"
-      icon: data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K
-    - name: Docker
+    - name: AfterEffect
+      color: "#989bf8"				
+      icon: https://img.zhheo.com/i/2022/08/22/6302f0748a83b.png
+    - name: Sketch 
+      color: "#ffffff"
+      icon: https://img.zhheo.com/i/2022/08/22/63030a85d6458.png
+    - name: Docker   
       color: "#57b6e6"
-      icon: https://image.anzhiy.cn/adminuploads/1/2022/09/25/63300647df7fa.png
-    - name: Photoshop
+      icon: https://img.zhheo.com/i/2022/08/22/6303102c049d1.png
+    - name: Photoshop  
       color: "#4082c3"
-      icon: https://image.anzhiy.cn/adminuploads/1/2022/09/25/63300647e1f10.png
-    - name: Node
-      color: "#333"
-      icon: https://cdn1.tianli0.top/npm/anzhiyu-blog@2.1.1/img/svg/node-logo.svg
-    - name: Webpack
-      color: "#2e3a41"
-      icon: https://image.anzhiy.cn/adminuploads/1/2022/09/26/6330ff27e5c9b.png
-    - name: Pinia
-      color: "#fff"
-      icon: https://npm.elemecdn.com/anzhiyu-blog@2.0.8/img/svg/pinia-logo.svg
-    - name: Python
-      color: "#fff"
-      icon: https://image.anzhiy.cn/adminuploads/1/2022/09/25/63300647dea51.png
-    - name: Vite
-      color: "#937df7"
-      icon: https://npm.elemecdn.com/anzhiyu-blog@2.0.8/img/svg/vite-logo.svg
-    - name: Flutter
-      color: "#4499e4"
-      icon: https://image.anzhiy.cn/adminuploads/1/2022/09/25/633004063ff15.png
-    - name: Java
-      color: "#fff"
-      icon: https://image.anzhiy.cn/adminuploads/1/2022/09/25/633005bf0fd1e.jpg
-    - name: CSS3
+      icon: https://img.zhheo.com/i/2022/08/22/63030fe730a69.png
+    - name: FinalCutPro 
+      color: "#d57979"
+      icon: https://img.zhheo.com/i/2022/08/22/630310dea00f5.png
+    - name: Python  
+      color: "#54cdda"
+      icon: https://img.zhheo.com/i/2022/08/22/63031127e8e2b.png
+    - name: Swift  
+      color: "#eb6840"
+      icon: https://img.zhheo.com/i/2022/08/22/630311760ca04.png
+    - name: Principle  
+      color: "#8f55ba"
+      icon: https://img.zhheo.com/i/2022/08/22/630311cf9dded.png
+    - name: illustrator  
+      color: "#f29e39"
+      icon: https://img.zhheo.com/i/2022/08/22/6303121db0410.png
+    - name: CSS3   
       color: "#2c51db"
-      icon: https://image.anzhiy.cn/adminuploads/1/2022/09/25/633006cc55e07.png
-    - name: JS
+      icon: https://img.zhheo.com/i/2022/08/22/630312c06cdc5.png
+    - name: JS   
       color: "#f7cb4f"
-      icon: https://image.anzhiy.cn/adminuploads/1/2022/09/25/633006eee047b.png
-    - name: HTML
+      icon: https://img.zhheo.com/i/2022/08/22/630312f898a1c.png
+    - name: HTML 
       color: "#e9572b"
-      icon: https://image.anzhiy.cn/adminuploads/1/2022/09/25/633006f9ab27d.png
-    - name: Git
+      icon: https://img.zhheo.com/i/2022/08/22/6303132113bbb.png
+    - name: Git   
       color: "#df5b40"
-      icon: https://image.anzhiy.cn/adminuploads/1/2022/09/25/633006e37c7fd.webp
-    - name: Apifox
+      icon: https://img.zhheo.com/i/2022/09/23/632d2d33b1e1b.webp
+    - name: Apifox   
       color: "#e65164"
-      icon: https://image.anzhiy.cn/adminuploads/1/2022/09/25/633007087a4dc.webp
+      icon: https://img.zhheo.com/i/2022/09/23/632d2e083fc9b.webp
+    - name: AfterEffect  
+      color: "#989bf8"
+      icon: https://img.zhheo.com/i/2022/08/22/6302f0748a83b.png
+    - name: Sketch 
+      color: "#54cdda"
+      icon: https://img.zhheo.com/i/2022/08/22/63030a85d6458.png          
+    - name: Docker 
+      color: "#57b6e6"
+      icon: https://img.zhheo.com/i/2022/08/22/6303102c049d1.png
+    - name: Photoshop           
+      color: "#4082c3"
+      icon: https://img.zhheo.com/i/2022/08/22/63030fe730a69.png 
+    - name: FinalCutPro  
+      color: "#54cdda"         
+      icon: https://img.zhheo.com/i/2022/08/22/630310dea00f5.png
+    - name: Python  
+      color: "#54cdda"
+      icon: https://img.zhheo.com/i/2022/08/22/63031127e8e2b.png         
+    - name: Swift   
+      color: "#eb6840"
+      icon: https://img.zhheo.com/i/2022/08/22/630311760ca04.png
+    - name: Principle  
+      color: "#8f55ba"
+      icon: https://img.zhheo.com/i/2022/08/22/630311cf9dded.png 
+    - name: illustrator  
+      color: "#f29e39"
+      icon: https://img.zhheo.com/i/2022/08/22/6303121db0410.png
+    - name: CSS3  
+      color: "#2c51db"
+      icon: https://img.zhheo.com/i/2022/08/22/630312c06cdc5.png 
+    - name: JS   
+      color: "#f7cb4f"
+      icon: https://img.zhheo.com/i/2022/08/22/630312f898a1c.png 
+    - name: HTML 
+      color: "#e9572b"
+      icon: https://img.zhheo.com/i/2022/08/22/6303132113bbb.png 
+    - name: Git 
+      color: "#df5b40"
+      icon: https://img.zhheo.com/i/2022/09/23/632d2d33b1e1b.webp
+    - name: Apifox           
+      color: "#e65164"
+      icon: https://img.zhheo.com/i/2022/09/23/632d2e083fc9b.webp

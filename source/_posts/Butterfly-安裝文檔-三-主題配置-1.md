@@ -9,9 +9,9 @@ tags:
 categories: Docs文檔
 keywords: 'hexo,butterfly,主題,doc,教程,文檔'
 description: Butterfly安裝文檔-主題配置
-cover: https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-docs-03-cover.png
+cover: https://cdn1.tianli0.top/gh/jerryc127/CDN/img/butterfly-docs-03-cover.png
 abbrlink: 4aa8abbe
-comments: false
+comments: true
 ---
 
 {% note blue 'fas fa-bullhorn' %}
@@ -54,7 +54,7 @@ comments: false
 
 修改網站各種資料，例如標題、副標題和郵箱等個人資料，請修改博客根目錄的`_config.yml`
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/20191120000444.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/20191120000444.png)
 
 ## 導航菜單
 
@@ -102,7 +102,7 @@ menu:
   關於: /about/ || fas fa-heart
 ```
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-menu.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-menu.png)
 
 ## 代碼
 
@@ -136,27 +136,27 @@ highlight_theme: light
 
 > darker
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-code-darker.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-code-darker.png)
 
 > pale night
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-code-pale-night.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-code-pale-night.png)
 
 > light
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-code-light.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-code-light.png)
 
 > ocean
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-highlight-ocean.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-highlight-ocean.png)
 
 > mac
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-highlight-mac.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-highlight-mac.png)
 
 > mac light
 
-![image-20200731175026827](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-mac-light.png)
+![image-20200731175026827](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-mac-light.png)
 
 <!-- endtab -->
 
@@ -182,7 +182,7 @@ highlight_theme: light
 highlight_copy: true
 ```
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-code-copy.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-code-copy.png)
 
 ### 代碼框展開/關閉
 
@@ -210,15 +210,15 @@ highlight_shrink: true #代碼框不展開，需點擊 '>' 打開
 
 `highlight_shrink: true`
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-highlight-shrink-true.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-highlight-shrink-true.png)
 
 `highlight_shrink: false`
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-highlight-shrink-false.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-highlight-shrink-false.png)
 
 `highlight_shrink: none`
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-highlight-shirk-none.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-highlight-shirk-none.png)
 
 ### 代碼換行
 
@@ -252,11 +252,11 @@ prismjs:
 
 > 設置`code_word_wrap`之前:
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-code-word-wrap-before.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-code-word-wrap-before.png)
 
 > 設置`code_word_wrap`之後:
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-code-word-wrap-after.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-code-word-wrap-after.png)
 
 ### 代碼高度限制
 
@@ -278,7 +278,7 @@ highlight_height_limit: false # unit: px
 
    
 
-![hexo-theme-butterfly-docs-highlight-heigh-limit](https://fastly.jsdelivr.net/gh/jerryc127/CDN@m2/img/hexo-theme-butterfly-docs-highlight-heigh-limit.gif)
+![hexo-theme-butterfly-docs-highlight-heigh-limit](https://cdn1.tianli0.top/gh/jerryc127/CDN@m2/img/hexo-theme-butterfly-docs-highlight-heigh-limit.gif)
 
 ## 社交圖標
 
@@ -294,15 +294,15 @@ social:
 
 圖標名可在這尋找
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-fontawesome.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-fontawesome.png)
 
 PC:
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-social-icon-pc.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-social-icon-pc.png)
 
 Mobile:
 
-![1560603353743](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-socila-icon-mobile.png)
+![1560603353743](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-socila-icon-mobile.png)
 
 ## 主頁文章節選(自動節選和文章頁description)
 
@@ -325,7 +325,7 @@ index_post_content:
 
 `description`在front-matter裏添加
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-post-description.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-post-description.png)
 
 ## 頂部圖
 
@@ -382,17 +382,17 @@ category_per_img：
 
 > top_img: false
 
-![image-20200924224536013](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/theme-butterfly-docs-page-top-img-false.png)
+![image-20200924224536013](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/theme-butterfly-docs-page-top-img-false.png)
 
-![image-20201027210949089](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/theme-butterfly-docs-post-top-img-false-new.png)
+![image-20201027210949089](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/theme-butterfly-docs-post-top-img-false-new.png)
 
 > top_img: orange
 
-![image-20200924225024153](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/theme-butterfly-docs-top-img-orange.png)
+![image-20200924225024153](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/theme-butterfly-docs-top-img-orange.png)
 
 > top_img: 'linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)'
 
-![image-20200924225300934](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/theme-butterfly-docs-top-img-color.png)
+![image-20200924225300934](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/theme-butterfly-docs-top-img-color.png)
 
 ## 文章置頂
 
@@ -424,27 +424,27 @@ cover:
 
 ```yaml
 default_cover:
-  - https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png
-  - https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg2.png
-  - https://fastly.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg3.png
+  - https://cdn1.tianli0.top/gh/jerryc127/CDN@latest/cover/default_bg.png
+  - https://cdn1.tianli0.top/gh/jerryc127/CDN@latest/cover/default_bg2.png
+  - https://cdn1.tianli0.top/gh/jerryc127/CDN@latest/cover/default_bg3.png
 ```
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-post-cover.png)
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-post-cover-show.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-post-cover.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-post-cover-show.png)
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-cover-false.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-cover-false.png)
 
 > left
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-cover-left.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-cover-left.png)
 
 > right
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-cover-right.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-cover-right.png)
 
 > both
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-cover-both.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-cover-both.png)
 
 ## 文章頁相關配置
 
@@ -472,15 +472,15 @@ post_meta:
 
 > 主頁
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-page-meta.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-page-meta.png)
 
 > 文章頁
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-post-info.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-post-info.png)
 
 
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-post-tag.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-post-tag.png)
 
 
 
@@ -488,11 +488,11 @@ post_meta:
 
 > 相對時間
 
-![image-20200928201701560](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/theme-butterfly-docs-relative-time.png)
+![image-20200928201701560](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/theme-butterfly-docs-relative-time.png)
 
 > 明確時間
 
-![image-20200928201911032](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/theme-butterfly-docs-full-date.png)
+![image-20200928201911032](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/theme-butterfly-docs-full-date.png)
 
 ### 文章版權
 
@@ -530,7 +530,7 @@ copyright_info: 此文章版權歸xxxxx所有，如有轉載，請註明來自�
 
 **版權顯示截圖**
 
-![image-20210130161913121](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-post-copyright.png)
+![image-20210130161913121](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-post-copyright.png)
 
 ### 文章打賞
 
@@ -554,7 +554,7 @@ reward:
       text: 支付寶
 ```
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-post-donate.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-post-donate.png)
 
 ### TOC
 
@@ -581,15 +581,15 @@ toc:
 
 > Toc PC
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-toc-pc-new.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-toc-pc-new.png)
 
 > Toc Mobile
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-toc-mobile-new.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-toc-mobile-new.png)
 
 > style_simple: true
 
-![image-20201209232104167](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-toc-style-simple.png)
+![image-20201209232104167](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-toc-style-simple.png)
 
 #### 為特定的文章配置
 
@@ -610,7 +610,7 @@ related_post:
   date_type: created # or created or updated 文章日期顯示創建日或者更新日
 ```
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-releatedpost.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-releatedpost.png)
 
 ### 文章過期提醒
 
@@ -635,11 +635,11 @@ noticeOutdate:
 
 > style: flat
 
-![image-20200731175909296](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butteffly-docs-outdate-flat.png)
+![image-20200731175909296](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butteffly-docs-outdate-flat.png)
 
 > style: simple
 
-![image-20200731180037968](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-outdated-simple.png)
+![image-20200731180037968](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-outdated-simple.png)
 
 ### 文章編輯按鈕
 
@@ -655,9 +655,9 @@ post_edit:
   url:
 ```
 
-![image-20210130160108360](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-post-edit.png)
+![image-20210130160108360](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-post-edit.png)
 
-![image-20210130160208436](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-post-edit-2.png)
+![image-20210130160208436](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-post-edit-2.png)
 
 ### 文章分頁按鈕
 
@@ -678,7 +678,7 @@ post_pagination: false
 | post_pagination: 1     | 下一篇顯示的是舊文章 |
 | post_pagination: 2     | 下一篇顯示的是新文章 |
 
-![image-20210130161545100](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-post-pagination.png)
+![image-20210130161545100](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-post-pagination.png)
 
 ## 頁面錨點
 
@@ -708,7 +708,7 @@ avatar:
   effect: true # 頭像會一直轉圈
 ```
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-avatar.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-avatar.png)
 
 ## 圖片描述
 
@@ -722,7 +722,7 @@ avatar:
 photofigcaption: true
 ```
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-photo-figcaption.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-photo-figcaption.png)
 
 ## 複製相關配置
 
@@ -772,7 +772,7 @@ footer:
     since: 2018
 ```
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-since.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-since.png)
 
 ### 頁腳自定義文本
 
@@ -784,7 +784,7 @@ footer:
 custom_text: Hi, welcome to my <a href="https://butterfly.js.org/">blog</a>!
 ```
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-footer-text.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-footer-text.png)
 
 對於部分人需要寫 ICP 的，也可以寫在 `custom_text`裏
 
@@ -819,11 +819,11 @@ translate:
 
 > 簡體
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-simp.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-simp.png)
 
 > 繁體
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-tranditional.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-tranditional.png)
 
 ### 夜間模式
 
@@ -840,7 +840,7 @@ darkmode:
   autoChangeMode: false
 ```
 
-![image-20201230201029381](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-dark-mode-1.png)
+![image-20201230201029381](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-dark-mode-1.png)
 
 {% note info %}
 V2.0.0 開始增加一個選項，可開啟自動切換light mode 和 dark mode
@@ -864,7 +864,7 @@ autoChangeMode: false 取消自動切換
 readmode: true
 ```
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-read-mode.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-read-mode.png)
 
 ### 按鈕排序
 
@@ -936,23 +936,23 @@ aside:
 
 > position: left
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-aside-left.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-aside-left.png)
 
 > position: right
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-aside-right.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-aside-right.png)
 
 > card_tags color: false
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/20200426182730.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/20200426182730.png)
 
 > card_tags color: true
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/20200426183025.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/20200426183025.png)
 
 > aside button
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-aside-button.gif)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-aside-button.gif)
 
 ### 訪問人數 busuanzi (UV 和 PV)
 
@@ -967,9 +967,9 @@ busuanzi:
   page_pv: true
 ```
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-busuanzi-site-pv.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-busuanzi-site-pv.png)
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-pv.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-pv.png)
 
 ### 運行時間
 
@@ -986,7 +986,7 @@ runtimeshow:
   #也可以寫成 年/月/日 時間
 ```
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-runtime.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-doc-runtime.png)
 
 ### 最新評論
 
@@ -1026,7 +1026,7 @@ newest_comments:
 
 > Demo
 
-![image-20200830223037320](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-newest-comments.png)
+![image-20200830223037320](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-newest-comments.png)
 
 ### 自定義添加欄目
 
@@ -1888,7 +1888,7 @@ pie
 {% endmermaid %}
 ```
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-mermaid.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/hexo-theme-butterfly-docs-mermaid.png)
 
 ### Tabs
 移植於next主題
@@ -2160,7 +2160,7 @@ This is my website, click the button {% btn 'https://butterfly.js.org/',Butterfl
 
 
 
-![image-20210319001204045](https://fastly.jsdelivr.net/gh/jerryc127/CDN@m2/img/hexo-theme-butterfly-docs-inlineimg.png)
+![image-20210319001204045](https://cdn1.tianli0.top/gh/jerryc127/CDN@m2/img/hexo-theme-butterfly-docs-inlineimg.png)
 
 
 
@@ -2360,7 +2360,7 @@ xxxxxx
 {% endflink %}
 ```
 
-![](https://fastly.jsdelivr.net/gh/jerryc127/CDN@m2/img/hexo-theme-butterfly-docs-flink-demo.png)
+![](https://cdn1.tianli0.top/gh/jerryc127/CDN@m2/img/hexo-theme-butterfly-docs-flink-demo.png)
 
 
 

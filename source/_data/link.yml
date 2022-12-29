@@ -8,354 +8,80 @@
 #       descr: 博客描述
 # 5. 發起 Pull requests ，合併到 butterfly.js.org 倉庫
 
-- class_name: '<i class="fas fa-check-double" style="color: #FF6666;padding-right: 0.4rem"></i>網站'
-  class_desc: '<span style="font-style: italic;">重要的事情説一遍</span>'
-  link_list:
-    - name: MYW
-      link: https://crazywong.com/
-      avatar: https://crazywong.com/img/avatar.png
-      descr: 今日事,今日畢
-    - name: Hexo
-      link: https://hexo.io/zh-tw/
-      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
-      descr: 快速、簡單且強大的網誌框架
-    - name: Butterfly
-      link: https://github.com/jerryc127/hexo-theme-butterfly
-      avatar: https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-github-avatar.png
-      descr: '🦋 A Hexo Theme: Butterfly'
 
-- class_name: '<i class="fas fa-fan" style="color:#00cccc;padding-right: 0.4rem"></i>示例'
-  class_desc: '<span style="font-style: italic;">最可愛的朋友在這裏</span>'
+- class_name: '<i class="fas fa-check-double" style="color: #FF6666;padding-right: 0.4rem"></i>網站<div class="addBtn"><button onclick="toRandomFlink()"><i class="fas fa-shuffle"></i>随机打开一个链接</button></div>'
+  class_desc: '<span style="font-style: italic;">小窝的装修参考了以下博客</span>'
   link_list:
-    - name: 更多示例
-      link: https://github.com/jerryc127/hexo-theme-butterfly/issues/76
-      avatar: https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/more-butterfly-demo-avatar.png
-      descr: 更多使用 Butterfly 的網站
-    - name: pai233の小窝
-      link: https://blog.pai233.top/
-      descr: Write Down My Life.
-      avatar: https://blog.pai233.top/img/avatar.jpg  
-    - name: GuKaifeng
-      link: https://gukaifeng.cn/
-      avatar: https://gukaifeng.cn/img/avatar.png
-      descr: 客官，来呀，不看会后悔的哦！
-    - name: SerMs
-      link: https://hgm.vercel.app/
-      avatar: https://hgm.vercel.app/img/log.png
-      descr: 东风吹破少年梦,从此再无赤子心~
-    - name: 雨落泪尽
-      link: https://couqiao.net/
-      avatar: https://file.couqiao.net/webimg/gravatar.webp
-      descr: 众人皆醒我独醉
-    - name: 米奇妙妙屋
-      link: https://ifibe.com
-      avatar: https://ifibe.com/img/hotlink-ok/avatar.webp
-      descr: 逐风揽月登九天 踏浪擒龙游四海
-    - name: hermoso
-      link: https://imszz.com
-      avatar: https://fastly.jsdelivr.net/gh/weilain/cdn-photo/Photo/avatar.jpg
-      descr: 时间如一捧流沙,缓缓的在指间流尽
-    - name: 呆逼博客
-      link: https://blog.keepdai.cn/
-      avatar: https://fastly.jsdelivr.net/gh/Daibi-mua/jsdelivr@1.3/logo.png
-      descr: 兴趣使然
     - name: Akilarの糖果屋
       link: https://akilar.top/
-      avatar: https://akilar.top/img/siteicon/favicon.png
-      descr: 期待您的光临！
-    - name: 小嘉的部落格
-      link: https://blog.imzjw.cn/
-      avatar: //cdn.jsdelivr.net/npm/nanshen/avatar.jpg
-      descr: 好记性不如烂笔头
-    - name: Aymeticの小窝
-      link: https://aymetic.com
-      avatar: https://fastly.jsdelivr.net/gh/Aymetic/site-source/img/avatar.jpg
-      descr: 从兴趣出发
-    - name: Heo
+      siteshot: https://npm.elemecdn.com/akilar-friends@latest/siteshot/akilar.top.jpg
+      avatar: https://npm.elemecdn.com/akilar-friends@latest/avatar/akilar.top.jpg
+      descr: 欢迎光临糖果屋
+    - name: 张洪Heo
       link: https://blog.zhheo.com/
-      avatar: https://blog.zhheo.com/img/avatar.png
-      descr: 爱折腾的设计师 
-    - name: BARAN的小站🔥🔥🔥
-      link: https://cxvh.com
-      avatar: https://fastly.jsdelivr.net/gh/cxvh/static@main/avatar/avatar.jpg
-      descr: 指尖跳动留下足迹.
-    - name: 不归路
-      link: https://cmwen.cn
-      avatar: http://q.qlogo.cn/headimg_dl?dst_uin=1914788728&spec=640&img_type=jpg
-      descr: 踏上一条不归路
-    - name: JCAlways
-      link: https://blog.zhangsifan.com
-      avatar: https://i.loli.net/2019/10/13/2a6ve3ZdW8TPCNY.jpg
-      descr: 记录前端知识
-    - name: Fungit
-      link: https://fungit.org/
-      avatar: https://fungit.org/avatar.png
-      descr: 木秀于林 风必摧之
-    - name: 白醭飙尘
-      link: https://y-jinhao.github.io/
-      avatar: https://fastly.jsdelivr.net/gh/Y-JINHAO/resources/img/avator1.png
-      descr: 无疾而终的困倦变成苋红的太阳的血瓷砖石仰慕的书架上呕吐的诗集
-    - name: Ethan.Tzy
-      link: https://tzy1997.com/
-      avatar: https://fastly.jsdelivr.net/gh/tzy13755126023/BLOG_SOURCE/theme_f/avater.jpg
-      descr: 学习与交流的乐园，希望能和你成为好朋友。
-    - name: 没有睡醒
-      link: https://www.hwheng.top/
-      avatar: https://avatars.githubusercontent.com/u/71166703?s=96&v=4
-      descr: 今日事,今日畢
-    - name: sunshine
-      link: https://sunguoqi.com/
-      avatar: https://i.loli.net/2021/06/08/CfvzqNFHag8G3bi.jpg
-      descr: I am your sunshine
-    - name: WindSky
-      link: https://zhouhua.vercel.app/
-      avatar: https://fastly.jsdelivr.net/gh/windskyxb/img/user.jpg
-      descr: 我们必将知道，我们即将知道。
-    - name: W4J1e's blog
-      link: https://www.hin.cool
-      avatar: https://hin.cool/favicon.ico
-      descr: 偏爱不务正业
-    - name: 沐の空间
-      link: https://muspace.top
-      avatar: https://muspace.top/img/favicon.png
-      descr: 缘，妙不可言
-    - name: Xujiayao's Blog
-      link: https://blog.xujiayao.top/
-      avatar: https://blog.xujiayao.top/file/avatar.jpg
-      descr: 没有个性，如何签名？
-    - name: Eurkon
-      link: https://blog.eurkon.com
-      avatar: https://blog.eurkon.com/images/user/avatar.jpg
-      descr: 不只是代码的搬运工
-    - name: 贰猹的小窝
-      link: https://noionion.top/
-      avatar: https://pub-noionion.oss-cn-hangzhou.aliyuncs.com/head.jpg
-      descr: 用这生命中的每一秒，给自己一个不后悔的未来
-    - name: 羽墨志
-      link: https://yumozhi.com
-      avatar: https://yumozhi.com/img/avatar.png
-      descr: 凡是过往，皆为序章！
-    - name: Jasonの小窝
-      link: https://freeaas.com
-      avatar: https://hi.freeaas.com/a/avatar.jpg
-      descr: 因为热爱，所以执着
-    - name: guole's Blog
-      link: https://guole.fun/
-      avatar: https://guole.fun/img/gl.jpg
-      descr: 保持理智，相信明天。
-    - name: 柠檬大师的空间站
-      link: https://leidl.top
-      avatar: https://leidl.top/img/favicon.jpg
-      descr: 一个不善言辞的Java攻城狮
-    - name: Layne666 - Blog
-      link: https://layne666.cn
-      avatar: https://layne666.cn/images/avatar.png
-      descr: 不多说了，诸位，拔剑吧！
-    - name: LastKnightCoder - Blog
-      link: https://lastknightcoder.github.io/hexo-blog/
-      avatar: https://fastly.jsdelivr.net/gh/LastKnightCoder/ImgHosting3@master/avatar.3fylnrbbo8m0.jpg
-      descr: 人生天地间，忽如远行客。
-    - name: yk-ddm - Blog
-      link: https://yk-ddm.github.io
-      avatar: https://yk-ddm.github.io/img/avatar.jpg
-      descr: 少想, 多练！
-    - name: Throwable
-      link: https://www.throwx.cn
-      avatar: https://throwable-blog-1256189093.cos.ap-guangzhou.myqcloud.com/mine/doge_avatar.jpg
-      descr: Java后端开发、基础架构、并发编程   
-    - name: lijinhao's blog
-      link: https://leekinghou-github-io.vercel.app/
-      avatar: https://files.catbox.moe/6g3wus.png
-      descr: 今日事今日毕
-    - name: Hey,Joker - Blog
-      link: https://jokerdig.com
-      avatar: https://fastly.jsdelivr.net/gh/JokerDaxiong/Jokerblog@main/source/images/avatar.png
-      descr: 一个代码小白的成长。
-    - name: RockJesus's blog
-      link: https://rockjesus.cn
-      avatar: https://www.rockjesus.cn/img/black.png
-      descr: 外星人👽黑苹果🍎
-    - name: FiveFire的博客
-      link: https://fivefirex.github.io/
-      avatar: https://fastly.jsdelivr.net/gh/fivefirex/cdn/avatar.jpeg
-      descr: 啥也不会的菜鸟，开发编程
-    - name: 辛巳流火的Blog
-      link: https://huguoyang.cn
-      avatar: https://gitee.com/hgy-xslh/my_img/raw/master/img/logo.png
-      descr: 一个不爱学习的小小白
-    - name: 雪中的博客
-      link: https://mrzefr.cn
-      avatar: https://fastly.jsdelivr.net/gh/SYSTEMWindows11/CDN@main/Doraemon.ico
-      descr: Hello World  
-    - name: 洛竹的博客
-      link: https://youngjuning.js.org
-      avatar: https://fastly.jsdelivr.net/gh/youngjuning/images/202109211729538.png
-      descr: 怕什么真理无穷，进一寸有一寸的欢喜。
-    - name: ZkeqのCoding日志
-      link: https://coding.maylove.pub
-      avatar: https://p6-tt.byteimg.com/origin/user-profile/77759605e13054f68a8d54ed7c510405.png
-      descr: 记录一些基础的Python, Java 语法.
-    - name: 小康博客
-      link: https://www.antmoe.com
-      avatar: https://fastly.jsdelivr.net/npm/kang-static@latest/avatar.jpg
-      descr: 一个收藏回忆与分享技术的地方！
-    - name: Black Flies
-      link: https://www.yyyzyyyz.cn/
-      avatar: https://fastly.jsdelivr.net/gh/hiltay/imgcdn/img/202111191951780.JPG
-      descr: When nothing goes right,just go left.
-    - name: Cyan Blog
-      link: https://blog.xmwpro.com/
-      avatar: https://cyan-blog.oss-cn-shenzhen.aliyuncs.com/global/avatar.jpeg
-      descr: 记录学习、生活和有趣的事
-    - name: midoriya
-      link: https://www.midoriya.co
-      avatar: https://www.midoriya.co/img/avatar1.jpg
-      descr: 我本将心向明月
-    - name: 梦の小窝
-      link: https://renm.cc
-      avatar: https://fastly.jsdelivr.net/gh/renmcc/renmcc@main/img/avatar2.webp
-      descr: 一个收藏回忆与分享技术的地方！
-    - name: BuyiXiao's Blog
-      link: https://buyixiao.github.io/
-      avatar: https://buyixiao.github.io/img/avatar.png
-      descr: 星光殷殷，其灿如言
-    - name: 星空下的YZY
-      link: https://226yzy.com
-      avatar: https://s4.ax1x.com/2021/12/11/oTDujJ.jpg
-      descr: 记录一枚菜鸟的征程
-    - name: Vaycent孙维-Blog
-      link: https://vaycent.com
-      avatar: https://vaycent.com/img/avatar.jpg
-      descr: Have Hard Fun
-    - name: Wotemo
-      link: https://www.wotemo.com
-      avatar: https://www.wotemo.com/img/wotemo.jpg
-      descr: 似此星辰非昨夜，为谁风露立中宵。
-    - name: 一人の境
-      link: https://blog.holic-x.com/wv-blog
-      avatar: https://blog.holic-x.com/img/avatar.jpg
-      descr: Carpe Diem ~
-    - name: Gahotx
-      link: https://gahotx.cn/
-      avatar: https://pub.gahotx.cn/photo/cat.jpg
-      descr: Don't repeat yourself
-    - name: 晴天的博客
-      link: https://qtspace.cn/
-      avatar: https://qtspace.cn/img/avatar.jpg
-      descr: 认清生活的真相，并仍然热爱它
-    - name: anyOne的成长之路
-      link: https://dongmaxiang.github.io
-      avatar: https://fastly.jsdelivr.net/gh/dongmaxiang/CDN@master/blog/avatars.jpg
-      descr: 千里之行，始于足下
-    - name: 暗影博客
-      link: https://dsanying.github.io
-      avatar: https://fastly.jsdelivr.net/gh/dsanying/ImgHosting/avatar.jpg
-      descr: 暗影无际，暗夜无边
-    - name: A.S.
-      link: https://wonderland.plus
-      avatar: https://blogimgs-1310551706.cos.ap-beijing.myqcloud.com/face.png
-      descr: You are wonderful.
-    - name: 打工这件小事
-      link: https://lilu.org.cn
-      avatar: https://fastly.jsdelivr.net/gh/sunchaser-lilu/sunchaser-cdn@master/images/avatar.png
-      descr: 没有那把剑，我照样可以歼灭敌军。
-    - name: GamerNoTitle
-      link: https://bili33.top
-      avatar: https://api.onedrive.com/v1.0/shares/s!Ameewj0EnvFunlgGqAEEhpTuKtmL/root/content
-      descr: GamerNoTitle的小屋
-    - name: Pure'中国
-      link: https://pure.xn--fiqs8s
-      avatar: https://pure.xn--fiqs8s/img/favicon.png
-      descr: Pure De Blog
-    - name: 山岳库博
-      link: https://kmar.top/
-      avatar: https://kmar.top/avatar.jpg
-      descr: 开发学习启发性二刺螈
-    - name: Zxb技术博客
-      link: https://zhaoxiaobin.net
-      avatar: https://zhaoxiaobin.net/pic/static/avatar.png
-      descr: 个人技术博客
-    - name: GuoDong の Blog
-      link: https://tyxiumud.github.io/
-      avatar: https://fastly.jsdelivr.net/gh/tyxiumud/blog.img/avatar.png
-      descr: 开心最重要啦~
-    - name: DaDio
-      link: https://dadio.cc/
-      avatar: https://dadio.cc/img/head.jpg
-      descr: 我走的很慢，但我从不后退
-    - name: CasecoRI 的小站
-      link: https://www.casecori.top/
-      avatar: https://cdn.casecori.top/gh/cystee/om/favicon.png
-      descr: Hyper 2022！
+      avatar: https://img.zhheo.com/i/2022/08/19/62ff32fa28da1.png
+      descr: 是一名 设计师、产品经理、独立开发者、博主
+    - name: 安知鱼`Blog
+      link: https://anzhiy.cn/
+      avatar: https://image.anzhiy.cn/adminuploads/1/2022/09/15/63232b7d91d22.jpg
+      descr: 生活明朗，万物可爱
+    - name: Tianli
+      link: https://tianli-blog.club
+      avatar: https://img1.tianli0.top/logo.png
+      descr: 惟其不可能，所以才相信。
+
+- class_name: '<i class="fas fa-fan" style="color:#00cccc;padding-right: 0.4rem"></i>我的好朋友们'
+  class_desc: '<span style="font-style: italic;">最可愛的朋友在這裏</span>'
+  link_list:
+    - name: 轻笑Chuckle
+      link: https://www.chuckle.top/
+      avatar: https://www.chuckle.top/img/head.webp
+      descr: 宁静致远，倾城轻笑
+    - name: ichikaの小窝
+      link: https://ichika.cc/
+      avatar: https://ichika.cc/img/Page/HeadIcon.jpg
+      descr: Hello,gamer!
     - name: Leonus
       link: https://blog.leonus.cn/
-      avatar: https://q1.qlogo.cn/g?b=qq&nk=553344777&s=640
+      avatar: https://q1.qlogo.cn/g?b=qq&nk=553344777&s=5
       descr: 进一寸有进一寸的欢喜。
-    - name: Felix_Chen
-      link: https://www.felixchen0707.cn/
-      avatar: https://www.felixchen0707.cn/img/theme_img/profile.jpg
-      descr: 抬头看未来
-    - name: ANINEGの小屋
-      link: https://anineg.space/
-      avatar: https://anineg.space/img/avatar.png
-      descr: 欢迎光临ANINEGの小屋!
-    - name: Caps
-      link: https://www.loadcaps.com/
-      avatar: https://img.acdn.run/img/2/2022/06/09/o2grp2-2.jpeg
-      descr: 耐不住寂寞 成不了大事
-    - name: EJYuan的小站
-      link: https://www.ejyuan.fun
-      avatar: https://img1.imgtp.com/2022/07/02/O6Bbw780.jpg
-      descr: Hi,I am EJ.
-    - name: SoulReader的小站
-      link: https://lxx1997.github.io/
-      avatar: https://lxx1997.github.io/image/avatar.png
-      descr: 前端小菜鸟,努力深造。
-    - name: Max's Blog
-      link: https://www.immaxfang.com
-      avatar: https://www.immaxfang.com/img/avatar.png
-      descr: Keep coding. Keep running.
-    - name: LanYunのBlog
-      link: https://lanyundev.vercel.app/
-      avatar: https://lanyundev.vercel.app/img/logo.jpg
-      descr: Share Technology.
-    - name: 一隅
-      link: https://gonglja.github.io/
-      avatar: https://cdn.jsdelivr.net/gh/Gonglja/imgur/img/202204111228921.png
-      descr: Keep Coding.
-    - name: 北梦的个人博客
-      link: https://www.beimengyeyu.com
-      avatar: https://www.beimengyeyu.com/img/avatar.jpg
-      descr: Happy every day.
-    - name: Aaki's Notes
-      link: https://mikan.bangdream.moe
-      avatar: https://gravatar.loli.net/avatar/da416f8013b9815f1e1c81754fffd701?s=300
-      descr: 记事本
-    - name: gis2all
-      link: https://gis2all.github.io/
-      avatar: https://gis2all.github.io/asset/theme_avatar.jpg
-      descr: DAYS GOING ON
-    - name: Liano-Blog
-      link: https://liano.top/
-      avatar: https://liano.top/img/avatar.png
-      descr: 新鲜的博客，不来看看嘛^_^
-    - name: 😁夕夕
-      link: https://imxixi.cn/
-      avatar: https://li-xx.oss-cn-beijing.aliyuncs.com/xixi/%E5%A4%B4%E5%83%8F.jpg
-      descr: 致力于成为更好的人而奋斗
-    - name: hominsu
-      link: https://www.hauhau.cn
-      avatar: https://www.hauhau.cn/img/logo.png
-      descr: 🎉 哈喽啊～各位
-    - name: 时雨小栈
-      link: https://tokiame.cn/
-      avatar: https://tokiame.cn/img/avatar.jpg
-      descr: 自我主义，有何不可
-    - name: Trrrrw
-      link: https://www.trrw.tech/
-      avatar: https://cdn.staticaly.com/gh/Trrrrw/image-hosting@master/images/Avatar.6a6hwam389o0.webp
-      descr: 人与人的羁绊是真正的力量之源
-    - name: 村雨遥
-      link: https://cunyu1943.github.io
-      avatar: https://s1.ax1x.com/2022/10/07/x3JeK0.jpg
-      descr: 专注于 Java、Spring、面试、效率工具等文章分享
+    - name: Sianx's Blog
+      link: https://sianx.com
+      avatar: https://cdn.bilicdn.tk/npm/picture-sianx@1.0.0/Blog/logo.png
+      descr: 总之岁月漫长, 然而值得等待。
+    - name: Fomalhaut🥝
+      link: https://www.fomal.cc/
+      avatar: https://www.fomal.cc/assets/head.jpg
+      descr: Future is now 🍭🍭🍭
+    - name:  小城故事
+      link: https://www.webxc.ml
+      avatar: https://npm.elemecdn.com/webxc/logo/logo.jpg
+      descr: 欢迎光临小城故事
+    - name: 呆鱼
+      link: https://daiyu-233.top/
+      avatar: https://daiyu-233.top/img/avatar.png
+      descr: 命运之所以称为命运，正是因为它无可改变。
+    - name: Ethan.Tzy
+      link: https://tzy1997.com/
+      avatar: https://bu.dusays.com/2022/05/02/626f92e193879.jpg
+      descr: 古今之成大事者，不惟有超世之才，亦必有坚忍不拔之志
+    - name: 青衣
+      link: https://www.qingyi1220.cn/
+      avatar: https://www.qingyi1220.cn/img/Tsingyi.jpg
+      descr: 世界既不黑也不白，而是一道精致的灰
+    - name: 子辰辰
+      link: https://www.xiaozhuzi.xyz/
+      avatar: https://ghost.xiaozhuzi.xyz/cc3/99.jpg
+      descr: 一个渗透测试在学的小菜鸡
+    - name: 小华同学927のBlog
+      link: https://blog.xiaohua927.top/
+      avatar: https://i.imgtg.com/2022/12/01/DM501.jpg
+      descr: 行而不辍，未来可期！
+    - name: 无影博客
+      link: https://wyblog1.eu.org
+      avatar: https://gcore.jsdelivr.net/gh/612901/661111@main/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-12-21%20102358.png
+      descr: 无影博客
+    - name: Echocbx
+      link: https://ezgx.tk/
+      avatar: https://wlopck.gitee.io/img/avatar.png
+      descr: 分享科技与狠活~

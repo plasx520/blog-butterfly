@@ -1,0 +1,98 @@
+//if top_img === false
+//  h1.page-title= page.title
+#video-select.video-select
+hr
+h3= 视频列表
+.videos
+  if site.data.video
+    each i,index in site.data.video
+      div(class="myvideo" onclick=`javascipt:selectVideo(`+index+`)`)
+        div(id=`video-item-`+index class="video-item" data-src=url_for(i.link))
+          a(href="#video-select")
+            img.video-item-cover(src=url_for(i.cover))
+        .video-desc
+          .video-title
+            a(href="#video-select")= i.title
+          .video-info= i.description
+
+style.
+  .videos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+  @media screen and (max-width: 1200px){
+    .videos{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+    }
+  }
+  @media screen and (max-width: 900px){
+    .videos{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+    }
+  }
+  @media screen and (max-width: 600px){
+    .videos{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+    }
+  }
+  .myvideo{
+    position: relative;
+    width: 100%;
+    border: 1px solid var(--mj-card-border);
+    border-radius: 12px;
+  }
+  .video-item{
+    overflow: hidden;
+    height: 160px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  .video-item img {
+    position: relative;
+    width: 100%;
+    margin: 0 !important;
+    height: 100%;
+    transform: scale(1.0);
+    transition: .3s;
+    object-fit: cover;
+  }
+  .myvideo:hover .video-item img {
+    transition: .3s;
+    transform: scale(1.1);
+  }
+  .video-title{
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .video-info{
+    font-size: 14px;
+    padding: 0 10px;
+    color: var(--mj-secondtext);
+  }
+  .video-select{
+    position:relative;
+    width:100%;
+    height:0;
+    padding-bottom:75%;
+  }
+  .video-select iframe{
+    position:absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    border-radius: 12px;
+  }
+!= page.content

@@ -9,10 +9,10 @@ tags:
 categories: Docs文檔
 keywords: 'hexo,butterfly,主題,doc,教程,文檔'
 description: Butterfly安裝文檔-更新日誌
-cover: https://fastly.jsdelivr.net/gh/jerryc127/CDN/img/Butterfly-docs-07-cover.png
+cover: https://cdn1.tianli0.top/gh/jerryc127/CDN/img/Butterfly-docs-07-cover.png
 abbrlink: 198a4240
 toc: false
-comments: false
+comments: true
 ---
 
 {% note blue 'fas fa-bullhorn' %}
