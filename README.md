@@ -78,6 +78,8 @@ npm install hexo-butterfly-envelope --save
 ~~~
 npm install hexo-lazyload-image --save
 ~~~
-
-
+5.本地搜索插件
+~~~
+npm install hexo-generator-search --save
+~~~
 ![](https://s2.loli.net/2022/11/14/thB3auFOdvHJWEU.webp)
