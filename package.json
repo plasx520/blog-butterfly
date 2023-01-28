@@ -27,7 +27,7 @@
     "hexo-lazyload-image": "^1.0.13",
     "hexo-renderer-ejs": "^1.0.0",
     "hexo-renderer-jade": "^0.5.0",
-    "hexo-renderer-marked": "^4.0.0",
+    "hexo-renderer-marked": "^6.0.0",
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^2.0.0",
     "hexo-tag-aplayer": "^3.0.4",
