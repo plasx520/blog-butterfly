@@ -1,36 +1,10 @@
-- date: 精品
-  msg: 魔改目录
-  color: "color: #e04f4f;"
-  url: /posts/c6050a1d.html
-- date: css
-  msg: 主题butterfly4.5.1css美化教程（一）
-  color: "color: #3d82ff;"
-  url: /posts/b48f40bd.html
-- date: css
-  msg: 主题butterfly4.5.1css美化教程（二）
-  color: "color: #3d82ff;"
-  url: /posts/eb769414.html
-- date: bat
-  msg: hexo博客系统快速命令工具（CMD快速辅助工具）
-  color: 
-  url: /posts/db0a31c8.html
-- date: 教程
-  msg: 5分钟搭一个hexo博客
-  color: 
-  url: /posts/b9dc5266.html
-- date: J  S
-  msg: 主题butterfly顶部复制提示弹窗
-  color: 
-  url: /posts/3296cbc9.html
-- date: 教程
-  msg: 主题butterfly拥有星空背景和流星特效
-  color: 
-  url: /posts/9ee2cd59.html
-- date: 教程
-  msg: Butterfly 安裝文檔(一) 快速開始
-  color: 
-  url: /posts/21cfbf15.html
-- date: J  S
-  msg: 友情链接快速添加js代码按钮填写内容
-  color: 
-  url: /posts/80adb334.html
+# 公告栏
+index1:
+  - date: 啊啊啊啊主题开源了。自己研究啊吧
+  - date: 我懒得写作品就喜欢改网页(՞•Ꙫ•՞)在此欢迎您光临小破站
+index2:
+  - date: 11111
+  - date: 22222
+index3:
+  - date: 33333
+  - date: 44444

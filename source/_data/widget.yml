@@ -1,24 +1,17 @@
 bottom:
-    - class_name: user-map
-      id_name: user-map 
-      name: 牛夫人 #名称
-      icon: fas fa-heartbeat #图标
+    - class_name:
+      id_name: newYear 
+      name: 
+      icon: 
       order: 1 #排序
-      html: <div class="card-widget heo-right-widget" id="card-wechat" onclick="window.open('/wechat/')"><div id="flip-wrapper"><div id="flip-content"><div class="face"></div><div class="back face"></div></div></div></div> #代码
+      html: <div class="card-widget heo-right-widget" id="card-wechat"><div id="flip-wrapper"><div id="flip-content"><div class="face"></div><div class="back face"></div></div></div></div> #代码
+
 
 
 top:
-  - class_name: 'card-docs card-categories'
-    id_name:
-    name: 文檔目錄
-    icon: fas fa-car-side
-    html: '<ul class=card-category-list>
-    <li class=card-category-list-item><a class=card-category-list-link href=/posts/21cfbf15/ >快速開始</a></li>
-    <li class=card-category-list-item><a class=card-category-list-link href=/posts/dc584b87/ >主題頁面</a></li>
-    <li class=card-category-list-item><a class=card-category-list-link href=/posts/4aa8abbe/ >主題配置1</a></li>
-    <li class=card-category-list-item><a class=card-category-list-link href=/posts/ceeb73f/ >主題配置2</a></li>
-    <li class=card-category-list-item><a class=card-category-list-link href=/posts/98d20436/ >主題問答</a></li>
-    <li class=card-category-list-item><a class=card-category-list-link href=/posts/4073eda/ >進階教程</a></li>
-    <li class=card-category-list-item><a class=card-category-list-link href=/posts/198a4240/ >更新日誌</a></li>
-    </ul>'
-
+  - class_name:
+    id_name: newYear
+    name:
+    icon:
+    order: 1
+    html: '<div class="about-statistic author-content-item2"><div class="card-content"><div class="lightning"><div class="lightning1"><img src="https://drfs.ctcontents.com/file/14237530/755647870/e44191/img/index/swordsmen.webp"></div><div class="lightning2"><img src="https://www.jiangweishan.com/demo/lightning2.png"></div></div><span class="author-content-item-title">文章归档  </span><div class="banner-button-group"><a class="banner-button" onclick="pjax.loadUrl(&quot;/archives/&quot;)" data-pjax-state="data-pjax-state"><span class="banner-button-text">文章隧道</span></a></div></div></div>'

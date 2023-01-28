@@ -3,15 +3,8 @@ extends includes/layout.pug
 block content
   include ./includes/mixins/post-ui.pug
   #recent-posts.recent-posts
-    include includes/notice.pug
-    include includes/ggl.pug
-    .author-content
-      .bannerGroup(style='height:auto;width:73%;padding:0px;')
-        .recent-post-item
-          !=partial('includes/sliderbar', {}, {cache:true})
-        .categoryGroup
-          !=partial('includes/sy2sliderbar', {}, {cache:true})
-      .recent-post-item(style='height:auto;width:25%;padding:0px;')
-        !=partial('includes/sysliderbar', {}, {cache:true})
+    include includes/categoryBar.pug
+    include includes/jinping.pug
+    include includes/appxiazai.pug
     +postUI
     include includes/pagination.pug

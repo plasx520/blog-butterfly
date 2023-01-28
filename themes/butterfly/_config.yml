@@ -46,7 +46,7 @@ copy:
 social:
   iconfont icon-liulanqi1: https://4t.pw || 浏览器
   iconfont icon-email: mailto:1400000222@qq.com || 邮箱
-  iconfont icon-QQ: https://github.com/tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1400000222&website=4t.pw || QQ
+  iconfont icon-QQ: tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1400000222&website=4t.pw || QQ
   iconfont icon-weixin: /about/ || 微信
   iconfont icon-douyin: https://v.douyin.com/rJq4VdC/ || 抖音
 
@@ -91,26 +91,27 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）网站转圈logo
-favicon: https://unpkg.com/plasx@1.0.3/img/favicon.webp # https://cdn2.tianli0.top/npm/plasx@1.0.3/img/favicon.webp
+favicon: https://unpkg.com/plasx@1.0.3/img/favicon.webp 
 
 # Avatar (頭像) true一直旋转
 avatar:
-  img: https://unpkg.com/plasx@1.0.3/img/favicon.webp # https://cdn2.tianli0.top/npm/plasx@1.0.3/img/favicon.webp
+  img: https://unpkg.com/plasx@1.0.3/img/favicon.webp 
   effect: false
 # 禁用所有横幅图片
 disable_top_img: false
 
-# 首页横幅图片
-index_img: https://api.dujin.org/pic/yuanshen/
+# 首页横幅图片视频
+index_img: https://s2.loli.net/2022/11/04/GOKblJF1BMpWvYf.webp
 # 视频地址
-index_video: https://www.wulihub.com.cn/gc/Q5ND2N/1920.js
-# https://api.ixiaowai.cn/api/api.php
+index_video: false
+
+# https://api.ixiaoi.cn/api/api.php
 
 # 无横幅显示图片
-default_top_img: https://api.ixiaowai.cn/api/api.php
+default_top_img: https://s2.loli.net/2022/11/04/GOKblJF1BMpWvYf.webp
 
 # 存档页面的横幅图像
-archive_img: https://api.ixiaowai.cn/api/api.php
+archive_img: https://s2.loli.net/2022/11/04/GOKblJF1BMpWvYf.webp
 
 # 如果标签页面的横幅未设置，则会显示top_img
 # 注意：标记页，而不是标记页 (子标签页面的 top_img)
@@ -274,13 +275,13 @@ addThis:
 # Share.js
 # https://github.com/overtrue/share.js
 sharejs:
-  enable: false
+  enable: true
   sites: facebook,twitter,wechat,weibo,qq
 
 # AddToAny
 # https://www.addtoany.com/
 addtoany:
-  enable: true
+  enable: false
   item: facebook,twitter,wechat,sina_weibo,facebook_messenger,email,copy_link
 
 # 评论系统
@@ -289,7 +290,7 @@ addtoany:
 comments:
   # 最多两个评论系统，第一个将显示为默认值
   # 系统选项: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/Artalk
-  use: false # Valine,Disqus
+  use: Twikoo # Valine,Disqus
   text: true # 在按钮旁边显示注释名称
   # 延迟加载：当注释元素进入浏览器的视区时，注释系统将被加载。
   # 如果将其设置为 true，则注释计数将无效
@@ -329,9 +330,9 @@ gitalk:
 # valine
 # https://valine.js.org
 valine:
-  appId:  # leancloud application app id
-  appKey:  # leancloud application app key
-  avatar:  # gravatar style https://valine.js.org/#/avatar
+  appId: ghDRRuzFEeixcb54vQzw6ncH-gzGzoHsz # leancloud application app id
+  appKey: ksJTq62M6cbFpeK7mv5abq1 # leancloud application app key
+  avatar: retro # gravatar style https://valine.js.org/#/avatar
   serverURLs: # 此配置适用于国内自定义域名用户，海外版本将自动检测（无需手动填写）
   bg: # valine 背景
   visitor: false #文章访问量统计
@@ -367,7 +368,7 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: 
+  envId: https://twikoo.zhheo.com
   region:
   visitor: false
   option:
@@ -449,10 +450,10 @@ messenger:
 # --------------------------------------
 footer:
   owner:
-    enable: false
+    enable: true
     since: 1993
-  custom_text: JSD加速由Tianli提供
-  copyright: false # 主题和框架的版权
+  custom_text: 没有爱了<script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script><script charset="utf-8" data-pjax="" src="/js/index.js"></script>
+  copyright: true # 主题和框架的版权
 
 # 分析统计
 # --------------------------------------
@@ -547,7 +548,7 @@ background:
   mobileday:  #【可选】移动端日间默认背景
   mobilenight:  #【可选】移动端夜间模式背景
 # 版权栏颜色背景
-footer_bg: 'linear-gradient(-45deg,#00053f,#00c9ff,#23a6d5,#00cb6f);background-size: 400% 400%; animation: gradientBG 15s ease infinite;'
+footer_bg: 'var(--heo-theme);'
 
 # 右下按钮/默认值的位置 unit: px 
 rightside-bottom: 
@@ -711,7 +712,7 @@ aside:
       text: 主题开源地址
       link: https://github.com/plasx520/blog-butterfly
   card_announcement:
-    enable: true
+    enable: false
     content: 主题以开源
   card_recent_post:
     enable: true
@@ -890,7 +891,7 @@ pangu:
 lazyload:
   enable: true
   field: site # site/post
-  placeholder: https://drfs.ctcontents.com/file/14237530/741480498/72a3ca/img/index/lazyload.webp
+  placeholder: https://cdn.4t.pw/file/14237530/741480498/72a3ca/img/index/lazyload.webp
   blur: false
 
 # PWA
@@ -924,32 +925,27 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-      # 置顶公告栏
-      # - <link rel="stylesheet" type="text/css" href="https://npm.elemecdn.com/blog12.8@1.0.1/notice.css"> 
       # 导航必备
-      - <link rel="preload" href="https://npm.elemecdn.com/blog12.8@1.0.1/nav_menu.css" as="style" onload="this.rel='stylesheet'"> # https://unpkg.com/plasx@1.0.3/css/nav_menu.css
-      # - <link rel="stylesheet" href="https://unpkg.com/plasxhexo@1.0.2/css/tag-link.css"> # https://cdn.jsdelivr.net/gh/zhheo/JS-Heo@main/tag-link/tag-link.css
-      # 更新
-      - <link rel="stylesheet"  type="text/css" href="/css/notice.css">  
-      # 标签时间轴     
-      # - <link rel="stylesheet" type="text/css" href="https://unpkg.com/plasxhexo@1.0.2/css/categoryBar.css"> # https://cdn.jsdelivr.net/npm/js-heo@1.0.11/categoryBar/categoryBar.css
-      #- <link rel="stylesheet" type="text/css" href="https://unpkg.com/plasxhexo@1.0.2/css/heoMainColor.css"> # https://cdn.jsdelivr.net/npm/js-heo@1.0.11/mainColor/heoMainColor.css
-
+      - <link rel="preload" href="https://npm.elemecdn.com/blog2023@1.0.2/nav_menu.css" as="style" onload="this.rel='stylesheet'"> 
   bottom:
      # 标签时间轴# 随机主题颜色
      - <script defer src="https://npm.elemecdn.com/blog12.8@1.0.1/categoryBar.js"></script> # https://cdn.jsdelivr.net/npm/js-heo@1.0.11/categoryBar/categoryBar.js
      # 夜间模式切换，css后半段代码为背景切换
-     - <script src="https://www.wulihub.com.cn/gc/QRKAMb/js/sun_moon.js" async></script> # https://cdn.cbd.int/plasx@1.0.3/js/sun_moon.js
+     - <script src="https://npm.elemecdn.com/blog2023@1.0.2/sun_moon.js" async></script> # https://cdn.cbd.int/plasx@1.0.3/js/sun_moon.js
      # 背景切换
      - <script src="https://unpkg.com/plasxhexo@1.0.2/js/winbox.bundle.min.js"></script> # https://cdn.jsdelivr.net/gh/nextapps-de/winbox/dist/winbox.bundle.min.js
      # 百度统计
      - <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?98d6c60617ee763b4f6708fedd7f50e5";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script>
      # 导航必备
-     - <script charset="utf-8" data-pjax="" src="https://npm.elemecdn.com/blog12.8@1.0.1/nav_menu.js"></script> 
-     # 音乐
-     # - <div class="aplayer no-destroy" data-id="6886768100" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-theme="#3F51B5"> </div>
-     # 复制提示
-     - <script charset="utf-8" data-pjax="" src="/js/fuzhi.js"></script>
+     - <script charset="utf-8" data-pjax="" src="https://npm.elemecdn.com/blog2023@1.0.2/nav_menu.js"></script> 
+     #  随机文章
+     - <script src="/zhheo/random.js"></script>
+     # 阿里图标库
+     - <script async src="https://at.alicdn.com/t/c/font_3855261_r5lzgvwjjsm.js"></script>
+     
+
+
+     
 
 
 
@@ -959,10 +955,6 @@ inject:
 # 不要修改以下设置，除非您知道它们是如何工作的
 # 非必要請不要修改
 CDN:
-  # 首页轮播图
-  swiper_js: https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/4.1.6/js/swiper.min.js
-  swiper_css: https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/4.1.6/css/swiper.min.css
-  swiper_init: https://cdn.cbd.int/plasx@1.0.3/js/swiper_init.js
   # The CDN provider of internal scripts (主題內部 js 的 cdn 配置)
   # option: local/jsdelivr/unpkg/cdnjs/custom
   # Dev version can only choose. ( dev版的主題只能設置為 local )
@@ -974,22 +966,22 @@ CDN:
 # 第三方脚本的 CDN 提供商（第三方 js 的 cdn 配置） 
 # 选项：local/jsdelivr/unpkg/cdnjs/custom 
 # 设置为 local 时，需要安装 hexo-butterfly-extjs
-  third_party_provider: jsdelivr
+  third_party_provider: custom
 # 将版本号添加到 CDN，无论真假 
   version: false
 
   #自定义格式
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
-  custom_format: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
+  custom_format: https://npm.elemecdn.com/${name}@${version}/${file}
 
   option:
-    # main_css: 
+    main_css: https://npm.elemecdn.com/blog2023@1.0.2/index.css
     countup_js: https://cdn.cbd.int/plasx@1.0.3/js/countup.js # countupJS关于页面
-    # main: 
-    # utils: 
+    main: https://npm.elemecdn.com/blog2023@1.0.2/main.js
+    utils: https://npm.elemecdn.com/blog2023@1.0.2/utils.js
     translate: https://cdn.zhheo.com/JS-Heo/translate/tw_cn.js 
-    # local_search: 
-    # algolia_js: https://anzhiy.cn/js/search/algolia.js
+    local_search: https://npm.elemecdn.com/blog2023@1.0.2/local-search.js
+    algolia_js: https://npm.elemecdn.com/blog2023@1.0.2/algolia.js
     # algolia_search_v4:
     instantsearch_v4: https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.49.1/instantsearch.production.min.js
     pjax: https://cdn.bootcdn.net/ajax/libs/pjax/0.2.8/pjax.min.js # https://lib.baomitu.com/pjax/0.2.8/pjax.min.js
@@ -1029,7 +1021,7 @@ CDN:
     # flickr_justified_gallery_css:
     aplayer_css: https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-ms/aplayer/1.10.1/APlayer.min.css
     aplayer_js: https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-ms/aplayer/1.10.1/APlayer.min.js
-    meting_js: https://unpkg.zhimg.com/meting@1.2.0/dist/Meting.min.js # https://unpkg.com/meting@1.2.0/dist/Meting.min.js
+    meting_js: https://unpkg.com/meting@1.2.0/dist/Meting.min.js
     prismjs_js: https://npm.elemecdn.com/prismjs@1.1.0/prism.js
     prismjs_lineNumber_js: https://npm.elemecdn.com/prismjs/plugins/line-numbers/prism-line-numbers.min.js
     prismjs_autoloader: https://npm.elemecdn.com/prismjs/plugins/autoloader/prism-autoloader.min.js
@@ -1060,3 +1052,13 @@ index_generator:
   path: ''
   per_page: 14
   order_by: -date
+# 源计划-方舟：首页轮播图
+# see https://akilar.top/posts/658f52d0/
+swiperBar:
+  enable: true # 开关
+  timemode: updated #date/updated
+  error_img: /img/cover.png #默认封面。记得换成自己的。
+  default_descr: 就算再怎么看我也不知道怎么描述它好啦！
+  swiper_css: https://npm.elemecdn.com/swiper@8.4.2/swiper-bundle.min.css #swiper css依赖
+  swiper_js: https://npm.elemecdn.com/swiper@8.4.2/swiper-bundle.min.js #swiper js依赖
+  swiper_init_js: /js/custom/swiper_init.js # swiper初始化方法

@@ -13,5 +13,6 @@ top_img: https://s2.loli.net/2022/11/04/y8rclikszbXZ7HK.webp
 {% galleryGroup '漫威' '關於漫威的圖片' '/xiance/marvel' https://i.loli.net/2019/12/25/8t97aVlp4hgyBGu.jpg %}
 
 {% galleryGroup 'OH MY GIRL' '關於OH MY GIRL的圖片' '/xiance/ohmygirl' https://i.loli.net/2019/12/25/hOqbQ3BIwa6KWpo.jpg %}
+{% galleryGroup '我的照片' '额济纳旗胡杨林景区' '/xiance/20221219' https://cdn.4t.pw/file/14237530/751065636/f65076/img/xiance/huyanling/2018-10-16%2814%29.jpg %}
 
 </div>

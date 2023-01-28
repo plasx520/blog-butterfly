@@ -1,0 +1,152 @@
+html, body {
+    margin: 0px;
+}
+
+#switcher {
+    background: #5cb85c;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+}
+
+.center {
+    padding-top: 0;
+    width: 100%;
+}
+
+.center ul li {
+    display: inline;
+    margin-top: -8px;
+    float: left;
+    position: relative;
+}
+a{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#logoTop, .right-tool {
+    margin: -8px 10px 0 -30px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-family: "microsoft yahei";
+}
+
+.center ul li.right-tool {
+	margin-left:10px;
+    cursor: pointer;
+    float: right
+}
+
+.center ul li ul li {
+    margin: 0 0 1px 4px;
+    padding: 5px;
+    width: 271px;
+}
+
+.center ul li ul li:hover a {
+    color: #f8bc06;
+}
+
+#iframe {
+    margin-top: 0;
+}
+
+.icon-monitor, .icon-tablet, .icon-mobile-1, .icon-mobile-2, .icon-mobile-3 {
+    height: 23px;
+    margin-right: 7px;
+    width: 30px;
+}
+
+.icon-monitor {
+    background-image: url("/dmyx/images/device_ico.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.icon-tablet {
+    background: rgba(0, 0, 0, 0) url("/dmyx/images/device_ico.png") no-repeat scroll -40px 0;
+}
+
+.icon-mobile-1 {
+    background: rgba(0, 0, 0, 0) url("/dmyx/images/device_ico.png") no-repeat scroll -76px 0;
+}
+
+.icon-monitor:hover, .icon-monitor.active {
+    background-position: 0 -24px;
+}
+
+.icon-tablet:hover, .icon-tablet.active {
+    background-position: -40px -24px;
+}
+
+.icon-mobile-1:hover, .icon-mobile-1.active {
+    background-position: -76px -24px;
+}
+
+.icon-mobile-2 {
+    background: rgba(0, 0, 0, 0) url("/dmyx/images/device_ico.png") no-repeat scroll -118px 0;
+}
+
+.icon-mobile-3 {
+    background: rgba(0, 0, 0, 0) url("/dmyx/images/device_ico.png") no-repeat scroll -151px 0;
+}
+
+.icon-mobile-2:hover, .icon-mobile-2.active {
+    background-position: -118px -24px;
+}
+
+.icon-mobile-3:hover, .icon-mobile-3.active {
+    background-position: -151px -24px;
+}
+
+#iframe-wrap {
+    height: 100%;
+    margin-top: 40px;
+    z-index: 50;
+}
+
+.tablet-width {
+    background: rgba(0, 0, 0, 0) url("/dmyx/images/shouji.png") no-repeat scroll 44px 3px;
+    height: 627px !important;
+    margin: 40px auto;
+    padding: 73px 17px 102px 61px;
+    width: 490px;
+}
+.tablet-width iframe {
+    height: 652px !important;
+}
+
+.mobile-width {
+    background: rgba(0, 0, 0, 0) url("/dmyx/images/shouji.png") no-repeat scroll -526px 2px;
+    height: 411px !important;
+    margin: 40px auto 0;
+    padding: 21px 81px 99px 70px;
+    width: 652px;
+}
+.mobile-width iframe {
+    height: 490px !important;
+}
+
+.mobile-width-2 {
+	background: rgba(0, 0, 0, 0) url("/dmyx/images/shouji.png") no-repeat scroll -647px -531px;
+    height: 385px !important;
+    margin: 40px auto 0;
+    padding: 55px 12px 169px 10px;
+    width: 291px;
+}
+.mobile-width-2 iframe {
+    height: 492px !important;
+}
+
+.mobile-width-3 {
+    background: rgba(0, 0, 0, 0) url("/dmyx/images/shouji.png") no-repeat scroll -1px -797px;
+    height: 170px !important;
+    margin: 40px auto 0;
+    padding: 12px 67px 134px 54px;
+    width: 492px;
+}
+.mobile-width-3 iframe {
+    height: 293px !important;
+}

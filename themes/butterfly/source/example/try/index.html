@@ -1,0 +1,103 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>在线预览 - 手册网</title>
+<link rel="stylesheet" type="text/css" href="/dmyx/css/try.css" />
+<script type="text/javascript" src="//apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+	<div id="switcher">
+		<div class="center">
+			<ul>
+				<li id="logoTop"><a href="https://www.shouce.ren" class="btn btn-success btn-sm color-f" target="_blank">手册网在线预览</a></li>
+				<div id="Device">
+					<li class="device-monitor"><a href="javascript:">
+							<div class="icon-monitor icon-list"></div>
+					</a></li>
+					<li class="device-mobile-2"><a href="javascript:">
+							<div class="icon-mobile-2 icon-list"></div>
+					</a></li>
+					<li class="device-mobile-3"><a href="javascript:">
+							<div class="icon-mobile-3 icon-list"></div>
+					</a></li>
+					<li class="device-mobile"><a href="javascript:">
+							<div class="icon-tablet icon-list"></div>
+					</a></li>
+					<li class="device-mobile"><a href="javascript:">
+							<div class="icon-mobile-1 icon-list"></div>
+					</a></li>
+				</div>
+									<li class="right-tool" onclick="window.close();">返回</li>
+								<li class="right-tool" onclick="window.location.reload(true);">刷新</li>
+			</ul>
+		</div>
+	</div>
+	<div id="iframe-wrap">
+		<iframe id="iframe" src="/example/try/code/1/bd/rono" frameborder="0" width="100%"></iframe>
+	</div>
+	<script type="text/javascript">
+			var theme_list_open = false;
+			$(document).ready(function () {
+				function fixHeight() {
+					var headerHeight = $("#switcher").height();
+					$("#iframe").attr("height", $(window).height()-45 + "px");
+				}
+				$(window).resize(function () {
+					fixHeight();
+				}
+								).resize();
+
+				//响应式预览
+				if(''){
+					$('.icon-mobile-2').addClass('active');
+					$(".icon-mobile-2").click(function () {
+						$('#iframe-wrap').removeClass().addClass('mobile-width-2');
+						$('.icon-list').removeClass('active');
+						$(this).addClass('active');
+						return false;
+					}).trigger('click');
+				}else{
+					$('.icon-monitor').addClass('active');
+					$(".icon-mobile-2").click(function () {
+						$('#iframe-wrap').removeClass().addClass('mobile-width-2');
+						$('.icon-list').removeClass('active');
+						$(this).addClass('active');
+						return false;
+					});
+				}
+
+				$(".icon-mobile-3").click(function () {
+					$('#iframe-wrap').removeClass().addClass('mobile-width-3');
+					$('.icon-list').removeClass('active');
+					$(this).addClass('active');
+					return false;
+				}
+										 );
+				$(".icon-mobile-1").click(function () {
+					$('#iframe-wrap').removeClass().addClass('mobile-width');
+					$('.icon-list').removeClass('active');
+					$(this).addClass('active');
+					return false;
+				}
+										 );
+				$(".icon-tablet").click(function () {
+					$('#iframe-wrap').removeClass().addClass('tablet-width');
+					$('.icon-list').removeClass('active');
+					$(this).addClass('active');
+					return false;
+				}
+									   );
+				$(".icon-monitor").click(function () {
+					$('#iframe-wrap').removeClass().addClass('full-width');
+					$('.icon-list').removeClass('active');
+					$(this).addClass('active');
+					return false;
+				}
+										);
+			}
+							 );
+		</script>
+</body>
+</html>

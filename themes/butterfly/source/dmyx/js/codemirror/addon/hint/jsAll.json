@@ -1,0 +1,1078 @@
+{
+  "!name": "jQuery",
+  "!define": {
+    "offset": {
+      "top": "number",
+      "left": "number"
+    },
+    "keyvalue": {
+      "name": "string",
+      "value": "string"
+    }
+  },
+  "jQuery": {
+    "!type": "fn(selector: string, context?: frameElement) -> jQuery.fn",
+    "!doc": "通过传递参数(s)返回一个匹配的元素集合或创建一个HTML。",
+    "fn": {
+      "add": {
+        "!type": "fn(selector: string) -> jQuery.fn",
+        "!doc": "把与表达式匹配的元素添加到jQuery对象中。这个函数可以用于连接分别与两个表达式匹配的元素结果集。例：$('p').add('span')"
+      },
+      "addBack": {
+        "!type": "fn(selector?: string) -> jQuery.fn",
+        "!doc": "添加堆栈中元素集合到当前集合，一个选择性的过滤选择器。例：$('li.third-item').nextAll().addBack().css('background-color','red');"
+      },
+      "addClass": {
+        "!type": "fn(className: string) -> jQuery.fn",
+        "!doc": "为每个匹配的元素添加指定的类名。例：$('p').addClass('selected');"
+      },
+      "after": {
+        "!type": "fn(content: ?) -> jQuery.fn",
+        "!doc": "在每个匹配的元素之后插入内容。例：$('p').after('<b>Hello</b>');"
+      },
+      "ajaxComplete": {
+        "!type": "fn(handler: fn(event: +jQuery.Event, req: +XMLHttpRequest)) -> jQuery.fn",
+        "!doc": "AJAX 请求完成时执行函数。Ajax 事件。例：$('#msg').ajaxComplete(function(event,request,settings){$(this).append('<li>请求完成.</li>')});"
+      },
+      "ajaxError": {
+        "!type": "fn(handler: fn(event: +jQuery.Event, req: +XMLHttpRequest)) -> jQuery.fn",
+        "!doc": "AJAX 请求发生错误时执行函数。Ajax 事件。例：$('#msg').ajaxError(function(event,request,settings){$(this).append('<li>出错页面:'+settings.url+'</li>')});"
+      },
+      "ajaxSend": {
+        "!type": "fn(handler: fn(event: +jQuery.Event, req: +XMLHttpRequest)) -> jQuery.fn",
+        "!doc": "AJAX 请求发送前执行函数。Ajax 事件。例：$('#msg').ajaxSend(function(evt,request,settings){$(this).append('<li>开始请求: '+settings.url+'</li>')});"
+      },
+      "ajaxStart": {
+        "!type": "fn(handler: fn()) -> jQuery.fn",
+        "!doc": "AJAX 请求开始时执行函数。Ajax 事件。例：$('#loading').ajaxStart(function(){$(this).show()});"
+      },
+      "ajaxStop": {
+        "!type": "fn(handler: fn()) -> jQuery.fn",
+        "!doc": "AJAX 请求结束时执行函数。Ajax 事件。例：$('#loading').ajaxStop(function(){$(this).hide()});"
+      },
+      "ajaxSuccess": {
+        "!type": "fn(handler: fn(event: +jQuery.Event, req: +XMLHttpRequest)) -> jQuery.fn",
+        "!doc": "AJAX 请求成功时执行函数。例：$('#msg').ajaxSuccess(function(evt,request,settings){$(this).append('<li>请求成功!</li>')});"
+      },
+      "andSelf": {
+        "!type": "fn() -> jQuery.fn",
+        "!doc": "加入先前所选的加入当前元素中,从jQuery1.8开始，.andSelf()方法已经被标注过时，在jQuery1.8和更高版本中应使用.addBack()。例：$('div').find('p').andSelf().addClass('border');"
+      },
+      "animate": {
+        "!type": "fn(properties: ?, duration?: number, easing?: string, complete?: fn()) -> jQuery.fn",
+        "!doc": "用于创建自定义动画的函数。例：$('#right').click(function(){$('.block').animate({left:'+50px'},'slow')});"
+      },
+      "append": {
+        "!type": "fn(content: ?) -> jQuery.fn",
+        "!doc": "向每个匹配的元素内部追加内容。例：$('p').append('<b>Hello</b>');"
+      },
+      "appendTo": {
+        "!type": "fn(target: ?) -> jQuery.fn",
+        "!doc": "把所有匹配的元素追加到另一个指定的元素元素集合中。例：$('p').appendTo('div');"
+      },
+      "attr": {
+        "!type": "fn(name: string, value?: string) -> string",
+        "!doc": "获取匹配的元素集合中的第一个元素的属性的值 或 设置每一个匹配元素的一个或多个属性。例：$('img').attr('src');$('img').attr('src','test.jpg');"
+      },
+      "before": {
+        "!type": "fn(content: ?) -> jQuery.fn",
+        "!doc": "在每个匹配的元素之前插入内容。例：$('p').before('<b>Hello</b>');"
+      },
+      "bind": {
+        "!type": "fn(eventType: string, handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "为每个匹配元素的特定事件绑定事件处理函数。例：$('p').bind('click',function(){alert($(this).text())});"
+      },
+      "blur": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当元素失去焦点时触发 blur 事件。例：$('p').blur( function () { alert('Hello World!'); } );"
+      },
+      "change": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当元素的值发生改变时，会发生 change 事件。例：$('input[type='text']').change(function(){alert('Hello World!');});"
+      },
+      "children": {
+        "!type": "fn(selector?: string) -> jQuery.fn",
+        "!doc": "取得一个包含匹配的元素集合中每一个元素的所有子元素的元素集合。例：$('div').children('.selected')"
+      },
+      "click": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "触发每一个匹配元素的click事件。例：$('p').click( function () { $(this).hide(); });"
+      },
+      "clone": {
+        "!type": "fn(dataAndEvents?: bool, deep?: bool) -> jQuery.fn",
+        "!doc": "克隆匹配的DOM元素并且选中这些克隆的副本。例：$('b').clone().prependTo('p');"
+      },
+      "closest": {
+        "!type": "fn(selector: string) -> jQuery.fn",
+        "!doc": "从元素本身开始，逐级向上级元素匹配，并返回最先匹配的元素。例：$('li:first').closest(['ul', 'body']);"
+      },
+      "contents": {
+        "!type": "fn() -> jQuery.fn",
+        "!doc": "查找匹配元素内部所有的子节点（包括文本节点）。如果元素是一个iframe，则查找文档内容。例：$('p').contents().not('[nodeType=1]').wrap('<div>');"
+      },
+      "context": {
+        "!type": "fn() -> +Element",
+        "!doc": "返回传给jQuery()的原始的DOM节点内容，即jQuery()的第二个参数。例：$('ul').append('<li>'+$('ul').context+'</li>').append('<li>'+$('ul',document.body).context.nodeName+'</li>');"
+      },
+      "css": {
+        "!type": "fn(name: string, value?: string) -> string",
+        "!doc": "访问匹配元素的样式属性。例：$('p').css('color');$('p').css('color','red');$('p').css({ 'color': '#ff0011', 'background': 'blue' });"
+      },
+      "data": {
+        "!type": "fn(key: string, value?: ?) -> !1",
+        "!doc": "在元素上存放数据,返回jQuery对象。例：$('div').data('test', { first: 16, last: 'pizza!' });$('div').data('test').first;"
+      },
+      "dblclick": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当双击元素时，会发生 dblclick 事件。例：$('p').dblclick( function () { alert('Hello World!'); });"
+      },
+      "delay": {
+        "!type": "fn(duration: number, queue?: string) -> jQuery.fn",
+        "!doc": "设置一个延时来推迟执行队列中之后的项目。例：$('#foo').slideUp(300).delay(800).fadeIn(400);"
+      },
+      "delegate": {
+        "!type": "fn(selector: string, eventType: string, handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "指定的元素（属于被选元素的子元素）添加一个或多个事件处理程序，并规定当这些事件发生时运行的函数。例：$('div').delegate('button','click',function(){$('p').slideToggle()});"
+      },
+      "dequeue": {
+        "!type": "fn(queue?: string) -> jQuery.fn",
+        "!doc": "从队列最前端移除一个队列函数，并执行他。例：$('div').queue(function(){$(this).toggleClass('red');$(this).dequeue()});"
+      },
+      "detach": {
+        "!type": "fn(selector?: string) -> jQuery.fn",
+        "!doc": "从DOM中删除所有匹配的元素。例：$('p').detach();"
+      },
+      "die": {
+        "!type": "fn() -> jQuery.fn",
+        "!doc": "从元素中删除先前用.live()绑定的所有事件.(此方法与live正好完全相反)$('#unbind').click(function(){$('#theone').die('click',aClick)});"
+      },
+      "each": {
+        "!type": "fn(callback: fn(i: number, element: +Element)) -> jQuery.fn",
+        "!doc": "以每一个匹配的元素作为上下文来执行一个函数。$('img').each(function(i){this.src='test'+i+'.jpg'});"
+      },
+      "empty": {
+        "!type": "fn() -> jQuery.fn",
+        "!doc": "删除匹配的元素集合中所有的子节点。$('p').empty();"
+      },
+      "end": {
+        "!type": "fn() -> jQuery.fn",
+        "!doc": "回到最近的一个'破坏性'操作之前。即，将匹配的元素列表变为前一次的状态。$('p').find('span').end();"
+      },
+      "eq": {
+        "!type": "fn(i: number) -> jQuery.fn",
+        "!doc": "获取第N个元素。$('p').eq(1)"
+      },
+      "error": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当元素遇到错误（没有正确载入）时，发生 error 事件。$(window).error(function(){return true});"
+      },
+      "fadeIn": {
+        "!type": "fn(duration?: number, complete?: fn()) -> jQuery.fn",
+        "!doc": "通过不透明度的变化来实现所有匹配元素的淡入效果，并在动画完成后可选地触发一个回调函数。$('p').fadeIn('slow');"
+      },
+      "fadeOut": {
+        "!type": "fn(duration?: number, complete?: fn()) -> jQuery.fn",
+        "!doc": "通过不透明度的变化来实现所有匹配元素的淡出效果，并在动画完成后可选地触发一个回调函数。$('p').fadeOut('slow');"
+      },
+      "fadeTo": {
+        "!type": "fn(duration: number, opacity: number, complete?: fn()) -> jQuery.fn",
+        "!doc": "把所有匹配元素的不透明度以渐进方式调整到指定的不透明度，并在动画完成后可选地触发一个回调函数。$('.btn2').click(function(){$('p').fadeIn()});"
+      },
+      "fadeToggle": {
+        "!type": "fn(duration?: number, easing?: string, complete?: fn()) -> jQuery.fn",
+        "!doc": "通过不透明度的变化来开关所有匹配元素的淡入和淡出效果，并在动画完成后可选地触发一个回调函数。$('p').fadeToggle('slow','linear');"
+      },
+      "filter": {
+        "!type": "fn(selector: string) -> jQuery.fn",
+        "!doc": "筛选出与指定表达式匹配的元素集合。$('p').filter('.selected')"
+      },
+      "find": {
+        "!type": "fn(selector: string) -> jQuery.fn",
+        "!doc": "搜索所有与指定表达式匹配的元素。这个函数是找出正在处理的元素的后代元素的好方法。$('p').find('span')"
+      },
+      "finish": {
+        "!type": "fn(queue?: string) -> jQuery.fn",
+        "!doc": "停止当前正在运行的动画，删除所有排队的动画，并完成匹配元素所有的动画。$('#complete').click(function(){$('div').finish()});"
+      },
+      "first": {
+        "!type": "fn() -> jQuery.fn",
+        "!doc": "获取第一个元素。$('li').first()"
+      },
+      "focusin": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当元素获得焦点时，触发 focusin 事件。$('p').focusin(function(){$(this).find('span').css('display','inline').fadeOut(1000)});"
+      },
+      "focusout": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当元素失去焦点时触发 focusout 事件。$('p').focusout(function(){$(this).find('span').css('display','inline').fadeOut(1000)});"
+      },
+      "get": {
+        "!type": "fn(i: number) -> +Element",
+        "!doc": "取得其中一个匹配的元素。 num表示取得第几个匹配的元素。$('img').get(0);$('img').get().reverse();"
+      },
+      "has": {
+        "!type": "fn(selector: string) -> jQuery.fn",
+        "!doc": "匹配含有选择器所匹配的元素的元素。$('div:has(p)').addClass('test');"
+      },
+      "hasClass": {
+        "!type": "fn(className: string) -> bool",
+        "!doc": "检查当前的元素是否含有某个特定的类，如果有，则返回true。 $('div').hasClass('protected')"
+      },
+      "height": {
+        "!type": "fn() -> number",
+        "!doc": "取得匹配元素当前计算的高度值（px）。$('p').height();$('p').height(20);"
+      },
+      "hide": {
+        "!type": "fn() -> jQuery.fn",
+        "!doc": "隐藏显示的元素。$('p').hide()"
+      },
+      "hover": {
+        "!type": "fn(fnOver: fn(+jQuery.Event), fnOut?: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "一个模仿悬停事件（鼠标移动到一个对象上面及移出这个对象）的方法。$('td').hover(function(){$(this).addClass('hover')},function(){$(this).removeClass('hover')});"
+      },
+      "html": {
+        "!type": "fn(htmlString?: string|fn(index: number, oldhtml: string) -> string) -> string|jQuery.fn",
+        "!doc": "取得第一个匹配元素的html内容。这个函数不能用于XML文档。$('p').html();"
+      },
+      "index": {
+        "!type": "fn(selector?: string) -> number",
+        "!doc": "搜索匹配的元素，并返回相应元素的索引值，从0开始计数。$('li').index($('#bar'));$('li').index($('li:gt(0)'));"
+      },
+      "innerHeight": {
+        "!type": "fn() -> number",
+        "!doc": "获取第一个匹配元素内部区域高度（包括补白、不包括边框）。var p=$('p:first');$('p:last').text('innerHeight:'+p.innerHeight());"
+      },
+      "innerWidth": {
+        "!type": "fn() -> number",
+        "!doc": "获取第一个匹配元素内部区域宽度（包括补白、不包括边框）。var p=$('p:first');$('p:last').text('innerWidth:'+p.innerWidth());"
+      },
+      "insertAfter": {
+        "!type": "fn(target: ?) -> jQuery.fn",
+        "!doc": "把所有匹配的元素插入到另一个、指定的元素元素集合的后面。$('p').insertAfter('#foo');"
+      },
+      "insertBefore": {
+        "!type": "fn(target: ?) -> jQuery.fn",
+        "!doc": "把所有匹配的元素插入到另一个、指定的元素元素集合的前面。$('p').insertBefore('#foo');"
+      },
+      "is": {
+        "!type": "fn(selector: ?) -> bool",
+        "!doc": "根据选择器、DOM元素或 jQuery 对象来检测匹配元素集合，如果其中至少有一个元素符合这个给定的表达式就返回true。$('input[type='checkbox']').parent().is('form')"
+      },
+      "jquery": {
+        "!type": "string",
+        "!doc": "jquery版本号字符串"
+      },
+      "keydown": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当键盘或按钮被按下时，发生 keydown 事件。$(window).keydown(function(event){switch(event.keyCode){alert('ok')}});"
+      },
+      "keypress": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当键盘或按钮被按下时，发生 keypress 事件。$('input').keydown(function(){$('span').text(i+=1)});"
+      },
+      "keyup": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当按钮被松开时，发生 keyup 事件。它发生在当前获得焦点的元素上。$('input').keyup(function(){$('input').css('background-color','#D6D6FF')});"
+      },
+      "last": {
+        "!type": "fn() -> jQuery.fn",
+        "!doc": "获取最后个元素。$('li').last()"
+      },
+      "length": {
+        "!type": "number",
+        "!doc": "jQuery 对象中元素的个数。$('img').length;"
+      },
+      "live": {
+        "!type": "fn(selector: string, handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "jQuery 给所有匹配的元素附加一个事件处理函数，即使这个元素是以后再添加进来的也有效。$('.clickme').live('click',function(){alert('Live handler called.')});"
+      },
+      "load": {
+        "!type": "fn(handler: fn()) -> jQuery.fn",
+        "!doc": "载入远程 HTML 文件代码并插入至 DOM 中。$('#feeds').load('feeds.html');"
+      },
+      "map": {
+        "!type": "fn(callback: fn(i: number, element: +Element)) -> jQuery.fn",
+        "!doc": "将一组元素转换成其他数组（不论是否是元素数组）。$('p').append($('input').map(function(){return $(this).val()}).get().join(', '));"
+      },
+      "mousedown": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当鼠标指针移动到元素上方，并按下鼠标按键时，会发生 mousedown 事件。$('button').mousedown(function(){$('p').slideToggle()});"
+      },
+      "mouseenter": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当鼠标指针穿过元素时，会发生 mouseenter 事件。该事件大多数时候会与mouseleave 事件一起使用。$('p').mouseenter(function(){$('p').css('background-color','yellow')});"
+      },
+      "mouseleave": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当鼠标指针离开元素时，会发生 mouseleave 事件。该事件大多数时候会与mouseenter 事件一起使用。$('p').mouseleave(function(){$('p').css('background-color','#E9E9E4')});"
+      },
+      "mousemove": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当鼠标指针在指定的元素中移动时，就会发生 mousemove 事件。$(document).mousemove(function(e){$('span').text(e.pageX+', '+e.pageY)});"
+      },
+      "mouseout": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当鼠标指针从元素上移开时，发生 mouseout 事件。$('p').mouseout(function(){$('p').css('background-color','#E9E9E4')});"
+      },
+      "mouseover": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当鼠标指针位于元素上方时，会发生 mouseover 事件。$('p').mouseover(function(){$('p').css('background-color','yellow')});"
+      },
+      "mouseup": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当在元素上放松鼠标按钮时，会发生 mouseup 事件。$('button').mouseup(function(){$('p').slideToggle()});"
+      },
+      "next": {
+        "!type": "fn(selector?: string) -> jQuery.fn",
+        "!doc": "取得一个包含匹配的元素集合中每一个元素紧邻的后面同辈元素的元素集合。$('p').next()"
+      },
+      "nextAll": {
+        "!type": "fn(selector?: string) -> jQuery.fn",
+        "!doc": "查找当前元素之后所有的同辈元素。$('div:first').nextAll().addClass('after');"
+      },
+      "nextUntil": {
+        "!type": "fn(selector?: string, filter?: string) -> jQuery.fn",
+        "!doc": "查找当前元素之后所有的同辈元素，直到遇到匹配的那个元素为止。$('#term-2').nextUntil('dt').css('background-color', 'red');"
+      },
+      "not": {
+        "!type": "fn(selector: string) -> jQuery.fn",
+        "!doc": "删除与指定表达式匹配的元素。$('p').not( $('#selected')[0] )"
+      },
+      "off": {
+        "!type": "fn(events: string, selector?: string, handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "在选择元素上移除一个或多个事件的事件处理函数。$('p').off()"
+      },
+      "offset": {
+        "!type": "fn() -> offset",
+        "!doc": "获取匹配元素在当前视口的相对偏移。var p=$('p:last');var offset=p.offset();p.html('left: '+offset.left+', top: '+offset.top);$('p:last').offset({ top: 10, left: 30 });"
+      },
+      "offsetParent": {
+        "!type": "fn() -> jQuery.fn",
+        "!doc": "返回第一个匹配元素用于定位的父节点。$('button').click(function(){$('p').offsetParent().css('background-color','red')});"
+      },
+      "on": {
+        "!type": "fn(events: string, handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "在选择元素上绑定一个或多个事件的事件处理函数。$('p').on('click',function(){alert($(this).text())});"
+      },
+      "one": {
+        "!type": "fn(events: string, data?: ?, handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "为每一个匹配元素的特定事件（像click）绑定一个一次性的事件处理函数。$('p').one('click',function(){alert($(this).text())});"
+      },
+      "outerHeight": {
+        "!type": "fn(includeMargin?: bool) -> number",
+        "!doc": "获取第一个匹配元素外部高度（默认包括补白和边框）。var p=$('p:first');$('p:last').text('outerHeight:'+p.outerHeight()+' , outerHeight(true):'+p.outerHeight(true));"
+      },
+      "outerWidth": {
+        "!type": "fn(includeMargin?: bool) -> number",
+        "!doc": "获取第一个匹配元素外部宽度（默认包括补白和边框）。var p=$('p:first');$('p:last').text('outerWidth:'+p.outerWidth()+' , outerWidth(true):'+p.outerWidth(true));"
+      },
+      "parent": {
+        "!type": "fn(selector?: string) -> jQuery.fn",
+        "!doc": "取得一个包含着所有匹配元素的唯一父元素的元素集合。$('p').parent()"
+      },
+      "parents": {
+        "!type": "fn(selector?: string) -> jQuery.fn",
+        "!doc": "取得一个包含着所有匹配元素的祖先元素的元素集合（不包含根元素）。可以通过一个可选的表达式进行筛选。$('span').parents()"
+      },
+      "parentsUntil": {
+        "!type": "fn(selector?: string, filter?: string) -> jQuery.fn",
+        "!doc": "查找当前元素的所有的父辈元素，直到遇到匹配的那个元素为止。$('li.item-a').parentsUntil('.level-1').css('background-color','red');"
+      },
+      "position": {
+        "!type": "fn() -> offset",
+        "!doc": "获取匹配元素相对父元素的偏移。var p=$('p:first');var position=p.position();$('p:last').html('left: '+position.left+', top: '+position.top);"
+      },
+      "prepend": {
+        "!type": "fn(content: ?) -> jQuery.fn",
+        "!doc": "向每个匹配的元素内部前置内容。$('p').prepend('<b>Hello</b>');"
+      },
+      "prependTo": {
+        "!type": "fn(target: ?) -> jQuery.fn",
+        "!doc": "把所有匹配的元素前置到另一个、指定的元素元素集合中。$('p').prependTo('#foo');"
+      },
+      "prev": {
+        "!type": "fn(selector?: string) -> jQuery.fn",
+        "!doc": "取得一个包含匹配的元素集合中每一个元素紧邻的前一个同辈元素的元素集合。$('p').prev()"
+      },
+      "prevAll": {
+        "!type": "fn(selector?: string) -> jQuery.fn",
+        "!doc": "查找当前元素之前所有的同辈元素。$('div:last').prevAll().addClass('before');"
+      },
+      "prevUntil": {
+        "!type": "fn(selector?: string, filter?: string) -> jQuery.fn",
+        "!doc": "查找当前元素之前所有的同辈元素，直到遇到匹配的那个元素为止。$('#term-2').prevUntil('dt').css('background-color', 'red');"
+      },
+      "promise": {
+        "!type": "fn(type?: string, target: ?) -> +jQuery.Promise",
+        "!doc": "返回一个 Promise 对象用来观察当某种类型的所有行动绑定到集合，排队与否还是已经完成。var div=$('<div />');div.promise().done(function(arg1){alert(this===div&&arg1===div)});"
+      },
+      "prop": {
+        "!type": "fn(name: string, value?: string) -> string",
+        "!doc": "获取匹配的元素集中第一个元素的属性（property）值或设置每一个匹配元素的一个或多个属性。$('input[type='checkbox']').prop('checked');"
+      },
+      "pushStack": {
+        "!type": "fn(elements: [+Element]) -> jQuery.fn",
+        "!doc": ""
+      },
+      "queue": {
+        "!type": "fn(queue?: string) -> [?]",
+        "!doc": "显示或操作在匹配元素上执行的函数队列。$('#show').click(function(){var n=$('div').queue('fx');$('span').text('Queue length is: '+n.length)});"
+      },
+      "ready": {
+        "!type": "fn(fn: fn()) -> jQuery.fn",
+        "!doc": "当DOM载入就绪可以查询及操纵时绑定一个要执行的函数。$(document).ready(function(){alert(1)});"
+      },
+      "remove": {
+        "!type": "fn(selector?: string) -> jQuery.fn",
+        "!doc": "从DOM中删除所有匹配的元素。$('p').remove();"
+      },
+      "removeAttr": {
+        "!type": "fn(attrName: string) -> jQuery.fn",
+        "!doc": "从每一个匹配的元素中删除一个属性。$('img').removeAttr('src');"
+      },
+      "removeClass": {
+        "!type": "fn(className?: string) -> jQuery.fn",
+        "!doc": "从所有匹配的元素中删除全部或者指定的类。$('p').removeClass('selected');"
+      },
+      "removeData": {
+        "!type": "fn(name?: string) -> jQuery.fn",
+        "!doc": "在元素上移除存放的数据。 $('div').removeData('greeting');"
+      },
+      "removeProp": {
+        "!type": "fn(propName: string) -> jQuery.fn",
+        "!doc": "用来删除由.prop()方法设置的属性集。var $para=$('p');$para.prop('luggageCode',1234);$para.removeProp('luggageCode');"
+      },
+      "replaceAll": {
+        "!type": "fn(target: ?) -> jQuery.fn",
+        "!doc": "用匹配的元素替换掉所有 selector匹配到的元素。$('<b>Paragraph. </b>').replaceAll('p');"
+      },
+      "replaceWith": {
+        "!type": "fn(newContent: ?) -> jQuery.fn",
+        "!doc": "将所有匹配的元素替换成指定的HTML或DOM元素。$('p').replaceWith('<b>Paragraph. </b>');"
+      },
+      "resize": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当调整浏览器窗口的大小时，发生 resize 事件。$(window).resize(function(){alert('Stop it!')});"
+      },
+      "scroll": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当用户滚动指定的元素时，会发生 scroll 事件。$('div').scroll(function(){$('span').text(x+=1)});"
+      },
+      "scrollLeft": {
+        "!type": "number",
+        "!doc": "获取匹配元素相对滚动条左侧的偏移。var p=$('p:first');$('p:last').text('scrollLeft:'+p.scrollLeft());"
+      },
+      "scrollTop": {
+        "!type": "number",
+        "!doc": "获取匹配元素相对滚动条顶部的偏移。var p=$('p:first');$('p:last').text('scrollTop:'+p.scrollTop());"
+      },
+      "select": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当 textarea 或文本类型的 input 元素中的文本被选择时，会发生 select 事件。$('input').select();"
+      },
+      "selector": {
+        "!type": "string",
+        "!doc": "返回传给jQuery()的原始选择器。$('ul').selector"
+      },
+      "serialize": {
+        "!type": "fn() -> string",
+        "!doc": "序列表表格内容为字符串。$('#results').append( '<tt>' + $('form').serialize() + '</tt>' );"
+      },
+      "serializeArray": {
+        "!type": "fn() -> [keyvalue]",
+        "!doc": "序列化表格元素 (类似 '.serialize()' 方法) 返回 JSON 数据结构数据。var fields = $('select, :radio').serializeArray();"
+      },
+      "show": {
+        "!type": "fn() -> jQuery.fn",
+        "!doc": "显示隐藏的匹配元素。$('p').show()"
+      },
+      "siblings": {
+        "!type": "fn(selector?: string) -> jQuery.fn",
+        "!doc": "取得一个包含匹配的元素集合中每一个元素的所有唯一同辈元素的元素集合。可以用可选的表达式进行筛选。$('div').siblings()"
+      },
+      "size": {
+        "!type": "fn() -> number",
+        "!doc": "jQuery 对象中元素的个数。$('img').size();"
+      },
+      "slice": {
+        "!type": "fn(start: number, end?: number) -> jQuery.fn",
+        "!doc": "选取一个匹配的子集。$('p').slice(0, 1).wrapInner('<b></b>');"
+      },
+      "slideDown": {
+        "!type": "fn(duration?: number, complete?: fn()) -> jQuery.fn",
+        "!doc": "通过高度变化（向下增大）来动态地显示所有匹配的元素，在显示完成后可选地触发一个回调函数。$('p').slideDown('slow');"
+      },
+      "slideToggle": {
+        "!type": "fn(duration?: number, complete?: fn()) -> jQuery.fn",
+        "!doc": "通过高度变化来切换所有匹配元素的可见性，并在切换完成后可选地触发一个回调函数。$('p').slideToggle('slow');"
+      },
+      "slideUp": {
+        "!type": "fn(duration?: number, complete?: fn()) -> jQuery.fn",
+        "!doc": "通过高度变化（向上减小）来动态地隐藏所有匹配的元素，在隐藏完成后可选地触发一个回调函数。$('p').slideUp('slow');"
+      },
+      "stop": {
+        "!type": "fn(clearQueue?: bool, jumpToEnd?: bool) -> jQuery.fn",
+        "!doc": "停止所有在指定元素上正在运行的动画。$('#box').stop();"
+      },
+      "submit": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "当提交表单时，会发生 submit 事件。$('form:first').submit();"
+      },
+      "text": {
+        "!type": "fn() -> string",
+        "!doc": "取得所有匹配元素的内容。$('p').text();"
+      },
+      "toArray": {
+        "!type": "fn() -> [+Element]",
+        "!doc": "把jQuery集合中所有DOM元素恢复成一个数组。$('li').toArray()"
+      },
+      "toggle": {
+        "!type": "fn(duration?: number, complete?: fn()) -> jQuery.fn",
+        "!doc": "用于绑定两个或多个事件处理器函数，以响应被选元素的轮流的 click 事件。$('td').toggle();"
+      },
+      "toggleClass": {
+        "!type": "fn(className: string) -> jQuery.fn",
+        "!doc": "如果存在（不存在）就删除（添加）一个类。$('p').toggleClass('selected');"
+      },
+      "trigger": {
+        "!type": "fn(eventType: string, params: ?) -> jQuery.fn",
+        "!doc": "在每一个匹配的元素上触发某类事件。$('form:first').trigger('submit')"
+      },
+      "triggerHandler": {
+        "!type": "fn(eventType: string, params: ?) -> ?",
+        "!doc": "这个特别的方法将会触发指定的事件类型上所有绑定的处理函数。但不会执行浏览器默认动作，也不会产生事件冒泡。 $('input').triggerHandler('focus');"
+      },
+      "unbind": {
+        "!type": "fn(eventType?: string, handler?: fn()) -> jQuery.fn",
+        "!doc": "bind()的反向操作，从每一个匹配的元素中删除绑定的事件。$('p').unbind()"
+      },
+      "undelegate": {
+        "!type": "fn() -> jQuery.fn",
+        "!doc": "删除由 delegate() 方法添加的一个或多个事件处理程序。$('p').undelegate();"
+      },
+      "unload": {
+        "!type": "fn(handler: fn(+jQuery.Event)) -> jQuery.fn",
+        "!doc": "在当用户离开页面时，会发生 unload 事件。$(window).unload( function () { alert('Bye now!'); } );"
+      },
+      "unwrap": {
+        "!type": "fn() -> jQuery.fn",
+        "!doc": "这个方法将移出元素的父元素。这能快速取消 .wrap()方法的效果。 $('p').unwrap()"
+      },
+      "val": {
+        "!type": "fn() -> string",
+        "!doc": "获得匹配元素的当前值。$('input').val();"
+      },
+      "width": {
+        "!type": "fn() -> number",
+        "!doc": "取得第一个匹配元素当前计算的宽度值（px）。$('p').width();"
+      },
+      "wrap": {
+        "!type": "fn(wrappingElement: ?) -> jQuery.fn",
+        "!doc": "把所有匹配的元素用其他元素的结构化标记包裹起来。$('p').wrap('<div class='wrap'></div>');"
+      },
+      "wrapAll": {
+        "!type": "fn(wrappingElement: ?) -> jQuery.fn",
+        "!doc": "将所有匹配的元素用单个元素包裹起来。$('p').wrapAll('<div></div>');"
+      },
+      "wrapInner": {
+        "!type": "fn(wrappingElement: ?) -> jQuery.fn",
+        "!doc": "将每一个匹配的元素的子内容(包括文本节点)用一个HTML结构包裹起来。$('p').wrapInner('<b></b>');"
+      },
+
+      "slice": {
+        "!type": "fn(start: number, end: number) -> jQuery.fn",
+        "!doc": "选取一个匹配的子集。$('p').slice(0, 1).wrapInner('<b></b>');"
+      },
+      "push": {
+        "!type": "Array.prototype.push",
+        "!doc": "Mutates an array by appending the given elements and returning the new length of the array."
+      },
+      "sort": {
+        "!type": "Array.prototype.sort",
+        "!doc": "Sorts the elements of an array in place and returns the array."
+      },
+      "splice": {
+        "!type": "Array.prototype.splice",
+        "!doc": "Changes the content of an array, adding new elements while removing old elements."
+      }
+    },
+    "ajax": {
+      "!type": "fn(url: string, settings: ?) -> +jQuery.jqXHR",
+      "!doc": "通过 HTTP 请求加载远程数据。$.ajax({type:'GET',url:'test.js',dataType:'script'});"
+    },
+    "ajaxPrefilter": {
+      "!type": "fn(dataTypes?: string, handler: fn(options: ?, originalOptions: ?, req: +XMLHttpRequest))",
+      "!doc": "Handle custom Ajax options or modify existing options before each request is sent and before they are processed by $.ajax()."
+    },
+    "ajaxSetup": {
+      "!type": "fn(options: ?)",
+      "!doc": "设置全局 AJAX 默认选项。$.ajaxSetup({url:'',global:false,type:'POST'});"
+    },
+    "ajaxTransport": {
+      "!type": "fn(dataType: string, handler: fn(options: ?, originalOptions: ?, req: +XMLHttpRequest))",
+      "!doc": "Creates an object that handles the actual transmission of Ajax data."
+    },
+    "Callbacks": {
+      "!type": "fn(flags: string) -> +jQuery.Callbacks",
+      "!doc": "A multi-purpose callbacks list object that provides a powerful way to manage callback lists.",
+      "prototype": {
+        "add":{
+          "!type": "fn(callbacks: ?) -> +jQuery.Callbacks",
+          "!doc": "把与表达式匹配的元素添加到jQuery对象中。$('p').add('span')"
+        },
+        "disable":{
+          "!type": "fn() -> +jQuery.Callbacks",
+          "!doc": "禁用回调列表中的回调。callbacks.disable();"
+        },
+        "disabled":{
+          "!type": "fn() -> bool",
+          "!doc": "Determine if the callbacks list has been disabled."
+        },
+        "empty":{
+          "!type": "fn() -> +jQuery.Callbacks",
+          "!doc": "从列表中删除所有的回调。callbacks.empty();"
+        },
+        "fire":{
+          "!type": "fn(arguments: ?) -> +jQuery.Callbacks",
+          "!doc": "禁用回调列表中的回调。"
+        },
+        "fired":{
+          "!type": "fn() -> bool",
+          "!doc": "用给定的参数调用所有的回调。callbacks.fire( 'hello' );"
+        },
+        "fireWith":{
+          "!type": "fn(context?: ?, args?: ?) -> +jQuery.Callbacks",
+          "!doc": "访问给定的上下文和参数列表中的所有回调。"
+        },
+        "has":{
+          "!type": "fn(callback: fn()) -> bool",
+          "!doc": "确定是否提供的回调列表。"
+        },
+        "lock":{
+          "!type": "fn() -> +jQuery.Callbacks",
+          "!doc": "锁定在其当前状态的回调列表。"
+        },
+        "locked":{
+          "!type": "fn() -> bool",
+          "!doc": "确定是否已被锁定的回调列表。"
+        },
+        "remove":{
+          "!type": "fn(callbacks: ?) -> +jQuery.Callbacks",
+          "!doc": "删除回调或回调回调列表的集合。"
+        }
+      }
+    },
+    "contains": {
+      "!type": "fn(container: +Element, contained: +Element) -> bool",
+      "!doc": "一个DOM节点是否包含另一个DOM节点。"
+    },
+    "cssHooks": {
+      "!type": "?",
+      "!doc": "直接向 jQuery 中添加钩子，用于覆盖设置或获取特定 CSS 属性时的方法，目的是为了标准化 CSS 属性名或创建自定义属性。"
+    },
+    "data": {
+      "!type": "fn(element: +Element, key: string, value: ?) -> !2",
+      "!doc": "在元素上存放数据,返回jQuery对象。$('div').data('blah','hello');$('div').data('blah');"
+    },
+    "Event": {
+      "!type": "fn(type: ?, props?: ?) -> +jQuery.Event",
+      "!doc": "The jQuery.Event constructor is exposed and can be used when calling trigger. The new operator is optional.",
+      "prototype": {
+        "currentTarget":{
+          "!type": "+Element",
+          "!doc": "在事件冒泡阶段中的当前DOM元素。"
+        },
+        "data":{
+          "!type": "?",
+          "!doc": "当前执行的处理器被绑定的时候，包含可选的数据传递给jQuery.fn.bind。"
+        },
+        "delegateTarget":{
+          "!type": "+Element",
+          "!doc": "当currently-called的jQuery事件处理程序附加元素。"
+        },
+        "isDefaultPrevented":{
+          "!type": "fn() -> bool",
+          "!doc": "根据事件对象中是否调用过 event.preventDefault() 方法来返回一个布尔值。"
+        },
+        "isImmediatePropagationStopped":{
+          "!type": "fn() -> bool",
+          "!doc": "根据事件对象中是否调用过 event.stopImmediatePropagation() 方法来返回一个布尔值。"
+        },
+        "isPropagationStopped":{
+          "!type": "fn() -> bool",
+          "!doc": "根据事件对象中是否调用过 event.stopPropagation() 方法来返回一个布尔值。"
+        },
+        "metaKey":{
+          "!type": "bool",
+          "!doc": "Indicates whether the META key was pressed when the event fired."
+        },
+        "namespace":{
+          "!type": "string",
+          "!doc": "当事件被触发时此属性包含指定的命名空间。"
+        },
+        "pageX":{
+          "!type": "number",
+          "!doc": "鼠标相对于文档的左边缘的位置。"
+        },
+        "pageY":{
+          "!type": "number",
+          "!doc": "鼠标相对于文档的左边缘的位置。"
+        },
+        "preventDefault":{
+          "!type": "fn()",
+          "!doc": "阻止默认事件行为的触发。"
+        },
+        "relatedTarget":{
+          "!type": "+Element",
+          "!doc": "在事件中涉及的其它任何DOM元素。"
+        },
+        "result":{
+          "!type": "?",
+          "!doc": "这个属性包含了当前事件事件最后触发的那个处理函数的返回值，除非值是 undefined 。"
+        },
+        "stopImmediatePropagation":{
+          "!type": "fn()",
+          "!doc": "阻止剩余的事件处理函数执行并且防止事件冒泡到DOM树上。"
+        },
+        "stopPropagation":{
+          "!type": "fn()",
+          "!doc": "防止事件冒泡到DOM树上，也就是不触发的任何前辈元素上的事件处理函数。"
+        },
+        "target":{
+          "!type": "+Element",
+          "!doc": "最初触发事件的DOM元素。"
+        },
+        "timeStamp":{
+          "!type": "number",
+          "!doc": "这个属性返回事件触发时距离1970年1月1日的毫秒数。"
+        },
+        "type":{
+          "!type": "string",
+          "!doc": "Describes the nature of the event."
+        },
+        "which":{
+          "!type": "number",
+          "!doc": "针对键盘和鼠标事件，这个属性能确定你到底按的是哪个键或按钮。"
+        }
+      }
+    },
+    "Deferred": {
+      "!type": "fn(beforeStart?: fn(deferred: +jQuery.Deferred)) -> +jQuery.Deferred",
+      "!doc": "A constructor function that returns a chainable utility object with methods to register multiple callbacks into callback queues, invoke callback queues, and relay the success or failure state of any synchronous or asynchronous function.",
+      "prototype": {
+        "always":{
+          "!type": "fn(callback: fn()) -> +jQuery.Deferred",
+          "!doc": "当递延对象是解决或拒绝时被调用添加处理程序。"
+        },
+        "done":{
+          "!type": "fn(callback: fn()) -> +jQuery.Deferred",
+          "!doc": "当延迟成功时调用一个函数或者数组函数."
+        },
+        "fail":{
+          "!type": "fn(callback: fn()) -> +jQuery.Deferred",
+          "!doc": "当延迟失败时调用一个函数或者数组函数.。"
+        },
+        "isRejected":{
+          "!type": "fn() -> bool",
+          "!doc": "确定延迟对象是否已被拒绝。注意：jquery1.7API中已弃用，请用deferred.state()替代。"
+        },
+        "isResolved":{
+          "!type": "fn() -> bool",
+          "!doc": "确定延迟对象是否已得到解决。注意：jquery1.7API中已弃用，请用deferred.state()替代。"
+        },
+        "notify":{
+          "!type": "fn(args?: ?) -> +jQuery.Deferred",
+          "!doc": "调用一个给定args的递延对象上的进行中的回调 （progressCallbacks）"
+        },
+        "notifyWith":{
+          "!type": "fn(context?: ?, args?: ?) -> +jQuery.Deferred",
+          "!doc": "去掉字符串起始和结尾的空格。"
+        },
+        "pipe":{
+          "!type": "fn(doneFilter?: fn(), failFilter?: fn()) -> +jQuery.Promise",
+          "!doc": "筛选器和/或链Deferreds的实用程序方法。注意：从 jQuery 1.8 开始，deferred.pipe() 方法过时. 应该使用deferred.then() 代替它。"
+        },
+        "progress":{
+          "!type": "fn(callback: fn()) -> +jQuery.Deferred",
+          "!doc": "当Deferred对象时生成进度通知时添加被访问处理程序。"
+        },
+        "promise":{
+          "!type": "fn(target: ?) -> +jQuery.Promise",
+          "!doc": "返回一个 Promise 对象用来观察当某种类型的所有行动绑定到集合，排队与否还是已经完成。"
+        },
+        "reject":{
+          "!type": "fn(args?: ?) -> +jQuery.Deferred",
+          "!doc": "拒绝延迟对象，并根据给定的参数调用任何失败的回调函数。"
+        },
+        "rejectWith":{
+          "!type": "fn(context?: ?, args?: ?) -> +jQuery.Deferred",
+          "!doc": "拒绝延迟的对象，并根据给定的上下文和参数调用任何失败的回调函数。"
+        },
+        "resolve":{
+          "!type": "fn(args?: ?) -> +jQuery.Deferred",
+          "!doc": "解决递延对象，并根据给定的参数调用任何完成的回调函数。"
+        },
+        "resolveWith":{
+          "!type": "fn(context?: ?, args?: ?) -> +jQuery.Deferred",
+          "!doc": "解决递延对象，并根据给定的上下文和参数调用任何完成的回调函数。"
+        },
+        "state":{
+          "!type": "fn() -> string",
+          "!doc": "确定一个Deferred对象的当前状态。"
+        },
+        "then":{
+          "!type": "fn(doneFilter: fn(), failFilter?: fn(), progressFilter?: fn()) -> +jQuery.Promise",
+          "!doc": "添加处理程序被调用时，递延对象得到解决或者拒绝。"
+        }
+      }
+    },
+    "Promise": {
+      "!doc": "A constructor function that returns a chainable utility object with methods to register multiple callbacks into callback queues, invoke callback queues, and relay the success or failure state of any synchronous or asynchronous function.",
+      "prototype": {
+        "always": "fn(callback: fn()) -> +jQuery.Promise",
+        "done": "fn(callback: fn()) -> +jQuery.Promise",
+        "fail": "fn(callback: fn()) -> +jQuery.Promise",
+        "isRejected": "fn() -> bool",
+        "isResolved": "fn() -> bool",
+        "pipe": "fn(doneFilter?: fn(), failFilter?: fn()) -> +jQuery.Promise",
+        "promise": "fn(target: ?) -> +jQuery.Deferred",
+        "state": "fn() -> string",
+        "then": "fn(doneFilter: fn(), failFilter?: fn(), progressFilter?: fn()) -> +jQuery.Promise"
+      }
+    },
+    "jqXHR": {
+      "prototype": {
+        "always": "fn(callback: fn()) -> +jQuery.jqXHR",
+        "done": "fn(callback: fn()) -> +jQuery.jqXHR",
+        "fail": "fn(callback: fn()) -> +jQuery.jqXHR",
+        "isRejected": "fn() -> bool",
+        "isResolved": "fn() -> bool",
+        "pipe": "fn(doneFilter?: fn(), failFilter?: fn()) -> +jQuery.Promise",
+        "promise": "fn(target: ?) -> +jQuery.Promise",
+        "state": "fn() -> string",
+        "then": "fn(doneFilter: fn(), failFilter?: fn(), progressFilter?: fn()) -> +jQuery.Promise",
+        "readyState": "number",
+        "status": "number",
+        "statusText": "string",
+        "responseText": "string",
+        "responseXML": "string",
+        "setRequestHeader": "fn(name: string, val: string)",
+        "getAllResponseHeader": "fn() ->",
+        "getResponseHeader": "fn() ->",
+        "statusCode": "fn() -> number",
+        "abort": "fn()"
+      }
+    },
+    "dequeue": {
+        "!type": "fn(queue?: string) -> jQuery.fn",
+        "!doc": "从队列最前端移除一个队列函数，并执行他。"
+    },
+    "each": {
+      "!type": "fn(collection: ?, callback: fn(i: number, elt: ?)) -> !0",
+      "!effects": ["call !1 number !0.<i>"],
+      "!doc": "以每一个匹配的元素作为上下文来执行一个函数。"
+    },
+    "error": "fn(message: string)",
+    "extend": {
+      "!type": "fn(target: ?, source: ?) -> !0",
+      "!effects": ["copy !1 !0"]
+    },
+    "fx": {
+      "!type": "fn(elem: +Element, options: ?, prop: string, end?: number, easing?: bool)",
+      "interval":{
+        "!type": "number",
+        "!doc": "设置动画的显示帧速。"
+      },
+      "off":{
+        "!type": "bool",
+        "!doc": "关闭页面上所有的动画。"
+      },
+      "speeds": {
+        "slow": "number",
+        "fast": "number",
+        "_default": "number"
+      },
+      "stop": "fn()",
+      "tick": "fn()",
+      "start": "fn()"
+    },
+    "get":{
+      "!type": "fn(url: string, data?: ?, success: fn(data: string, textStatus: string, req: +XMLHttpRequest), dataType?: string) -> +jQuery.jqXHR",
+      "!doc": "通过远程 HTTP GET 请求载入信息。$.get('test.php');"
+    },
+    "getJSON": {
+      "!type": "fn(url: string, data?: ?, success: fn(data: ?, textStatus: string, req: +XMLHttpRequest)) -> +jQuery.jqXHR",
+      "!doc": "通过 HTTP GET 请求载入 JSON 数据。$.getJSON('test.js',{name:'John',time:'2pm'},function(json){alert('JSON Data: '+json.users[3].name)});"
+    },
+    "getScript": {
+      "!type": "fn(url: string, success?: fn(script: string, textStatus: string, req: +XMLHttpRequest)) -> +jQuery.jqXHR",
+      "!doc": "通过 HTTP GET 请求载入并执行一个 JavaScript 文件。$.getScript('test.js',function(){alert('Script loaded and executed.')});"
+    },
+    "globalEval": {
+      "!type": "fn(code: string)",
+      "!doc": "Execute some JavaScript code globally."
+    },
+    "grep": {
+      "!type": "fn(array: [?], filter: fn(elt: ?, i: number), invert?: bool) -> !0",
+      "!effects": ["call !1 !0.<i> number"],
+      "!doc":"使用过滤函数过滤数组元素。"
+    },
+    "hasData": {
+      "!type": "fn(element: +Element) -> bool",
+      "!doc": "Determine whether an element has any jQuery data associated with it."
+    },
+    "holdReady": {
+      "!type": "fn(hold: bool)",
+      "!doc": "暂停或恢复.ready() 事件的执行。"
+    },
+    "inArray": {
+      "!type": "fn(value: ?, array: [?], from?: number) -> number",
+      "!doc": "S确定第一个参数在数组中的位置，从0开始计数(如果没有找到则返回 -1 )。"
+    },
+    "isArray": {
+      "!type": "fn(obj: ?) -> bool",
+      "!doc": "Determine whether the argument is an array."
+    },
+    "isEmptyObject": {
+      "!type": "fn(obj: ?) -> bool",
+      "!doc": "jQuery 1.4 新增。测试对象是否是空对象（不包含任何属性）。"
+    },
+    "isFunction": {
+      "!type": "fn(obj: ?) -> bool",
+      "!doc": "测试对象是否为函数。"
+    },
+    "isNumeric": {
+      "!type": "fn(obj: ?) -> bool",
+      "!doc": "确定它的参数是否是一个数字。"
+    },
+    "isPlainObject": {
+      "!type": "fn(obj: ?) -> bool",
+      "!doc": "测试对象是否是纯粹的对象（通过 '{}' 或者 'new Object' 创建的）。"
+    },
+    "isWindow": {
+      "!type": "fn(obj: ?) -> bool",
+      "!doc": "测试对象是否是窗口（有可能是Frame）。"
+    },
+    "isXMLDoc": {
+      "!type": "fn(obj: ?) -> bool",
+      "!doc": "Check to see if a DOM node is within an XML document (or is an XML document)."
+    },
+    "isFunction": {
+      "!type": "fn(obj: ?) -> bool",
+      "!doc": "测试对象是否为函数。"
+    },
+    "makeArray": {
+      "!type": "fn(obj: ?) -> [!0.<i>]",
+      "!doc": "将类数组对象转换为数组对象。"
+    },
+    "map": {
+      "!type": "fn(array: [?], callback: fn(element: ?, i: number) -> ?) -> [!1.!ret]",
+      "!effects": ["call !1 !0.<i> number"],
+      "!doc": "将一个数组中的元素转换到另一个数组中。"
+    },
+    "merge": {
+      "!type": "fn(first: [?], second: [?]) -> !0",
+      "!doc": "合并两个数组。"
+    },
+    "noConflict": {
+      "!type": "fn(removeAll?: bool) -> jQuery",
+      "!doc": "运行这个函数将变量$的控制权让渡给第一个实现它的那个库。"
+    },
+    "noop": {
+      "!type": "fn()",
+      "!doc": "一个空函数。"
+    },
+    "now": {
+      "!type": "fn() -> number",
+      "!doc": "Return a number representing the current time."
+    },
+    "param": {
+      "!type": "fn(obj: ?) -> string",
+      "!doc": "将表单元素数组或者对象序列化。是.serialize()的核心方法。"
+    },
+    "parseHTML": {
+      "!type": "fn(data: string, context?: +Element, keepScripts?: bool) -> [+Element]",
+      "!doc": "Parses a string into an array of DOM nodes."
+    },
+    "parseJSON": {
+      "!type": "fn(json: string) -> ?",
+      "!doc": "接受一个JSON字符串，返回解析后的对象。"
+    },
+    "parseXML": {
+      "!type": "fn(xml: string) -> +XMLDocument",
+      "!doc": "解析一个字符串到一个XML文件。"
+    },
+    "post": {
+      "!type": "fn(url: string, data?: ?, success: fn(data: string, textStatus: string, req: +XMLHttpRequest), dataType?: string) -> +jQuery.jqXHR",
+      "!doc": "通过远程 HTTP POST 请求载入信息。"
+    },
+    "proxy": {
+      "!type": "fn(function: fn(), context: ?) -> fn()",
+      "!doc": "jQuery 1.4 新增。返回一个新函数，并且这个函数始终保持了特定的作用域。"
+    },
+    "queue": {
+      "!type": "fn(element: +Element, queue?: string) -> [?]",
+      "!doc": "显示或操作在匹配元素上执行的函数队列。"
+    },
+    "removeData": {
+      "!type": "fn(element: +Element, name?: string)",
+      "!doc": "在元素上移除存放的数据。"
+    },
+    "sub": {
+      "!type": "fn() -> jQuery",
+      "!doc": "可创建一个新的jQuery副本，不影响原有的jQuery对像。该方法是在jQuery 1.5中引入的，但是被证明不是很有用，将被移到jQuery 1.9兼容性插件中。"
+    },
+    "support": {
+      "!doc": "A collection of properties that represent the presence of different browser features or bugs. Primarily intended for jQuery's internal use; specific properties may be removed when they are no longer needed internally to improve page startup performance.",
+      "getSetAttribute": "bool",
+      "leadingWhitespace": "bool",
+      "tbody": "bool",
+      "htmlSerialize": "bool",
+      "style": "bool",
+      "hrefNormalized": "bool",
+      "opacity": "bool",
+      "cssFloat": "bool",
+      "checkOn": "bool",
+      "optSelected": "bool",
+      "enctype": "bool",
+      "html5Clone": "bool",
+      "boxModel": "bool",
+      "deleteExpando": "bool",
+      "noCloneEvent": "bool",
+      "inlineBlockNeedsLayout": "bool",
+      "shrinkWrapBlocks": "bool",
+      "reliableMarginRight": "bool",
+      "boxSizingReliable": "bool",
+      "pixelPosition": "bool",
+      "noCloneChecked": "bool",
+      "optDisabled": "bool",
+      "input": "bool",
+      "radioValue": "bool",
+      "appendChecked": "bool",
+      "checkClone": "bool",
+      "clearCloneStyle": "bool",
+      "reliableHiddenOffsets": "bool",
+      "boxSizing": "bool",
+      "doesNotIncludeMarginInBodyOffset": "bool",
+      "cors": "bool",
+      "ajax": "bool"
+    },
+    "trim": {
+      "!type": "fn(str: string) -> string",
+      "!doc": "去掉字符串起始和结尾的空格。"
+    },
+    "type": {
+      "!type": "fn(obj: ?) -> string",
+      "!doc": "检测obj的数据类型。"
+    },
+    "unique": {
+      "!type": "fn(array: [?]) -> !0",
+      "!doc": "删除数组中重复元素。只处理删除DOM元素数组，而不能处理字符串或者数字数组。"
+    },
+    "when": {
+      "!type": "fn(deferred: +jQuery.Deferred) -> +jQuery.Promise",
+      "!doc": "提供一种方法来执行一个或多个对象的回调函数，延迟对象通常表示异步事件。"
+    }
+  },
+  "$": "jQuery"
+}

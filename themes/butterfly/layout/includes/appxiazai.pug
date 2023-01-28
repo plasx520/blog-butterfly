@@ -1,0 +1,57 @@
+if is_home()
+    .down-list.touying
+        .title 下载专区
+            .type
+                a.hover(alt='绿色软件') 绿色软件
+                a(alt='易语言源码') 易语言源码
+                a(alt='网站源码') 网站源码
+                a(alt='图片展示') 图片展示
+                a(alt='没想好') 没想好加啥
+        .tpl-tr-wai
+            .tpl-tr.layui-clear(style='transform: translateX(0px);')
+                .list-top
+                    ul
+                        each article, index in site.categories.findOne({name: '魔改'}).posts.data
+                            if index < 9
+                            li
+                                .fl
+                                    img(src=url_for(article.apptb) alt=title onerror=`this.onerror=null;this.src='${url_for(theme.error_img.post_page)}'`)
+                                .fr
+                                    .tit
+                                        h-5
+                                            a(href=url_for(article.path) title=article.title)!=article.title
+                                    .down
+                                        span
+                                            a(href=url_for(article.path), target='_blank') 立即下载
+                .list-top
+                    ul
+                        each article, index in site.tags.findOne({name: '教程'}).posts.data
+                            if index < 9
+                            li
+                                .fl
+                                    img(src=url_for(article.cover) alt=title onerror=`this.onerror=null;this.src='${url_for(theme.error_img.post_page)}'`)
+                                .fr
+                                    .tit
+                                        h-5
+                                            a(href=url_for(article.path) title=article.title)!=article.title
+                                    .down
+                                        span
+                                            a(href=url_for(article.path), target='_blank') 前往查看
+                .list-top
+                    ul
+                        each article, index in site.categories.findOne({name: '魔改'}).posts.data
+                            if index < 9
+                            li
+                                .fl
+                                    img(src=url_for(article.cover) alt=title onerror=`this.onerror=null;this.src='${url_for(theme.error_img.post_page)}'`)
+                                .fr
+                                    .tit
+                                        h-5
+                                            a(href=url_for(article.path) title=article.title)!=article.title
+                                    .down
+                                        span
+                                            a(href=url_for(article.path), target='_blank') 立即下载
+                .list-top
+                   img(src='https://drfs.ctcontents.com/file/14237530/739259879/1aa152/img/dawenjian/110.jpg' style='width: 98%;')
+                .list-top
+                    .container 没想好加啥

@@ -25,10 +25,6 @@
       link: https://anzhiy.cn/
       avatar: https://image.anzhiy.cn/adminuploads/1/2022/09/15/63232b7d91d22.jpg
       descr: 生活明朗，万物可爱
-    - name: Tianli
-      link: https://tianli-blog.club
-      avatar: https://img1.tianli0.top/logo.png
-      descr: 惟其不可能，所以才相信。
 
 - class_name: '<i class="fas fa-fan" style="color:#00cccc;padding-right: 0.4rem"></i>我的好朋友们'
   class_desc: '<span style="font-style: italic;">最可愛的朋友在這裏</span>'
@@ -85,3 +81,11 @@
       link: https://ezgx.tk/
       avatar: https://wlopck.gitee.io/img/avatar.png
       descr: 分享科技与狠活~
+    - name: wsbのblog
+      link: https://wsbblog.cn
+      avatar: https://wsbblog.cn/img/wsb.webp
+      descr: 己所不欲，勿施于人
+    - name: LyShark - 孤风洗剑
+      link: https://www.lyshark.com
+      avatar: https://www.lyshark.com/images/baidu_logo.png
+      descr: 道，可道，非常道；名，可名，非常名。—— 老子《道德经》

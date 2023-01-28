@@ -1,0 +1,172 @@
+if is_home()
+    #home_top
+        .down-index
+            .type
+                a(alt="无聊")
+                  img(src='/img/tz/1.webp' style='width:100px;height:100px;')
+                a.hover(alt="期待")
+                  img(src='/img/tz/2.webp' style='width:100px;height:100px;')
+                a(alt="绿色软开心件")
+                  img(src='/img/tz/3.webp' style='width:100px;height:100px;')
+            .tpl-tr-wai
+                .tpl-tr1.layui-clear1(style='transform: translateX(0px);')
+                    .list-top
+                      .home_top2
+                        #notice.notice.touying(onclick=`window.open('/notice/','_self')`)
+                            svg.notice-logo.icon.cyber-swiper-item-decoration(aria-hidden='true')
+                              use(xlink:href='#icon-a-355_wsa')
+                            #noticeList.swiper-container
+                                .swiper-wrapper
+                                    each i in site.data.notice.index1
+                                      .li-style.swiper-slide=i.date
+                            i.notice-enter.fas.fa-arrow-circle-right
+                      .home_top1
+                        .bannerGroup2
+                          div(id="random")
+                            canvas#canvas.touying(width='927' height='325')
+                                script(src='https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/gsap/3.9.1/gsap.min.js')
+                                script(src='https://cdn.zhheo.com/page/people/script.js')
+                            a(id="random-hover" style="width:100%;height:auto;" href="javascript:toRandomPost()")
+                                span &nbsp
+                                i.fa.fa-paper-plane
+                                div &nbsp随便逛逛→
+                          .categoryGroup
+                            .categoryItem(style='box-shadow: var(--heo-shadow-blue);')
+                                a.categoryButton.bikan(href='/posts/c6050a1d/', data-pjax-state)
+                                    span.categoryButtonText 魔改锦囊
+                                    i.fas.fa-dove
+                            .categoryItem(style='box-shadow: var(--heo-shadow-red);')
+                                a.categoryButton.remen(href='/tags/魔改/', data-pjax-state)
+                                    span.categoryButtonText 热门魔改
+                                    i.fas.fa-burn
+                            .categoryItem(style='box-shadow: var(--heo-shadow-green);')
+                                a.categoryButton.shiyong.touying(href='/tags/教程/', data-pjax-state)
+                                    span.categoryButtonText 实用教程
+                                    i.fas.fa-book
+                        .div-card3.touying
+                          .news 
+                            each article, index in site.categories.findOne({name: 'Docs文檔'}).posts.data
+                              if index < 11
+                                li.new.fa-fw.fa.fa-link
+                                  a(href=url_for(article.path) title=article.title)!= index+_p('、') + article.title
+                                  span!=date(article.date, config.date_format)
+                          #todayCard.todayCard(onclick="javascript:window.open('https://blog.zhheo.com/p/671f98c8.html')" style='z-index: 1;')
+                            .todayCard-info
+                              .todayCard-tips 重磅更新
+                              .todayCard-title 今年过年，来放电子鞭炮
+                            .todayCard-cover(style="background: url('/img/bt.webp') no-repeat center /cover")
+                            .banner-button-group
+                              a.banner-button(onclick='window.event.cancelBubble=true;buttonClick();' data-pjax-state='external')
+                                i.fas.fa-circle-plus
+                                span.banner-button-text 更多推荐
+                    .list-top
+                      .home_top2
+                        #notice.notice.touying(onclick=`window.open('/notice/','_self')`)
+                            svg.notice-logo.icon.cyber-swiper-item-decoration(aria-hidden='true')
+                              use(xlink:href='#icon-a-68_devcloud-collaboration')
+                            #noticeList.swiper-container
+                                .swiper-wrapper
+                                    each i in site.data.notice.index2
+                                      .li-style.swiper-slide=i.date
+                            i.notice-enter.fas.fa-arrow-circle-right
+                      .home_top1
+                        .bannerGroup2
+                          if theme.swiperBar.enable
+                            !=partial('includes/custom/cyber_swiperBar', {}, {cache: true})
+                          .categoryGroup
+                            .categoryItem(style='box-shadow: var(--heo-shadow-blue);')
+                                a.categoryButton.bikan(href='/posts/c6050a1d/', data-pjax-state)
+                                    span.categoryButtonText 魔改锦囊
+                                    i.fas.fa-dove
+                            .categoryItem(style='box-shadow: var(--heo-shadow-red);')
+                                a.categoryButton.remen(href='/tags/魔改/', data-pjax-state)
+                                    span.categoryButtonText 热门魔改
+                                    i.fas.fa-burn
+                            .categoryItem(style='box-shadow: var(--heo-shadow-green);')
+                                a.categoryButton.shiyong.touying(href='/tags/教程/', data-pjax-state)
+                                    span.categoryButtonText 实用教程
+                                    i.fas.fa-book
+                        .div-card2.touying
+                          i.notice-logo2.fas.fa-bullhorn.fa-shake
+                          span=' '+_p('推荐文章')
+                          .news
+                            each article, index in site.categories.findOne({name: '魔改'}).posts.data
+                              if index < 9
+                                li.new.fa-fw.fa.fa-link
+                                  a(href=url_for(article.path) title=article.title  style=article.ztys)!= index+_p('、') + article.title
+                                  span!=date(article.date)
+                    .list-top
+                      .home_top2
+                        #notice.notice.touying(onclick=`window.open('/notice/','_self')`)
+                            svg.notice-logo.icon.cyber-swiper-item-decoration(aria-hidden='true')
+                              use(xlink:href='#icon-V')
+                            #noticeList.swiper-container
+                                .swiper-wrapper
+                                    each i in site.data.notice.index3
+                                      .li-style.swiper-slide=i.date
+                            i.notice-enter.fas.fa-arrow-circle-right
+                      .home_top1
+                        .bannerGroup2
+                          #banners.touying
+                            .banners-title
+                                .banners-title-big 无限活力
+                                .banners-title-big 与热爱生活
+                                .banners-title-small BYWIND.XYZ
+                            .tags-group-all
+                                .tags-group-wrapper
+                                    each i in site.data.creativity
+                                        - const evenNum = i.creativity_list.filter((x, index) => index % 2 === 0);
+                                        - const oddNum = i.creativity_list.filter((x, index) => index % 2 === 1);
+                                        each item, index in i.creativity_list
+                                            if ((index + 1 <= evenNum.length) && (index + 1 <= oddNum.length))
+                                                .tags-group-icon-pair
+                                                    .tags-group-icon(style=`background: ${evenNum[index].color}`)
+                                                        img(src=evenNum[index].icon, onerror='this.onerror=null,this.src="/img/friend_404.gif"', title=evenNum[index].name, alt=evenNum[index].name)
+                                                    .tags-group-icon(style=`background: ${oddNum[index].color}`)
+                                                        img(src=oddNum[index].icon, onerror='this.onerror=null,this.src="/img/friend_404.gif"', title=oddNum[index].name, alt=oddNum[index].name)
+                                    each i in site.data.creativity
+                                        - const evenNum = i.creativity_list.filter((x, index) => index % 2 === 0);
+                                        - const oddNum = i.creativity_list.filter((x, index) => index % 2 === 1);
+                                        each item, index in i.creativity_list
+                                            if ((index + 1 <= evenNum.length) && (index + 1 <= oddNum.length))
+                                                .tags-group-icon-pair
+                                                    .tags-group-icon(style=`background: ${evenNum[index].color}`)
+                                                        img(src=evenNum[index].icon, onerror='this.onerror=null,this.src="/img/friend_404.gif"', title=evenNum[index].name, alt=evenNum[index].name)
+                                                    .tags-group-icon(style=`background: ${oddNum[index].color}`)
+                                                        img(src=oddNum[index].icon, onerror='this.onerror=null,this.src="/img/friend_404.gif"', title=oddNum[index].name, alt=oddNum[index].name)
+                            a(id="random-hover" style="width:100%;height:auto;" href="javascript:toRandomPost()")
+                                span &nbsp随便逛逛
+                                div &nbsp→
+                          .categoryGroup
+                            .categoryItem(style='box-shadow: var(--heo-shadow-blue);')
+                                a.categoryButton.bikan(href='/posts/c6050a1d/', data-pjax-state)
+                                    span.categoryButtonText 魔改锦囊
+                                    i.fas.fa-dove
+                            .categoryItem(style='box-shadow: var(--heo-shadow-red);')
+                                a.categoryButton.remen(href='/tags/魔改/', data-pjax-state)
+                                    span.categoryButtonText 热门魔改
+                                    i.fas.fa-burn
+                            .categoryItem(style='box-shadow: var(--heo-shadow-green);')
+                                a.categoryButton.shiyong.touying(href='/tags/教程/', data-pjax-state)
+                                    span.categoryButtonText 实用教程
+                                    i.fas.fa-book
+                        .div-card3.touying
+                          .about-statistic2.author-content-item3
+                            .card-content
+                              .todayCard-info
+                                .todayCard-tips 重磅更新
+                                .todayCard-title 今年过年，来放电子鞭炮 
+        .js-pjax
+          script(src='https://unpkg.com/swiper/swiper-bundle.min.js' data-pjax='')
+          script.
+            var swiper = new Swiper ('#noticeList', {
+              spaceBetween: 30,
+              centeredSlides: true,
+              direction: 'vertical', // 垂直切换选项
+              loop: true, // 循环模式选项
+              autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+              },
+            })
+        link(rel='stylesheet', href='/css/mycss.css')

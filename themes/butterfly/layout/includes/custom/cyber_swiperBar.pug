@@ -1,0 +1,56 @@
+.recent-post-item#swiperBar
+  #cyber-swiper-container
+    .swiper-wrapper.cyber-swiper-wrapper
+      //- 文章卡片
+      if theme.pjax.enable
+        each item in swiper_list()
+          //- 内容版块
+          .swiper-slide.cyber-swiper-item
+            //- 封面
+            .cyber-swiper-item-cover
+              img.article-cover(src=item.cover title='' onerror=`this.src=` + theme.swiperBar.error_img + `; this.onerror = null;`)
+            //- 时间
+            if (theme.swiperBar.timemode === 'updated' )
+              .cyber-swiper-item-time
+                span= item.updated.format('YYYY-MM-DD')
+            else
+              .cyber-swiper-item-time
+                span= item.date.format('YYYY-MM-DD')
+            //- 标题和描述
+            .cyber-swiper-item-info
+              a.cyber-swiper-item-title(onclick=`pjax.loadUrl("` + item.path + `");` title='')
+                .cyber-swiper-item-title-link= item.title            
+              a.cyber-swiper-item-description(onclick=`pjax.loadUrl("` + item.path + `");` title='')
+                .cyber-swiper-item-description-text!= item.description ? item.description : theme.swiperBar.default_descr
+            //- 装饰图标盲盒
+            svg.icon.cyber-swiper-item-decoration(aria-hidden="true")
+              use(xlink:href=cybericon())
+      else
+        each item in swiper_list()
+          //- 内容版块
+          .swiper-slide.cyber-swiper-item
+            //- 封面
+            a.cyber-swiper-item-cover(href=item.path  title='')
+              img.article-cover(src=item.cover title='' onerror=`this.src=` + theme.swiperBar.error_img + `; this.onerror = null;`)
+            //- 时间
+            if (theme.swiperBar.timemode === 'updated' )
+              .cyber-swiper-item-time
+                span='updated:'
+                span= item.updated.format('YYYY-MM-DD')
+            else
+              .cyber-swiper-item-time
+                span='updated:'
+                span= item.date.format('YYYY-MM-DD')
+            //- 标题和描述
+            .cyber-swiper-item-info
+              a.cyber-swiper-item-title(href=item.path  title='')
+                .cyber-swiper-item-title-link= item.title
+              a.cyber-swiper-item-description(href=item.path  title='')
+                .cyber-swiper-item-description-text!= item.description ? item.description : theme.swiperBar.default_descr
+            //- 装饰图标盲盒
+            svg.icon.cyber-swiper-item-decoration(aria-hidden="true")
+              use(xlink:href=cybericon())
+    .swiper-pagination.cyber-swiper-pagination
+
+  script(defer src=url_for(theme.swiperBar.swiper_js))
+  script(defer data-pjax src=url_for(theme.swiperBar.swiper_init_js))

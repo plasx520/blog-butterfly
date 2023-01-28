@@ -17,7 +17,7 @@ if !theme.disable_top_img && page.top_img !== false
     - var top_img = page.top_img || theme.default_top_img
 
   if top_img !== false
-    - var imgSource = top_img && top_img.indexOf('/') !== -1 ? `background-image: linear-gradient(to bottom, rgb(0 225 255 / 23%), rgb(90 91 255 / 47%)), url('${url_for(top_img)}')` : `background: ${top_img}`
+    - var imgSource = top_img && top_img.indexOf('/') !== -1 ? `background-image: linear-gradient(to bottom, var(--heo-theme), var(--heo-zhuti)), url('${url_for(top_img)}')` : `background: ${top_img}`
     - var bg_img = top_img ? imgSource : ''
     - var site_title = page.title || page.tag || page.category || config.title
     - var isHomeClass = is_home() ? 'full_page nav-fixed nav-visible' : 'not-home-page'
@@ -33,9 +33,19 @@ header#page-header(class=isHomeClass style=bg_img)
   if top_img !== false
     if is_post()
       include ./post-info.pug
+      section.main-hero-waves-area.waves-area
+        svg.waves-svg(xmlns='http://www.w3.org/2000/svg', xlink='http://www.w3.org/1999/xlink', viewBox='0 24 150 28', preserveAspectRatio='none', shape-rendering='auto')
+          defs
+            path#gentle-wave(d='M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z')
+          g.parallax
+            use(href='#gentle-wave', x='48', y='0')
+            use(href='#gentle-wave', x='48', y='3')
+            use(href='#gentle-wave', x='48', y='5')
+            use(href='#gentle-wave', x='48', y='7')
     else if is_home()
-      video#index-video.videosy(autoplay='' loop='' muted='' __idm_id__='196610' style='object-fit:fill;width:100%;height:100%;')
-        source(src=theme.index_video) 
+      if page.index_video ? page.index_video : theme.index_video
+        video#index-video.videosy(autoplay='' loop='' muted='' __idm_id__='196610' style='object-fit:fill;width:100%;height:100%;')
+          source(src=theme.index_video) 
       #site-info
         h1#site-title=site_title
         if theme.subtitle.enable

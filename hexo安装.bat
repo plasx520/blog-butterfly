@@ -26,7 +26,7 @@ echo    7 = 重新渲染    8 = 生成文件
 echo.
 echo    9 = 升级hexo    0 = 打开页面
 echo.
-echo    j = 监视文件    q = 退出
+echo    j = 生成搜索    q = 退出
 echo.
 echo =============================================
 
@@ -177,10 +177,10 @@ goto meun
 :j
 cls
 echo.
-echo     监视文件变动
-start cmd /k "cd %userprofile%\Desktop\blog && hexo generate --watch "
+echo    生成搜索引擎
+start cmd /k "cd %userprofile%\Desktop\blog && hexo algolia"
 echo.
-echo   hexo generate --watch #监视文件变动
+echo   生成搜索引擎
 echo.
 echo     3秒后自动返回主菜单
 echo.

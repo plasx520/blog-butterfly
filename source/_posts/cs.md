@@ -14,8 +14,10 @@ cover: 'https://s2.loli.net/2022/11/04/y8rclikszbXZ7HK.webp'
 comments: true
 abbrlink: 9daba997
 date: 2022-11-05 20:42:55
+swiper_index: 2
 updated:
 ---
+
 
 
 
@@ -233,11 +235,11 @@ hahaha <span><img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/%E
 
 
 ```
-{% link 怕冷爱上雪, https://blog.4t.pw, https://cdn3.tianli0.top/npm/plasx@1.0.3/img/favicon.webp %}
+{% link 怕冷爱上雪, https://blog.4t.pw, https://jsd.onmicrosoft.cn/npm/plasx@1.0.3/img/favicon.webp %}
 ```
 
 <div class="linkdh">
-{% link 怕冷爱上雪, https://blog.4t.pw, https://cdn3.tianli0.top/npm/plasx@1.0.3/img/favicon.webp %}
+{% link 怕冷爱上雪, https://blog.4t.pw, https://jsd.onmicrosoft.cn/npm/plasx@1.0.3/img/favicon.webp %}
 </div>
 
 
@@ -263,3 +265,81 @@ hahaha <span><img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/%E
 >{% btn 'https://butterfly.js.org/',高速下载,far fa-hand-point-right,pink larger %}
 >{% endmima %}
 
+```
+{% msgbox title %}
+{% msgguest name,avatar %}
+对话内容
+{% endmsgguest %}
+{% msgadmin name,avatar %}
+对话内容
+{% endmsgadmin %}
+{% endmsgbox %}
+```
+
+```
+{% msgbox "🧊Akilarの糖果屋🍭" %}
+{% msgguest "waha|blog.raiseme.net" %}
+markdown还有比typora更好用的吗?
+{% endmsgguest %}
+{% msgadmin %}
+Atom党加一
+{% endmsgadmin %}
+{% msgguest "xl","https://gcore.jsdelivr.net/gh/zykjofficial/zykjofficial.github.io@master/img/avatar.png" %}
+markdown我用typora
+{% endmsgguest %}
+{% msgguest "青葱|ciraosindex.top","https://npm.elemecdn.com/akilar-friends@latest/avatar/www.itciraos.cn.jpg" %}
+我顶vscode
+{% endmsgguest %}
+{% msgguest "冰卡诺|zfe.one","https://npm.elemecdn.com/akilar-friends@latest/avatar/zfe.space.jpg" %}
+我用石墨
+{% endmsgguest %}
+{% msgguest "冰卡诺|zfe.one","https://npm.elemecdn.com/akilar-friends@latest/avatar/zfe.space.jpg" %}
+![](/assets/1671589422883.png)
+{% endmsgguest %}
+{% msgadmin %}
+我就知道会有这个
+{% endmsgadmin %}
+{% msgguest "陈殇|blog.chen-shang.top","https://npm.elemecdn.com/akilar-friends@latest/avatar/weikecc.top.jpg" %}  
+冰老师用铅笔？
+{% endmsgguest %}
+{% msgguest "青葱|ciraosindex.top","https://npm.elemecdn.com/akilar-friends@latest/avatar/www.itciraos.cn.jpg" %}
+大佬，就是不一样
+{% endmsgguest %}
+{% msgguest "xl","https://gcore.jsdelivr.net/gh/zykjofficial/zykjofficial.github.io@master/img/avatar.png" %}
+大佬，就是不一样
+{% endmsgguest %}
+{% endmsgbox %}
+```
+
+{% msgbox "🧊Akilarの糖果屋🍭" %}
+{% msgguest "waha|blog.raiseme.net" %}
+markdown还有比typora更好用的吗?
+{% endmsgguest %}
+{% msgadmin %}
+Atom党加一
+{% endmsgadmin %}
+{% msgguest "xl","https://gcore.jsdelivr.net/gh/zykjofficial/zykjofficial.github.io@master/img/avatar.png" %}
+markdown我用typora
+{% endmsgguest %}
+{% msgguest "青葱|ciraosindex.top","https://npm.elemecdn.com/akilar-friends@latest/avatar/www.itciraos.cn.jpg" %}
+我顶vscode
+{% endmsgguest %}
+{% msgguest "冰卡诺|zfe.one","https://npm.elemecdn.com/akilar-friends@latest/avatar/zfe.space.jpg" %}
+我用石墨
+{% endmsgguest %}
+{% msgguest "冰卡诺|zfe.one","https://npm.elemecdn.com/akilar-friends@latest/avatar/zfe.space.jpg" %}
+![](/img/bj.webp)
+{% endmsgguest %}
+{% msgadmin %}
+我就知道会有这个
+{% endmsgadmin %}
+{% msgguest "陈殇|blog.chen-shang.top","https://npm.elemecdn.com/akilar-friends@latest/avatar/weikecc.top.jpg" %}  
+冰老师用铅笔？
+{% endmsgguest %}
+{% msgguest "青葱|ciraosindex.top","https://npm.elemecdn.com/akilar-friends@latest/avatar/www.itciraos.cn.jpg" %}
+大佬，就是不一样
+{% endmsgguest %}
+{% msgguest "xl","https://gcore.jsdelivr.net/gh/zykjofficial/zykjofficial.github.io@master/img/avatar.png" %}
+大佬，就是不一样
+{% endmsgguest %}
+{% endmsgbox %}

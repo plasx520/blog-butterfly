@@ -1,0 +1,44 @@
+{
+  "name": "hexo-tag-aplayer",
+  "version": "3.0.4",
+  "description": "Embed aplayer in Hexo posts/pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "music",
+    "hexo",
+    "tag",
+    "player",
+    "aplayer"
+  ],
+  "author": "Grzhan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grzhan/hexo-tag-aplayer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/grzhan/hexo-tag-aplayer/issues"
+  },
+  "homepage": "https://github.com/grzhan/hexo-tag-aplayer#readme",
+  "dependencies": {
+    "aplayer": "^1.10.0",
+    "babel-polyfill": "^6.16.0",
+    "hexo-fs": "^0.2.0",
+    "hexo-log": "^0.2.0",
+    "hexo-util": "^0.1.7",
+    "meting": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.18.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-watch": "^5.0.0"
+  }
+}

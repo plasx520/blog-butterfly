@@ -8,9 +8,9 @@ function xiazai(args) {
 	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 	<script src="https://cdn.bootcss.com/js-sha1/0.6.0/sha1.js"></script>
 	<script src="/js/xiazai.js"></script>
-	<button onclick="myFunction()" type="button" data-dl>
+	<button2 onclick="myFunction()" type="button" data-dl>
 	  <span class="dl-icon"></span><span>开始下载</span>
-	  </button></div>
+	  </button2></div>
 	  <script>
 	function myFunction(){
 	  url=("/xz/index.html?noticeId=" + str64 + "&bd=${bd}&ct=${ct}&ty=${ty}&bz=${bz}")

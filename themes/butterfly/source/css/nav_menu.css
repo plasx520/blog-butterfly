@@ -1,5 +1,5 @@
 #nav a:hover {
-  background: var(--anzhiyu-main);
+  background: var(--heo-theme) !important;
   transition: 0.3s;
 }
 
@@ -174,7 +174,7 @@ ul.menus_item_child {
 }
 #nav {
   padding: 0 calc((100% - 1420px) / 2);
-  backdrop-filter: saturate(180%) blur(20px);
+  /* backdrop-filter: saturate(180%) blur(20px); */
 }
 
 #nav a {
@@ -548,4 +548,8 @@ center#name-container {
   --anzhiyu-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0);
   --anzhiyu-shadow-light2black: 0 5px 12px -5px rgba(102, 68, 68, 0);
   --anzhiyu-card-border: #42444a;
+}
+.xiaotuzi{
+  width: 80px;
+  height: 80px;
 }

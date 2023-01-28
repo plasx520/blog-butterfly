@@ -12,7 +12,7 @@ categories: 進階教程
 keywords: 'hexo,butterfly,主題,doc,教程,文檔,Aplayer,Aplayer吸底,pjax'
 description: Butterfly添加全局吸底Aplayer教程
 top_img:
-cover: https://cdn1.tianli0.top/gh/jerryc127/CDN/img/Butterfly-add-aplayer-cover.png
+cover: https://jsd.onmicrosoft.cn/gh/jerryc127/CDN/img/Butterfly-add-aplayer-cover.png
 comments: true
 ---
 
@@ -54,7 +54,7 @@ comments: true
 
 回到正題，這篇文章將教大家如何在Butterfly上使用全局吸底 Aplayer
 
-![aplayer](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/butterfly-aplayer-xidi.gif)
+![aplayer](https://jsd.onmicrosoft.cn/gh/jerryc127/CDN/img/butterfly-aplayer-xidi.gif)
 
 ## 關閉 `asset_inject`
 

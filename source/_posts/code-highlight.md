@@ -7,7 +7,7 @@ tags:
 categories:
   - Demo
 description: Code Highlight Style test
-cover: https://cdn1.tianli0.top/gh/jerryc127/CDN/img/Code-Highlight-Style-test-cover.png
+cover: https://jsd.onmicrosoft.cn/gh/jerryc127/CDN/img/Code-Highlight-Style-test-cover.png
 comments: true
 ---
 

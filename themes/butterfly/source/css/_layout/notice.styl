@@ -1,0 +1,1798 @@
+/* 网站标题、副标题闪光 */
+#page-header #site-title:hover,
+#page-header #site-subtitle:hover 
+    color: rgb(255, 255, 255)
+    text-shadow: rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 20px, rgb(255, 255, 255) 0px 0px 30px, rgb(0, 255, 255) 0px 0px 40px, rgb(0, 255, 255) 0px 0px 70px, rgb(0, 255, 255) 0px 0px 80px, rgb(0, 255, 255) 0px 0px 100px
+/*移动端优化：去除归档、标签、最新文章、公告、评论、只保留网站统计*/
+@media screen and (max-width:900px) 
+    div#footer_deal,
+    div#Jay-footer,
+    .topGroup,
+    .down-list,
+    #home_top,
+    .div-card2,
+    .videosy 
+        display: none !important
+    .bannerGroup2 
+        width: 93% !important
+    #home_top 
+        padding: 40px 0px 0px 35px !important
+/*彩虹文字*/
+#site-info h1,
+#page-header #site-title 
+    padding-top: 3px
+    background-image: linear-gradient(to left, orangered, orange, gold, lightgreen, cyan, dodgerblue, mediumpurple, hotpink, orangered)
+    background-size: 110vw
+    -webkit-background-clip: text
+    background-clip: text
+    color: transparent
+    -webkit-animation: rainbowan 60s linear infinite
+    animation: rainbowan 60s linear infinite
+@-webkit-keyframes rainbowan 
+    to 
+        background-position: -2000vw
+@keyframes rainbowan 
+    to 
+        background-position: -2000vw
+/* 顶部标签*/
+#post-meta .post-meta__tags 
+    display: inline-block
+    background: #ffffff33
+    margin: 0px 8px 0px 0px
+    padding: 2px 20px
+    width: fit-content
+    border-radius: 7px
+    color: #49b1f5
+    font-size: 1em
+    -webkit-transition: all 0.2s ease-in-out
+    -moz-transition: all 0.2s ease-in-out
+    -o-transition: all 0.2s ease-in-out
+    -ms-transition: all 0.2s ease-in-out
+    transition: all 0.2s ease-in-out
+#post-meta .post-meta__tags:hover 
+    background: #49b1f5 !important
+    color: var(--white) !important
+    border-radius: 8px !important
+.post>#page-header 
+    box-shadow: var(--plasx-anheiwz)
+.tagsbq 
+    display: inline-block
+    background: rgba(255,131, 235, 0.222)
+    margin: 0px 8px 0px 0px
+    padding: 0px 10px
+    width: fit-content
+    border-radius: 7px
+    color: #49b1f5
+    font-size: 1em
+    -webkit-transition: all 0.2s ease-in-out
+    -moz-transition: all 0.2s ease-in-out
+    -o-transition: all 0.2s ease-in-out
+    -ms-transition: all 0.2s ease-in-out
+    transition: all 0.2s ease-in-out
+.tagsbq:hover 
+    background: #49b1f5 !important
+    color: var(--white) !important
+    border-radius: 8px !important
+/* 背景切换*/
+/* 由于全屏会出bug，所以直接给他隐藏 */
+.wb-header 
+    background: rgba(0, 206, 242, 0.68)
+.winbox 
+    border-radius: 12px
+    overflow: hidden
+.wb-full 
+    display: none
+.wb-min 
+    background-position: center
+[data-theme='dark'] .wb-body,
+[data-theme='dark'] #changeBgBox 
+    background: #333 !important
+.bgbox 
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+.pimgbox,
+.imgbox,
+.box 
+    width: 166px
+    margin: 10px
+    background-size: cover
+.pimgbox,
+.imgbox 
+    border-radius: 10px
+    overflow: hidden
+.pimgbox 
+    height: 240px
+.imgbox 
+    height: 95px
+.box 
+    height: 100px
+@media screen and (max-width:768px) 
+    /* 背景 */
+    .pimgbox,
+    .imgbox,
+    .box 
+        height: 73px
+        width: 135px
+    .pimgbox 
+        height: 205px
+    /* 2.0新增内容 */
+    .wb-min 
+        display: none
+    #changeBgBox .wb-body::-webkit-scrollbar 
+        display: none
+/* 公告栏 */
+.notice-logo 
+    line-height: 22px
+    margin-right: 8px
+    transition: 0.3s
+    color: #ff0000
+    font-size: 1.6em
+#notice 
+    height: 47px
+    background-color: var(--heo-zhuti)
+    color: var(--font-color)
+    padding: 10px 20px 10px 20px
+    border-radius: 50px
+    cursor: pointer
+    display: flex
+    overflow: hidden
+[data-theme="dark"] #notice 
+    background: rgba(0, 0, 0, 0.175) !important
+#notice span 
+    white-space: nowrap
+    font-weight: bolder
+.swiper-wrapper 
+    width: 100%
+    height: 25px
+    line-height: 25px
+.swiper-wrapper .swiper-slide 
+    width: 100%
+    text-align: center
+    -webkit-line-clamp: 1
+    -webkit-box-orient: vertical
+    overflow: hidden
+    text-overflow: ellipsis
+    transition: 0.3s
+    font-weight: bold
+.swiper-slide:hover 
+    color: #64b2ff
+#noticeList 
+    margin-left: auto
+    margin-right: auto
+    position: relative
+    overflow: hidden
+    list-style: none
+    padding: 0
+    z-index: 1
+.notice-enter 
+    line-height: 25px
+    margin-left: 8px
+    transition: 0.3s
+    color: var(--heo-theme)
+/* 阿里图标大小 */
+@font-face 
+    font-family: "iconfont"
+    font-display: swap
+    src: url('//at.alicdn.com/t/c/font_3756163_yk2bt3u2pd.woff2?t=1667842809479') format('woff2'), url('//at.alicdn.com/t/c/font_3756163_yk2bt3u2pd.woff?t=1667842809479') format('woff'), url('//at.alicdn.com/t/c/font_3756163_yk2bt3u2pd.ttf?t=1667842809479') format('truetype')
+.iconfont 
+    font-family: "iconfont" !important
+    font-size: 25px
+    font-style: normal
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+.icon-liulanqi1:before 
+    content: "\e610"
+.icon-email:before 
+    content: "\e60b"
+.icon-QQ:before 
+    content: "\e667"
+.icon-weixin:before 
+    content: "\e607"
+.icon-douyin:before 
+    content: "\e604"
+/* 側邊欄個人信息卡片動態漸變色 */
+#aside-content>.card-widget.card-info 
+    background: linear-gradient(-45deg, #e8d8b9, #eccec5, #a3e9eb, #bdbdf0, #eec1ea)
+    box-shadow: 0 0 5px rgb(66, 68, 68)
+    position: relative
+    background-size: 400% 400%
+    animation: Gradient 4s ease infinite !important
+    border-radius: 40px
+    border: 9px solid #000 
+    padding: 0 14px 8px
+    height: 570px !important
+#aside-content .card-info .card-info-social-icons 
+    margin: 6px 0 -6px
+    position: relative
+    background-color: #00000026
+    border-radius: 12px
+    margin-bottom: 10px
+#aside-content .card-info .card-info-data 
+    margin: 14px 0 11px
+@-webkit-keyframes Gradient 
+    0% 
+        background-position: 0% 50%
+    50% 
+        background-position: 100% 50%
+    100% 
+        background-position: 0% 50%
+@-moz-keyframes Gradient 
+    0% 
+        background-position: 0% 50%
+    50% 
+        background-position: 100% 50%
+    100% 
+        background-position: 0% 50%
+@keyframes Gradient 
+    0% 
+        background-position: 0% 50%
+    50% 
+        background-position: 100% 50%
+    100% 
+        background-position: 0% 50%
+/* 個人信息Follow me按鈕 */
+#aside-content>.card-widget.card-info>#card-info-btn 
+    border-radius: 8px
+    height: 135px
+    background-image: url(https://cdn3.tianli0.top/npm/plasx@1.0.3/img/xka.webp)
+    background-position: 50% 50%
+    background-repeat: repeat
+    box-shadow: inset 3px 4px 3px 1px rgba(0,0,0, 0.40)
+[data-theme="dark"] #aside-content>.card-widget.card-info 
+    background: linear-gradient(-45deg, #635c4f, #655956, #456162, #4e4e62, #5f4e5d)
+    box-shadow: 0 0 5px rgb(66, 68, 68)
+    position: relative
+    background-size: 400% 400%
+    -webkit-animation: Gradient 10s ease infinite
+    -moz-animation: Gradient 10s ease infinite
+    animation: Gradient 10s ease infinite !important
+/* 手机底部 */
+.home-indicator 
+    position: relative
+    width: 108px
+    margin: auto
+    height: 6px
+    background-color: var(--recent-post-bgcolor)
+    border-radius: 3px
+/* 手机顶部 */
+.home-indicatordin 
+    position: relative
+    width: 108px
+    margin: auto
+    height: 6px
+    background-color: var(--recent-post-bgcolor)
+    border-radius: 3px
+.fakaozuo 
+    text-align: left
+.status-bar 
+    position: relative
+    display: flex
+    height: 20px
+    margin-bottom: 31px
+    justify-content: space-between
+    font-size: 1em
+#camera 
+    width: 20px
+    height: 20px
+    border: solid 7px #232323
+    border-radius: 50%
+    margin: 6px 7px 0px 15%
+    box-shadow: inset 1px 1px 2px 2px rgba(0,0,0,0.68)
+.xiayi 
+    padding: 5px
+.biaotou 
+    border-radius: 12px
+    width: 76px
+    background-color: #5252522e
+    transition: .3s
+    margin: 0 10px
+.biaotou:hover 
+    background-color: rgb(47, 47, 47)
+/* 修改标签栏 */
+/* 归档、标签、分类页 */
+#archive,
+#tag,
+#category 
+    background: var(--recent-post-bgcolor)
+    padding: 25px 10px
+.article-sort-title 
+    margin-top: 30px
+    margin-bottom: 20px
+.article-sort-item::before,
+.article-sort-title::before,
+.article-sort-title::after 
+    content: none
+.article-sort .year 
+    width: 100% !important
+    border-bottom: dashed 5px #1688c9
+    font-size: 26px
+    margin-top: 20px
+.article-sort 
+    border: none
+    display: flex
+    flex-wrap: wrap
+    margin: 20px 20px
+    padding: 0
+.article-sort-item:not(.year) 
+    padding: 8px 10px
+    width: calc(50% - 0.8rem)
+    margin: 0.4rem
+    border: 2px solid #1688c9
+    border-radius: 15px
+    background: var(--card-bg)
+    transition: 0.5s
+    height: 120px
+    box-shadow: 0px 0px 3px 2px rgb(0,31,40,.53)
+    color: rgb(231, 231, 231)
+.article-sort-item-a 
+    position: absolute
+    width: 100%
+    height: 100%
+.article-sort-item-img 
+    transition: 0.5s
+    height: 90px
+    width: 140px
+.article-sort-item>a>img 
+    border-radius: 15px
+.article-sort-item-title 
+    font-size: 22px
+    padding-left: 10px
+    margin: 10px 0
+    line-height: 25px
+    text-overflow: ellipsis
+.article-sort-item-title:hover 
+    transform: none
+.article-sort-meta 
+    height: max-content
+    position: relative
+.article-sort-meta>.article-meta-wrap 
+    float: left
+.article-sort-meta>.article-sort-item-time 
+    float: right
+.article-sort-item-categories,
+.article-sort-item-tags 
+    margin: 0 3px
+    padding: 5px 8px
+    border-radius: 25px
+    border: 1px solid var(--dark-grey)
+    font-size: 12px
+    transition: 0.5s
+.article-sort-item-info>div:not(.article-sort-meta) 
+    display: flex
+.article-sort-description,
+.article-sort-item>i 
+    width: 0
+    opacity: 0
+    overflow: hidden
+    transition: 0.5s
+.article-sort-description 
+    width: 0
+    height: 59px
+    vertical-align: middle
+    margin: 5px 10px 0 15px
+    text-overflow: ellipsis
+.article-sort-item:hover:not(.year) 
+    background-color: #13a6ba
+    box-shadow: 0 0 10px #1688c9
+.article-sort-item:hover:not(.year) 
+    background-color: #13a6ba
+    box-shadow: 0 0 10px #1688c9
+.article-sort-item:hover:not(.year) .article-sort-description,
+.article-sort-item:hover:not(.year)>i 
+    width: auto
+    opacity: 1
+.article-sort-item:hover:not(.year) .article-sort-description 
+    width: auto
+.article-sort-item:hover:not(.year) .article-sort-item-img 
+    transition: 0.5s
+    width: 0
+.article-sort-item:hover:not(.year) .article-sort-item-title 
+    color: var(--ichika-font-white) !important
+.article-sort-item:hover:not(.year) .article-meta-wrap a,
+.article-sort-item:hover:not(.year) .article-sort-description,
+.article-sort-item:hover:not(.year) .article-sort-item-time 
+    color: var(--ichika-light-grey) !important
+.article-sort-item:hover:not(.year) .article-sort-item-categories 
+    border: 1.5px solid var(--ichika-green)
+.article-sort-item:hover:not(.year) .article-sort-item-tags 
+    border: 1.5px solid var(--ichika-purple)
+.article-sort-item:hover:not(.year) .article-sort-item-categories:hover 
+    background: var(--ichika-green)
+    box-shadow: 0 0 5px var(--ichika-green)
+.article-sort-item:hover:not(.year) .article-sort-item-tags:hover 
+    background: var(--ichika-purple)
+    box-shadow: 0 0 5px var(--ichika-purple)
+@media screen and (max-width:768px) 
+    .article-sort-item:not(.year) 
+        width: 100%
+    .article-sort-meta>.article-meta-wrap 
+        display: none
+    .article-sort-item-title 
+        font-size: 16px
+    .article-sort-item-img 
+        width: 90px
+/* 设置文字内容 :qq显示的作用是选择第几个 */
+.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(1):before 
+    content: '输入QQ号会自动获取昵称和头像🐧'
+.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(2):before 
+    content: '收到回复将会发送到您的邮箱📧'
+.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(3):before 
+    content: '可以通过昵称访问您的网站🔗'
+.el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::before,
+.el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::after 
+    display: block
+/* 主内容区 */
+.el-input.el-input--small.el-input-group.el-input-group--prepend::before 
+    /* 先隐藏起来 */
+    display: none
+    /* 绝对定位 */
+    position: absolute
+    /* 向上移动60像素 */
+    top: -60px
+    /* 文字强制不换行，防止left:50%导致的文字换行 */
+    white-space: nowrap
+    /* 圆角 */
+    border-radius: 10px
+    /* 距离左边50% */
+    left: 50%
+    /* 然后再向左边挪动自身的一半，即可实现居中 */
+    transform: translate(-50%)
+    /* 填充 */
+    padding: 14px 18px
+    background: #444
+    color: #fff
+/* 小角标 */
+.el-input.el-input--small.el-input-group.el-input-group--prepend::after 
+    display: none
+    content: ''
+    position: absolute
+    /* 内容大小（宽高）为0且边框大小不为0的情况下，每一条边（4个边）都是一个三角形，组成一个正方形。
+我们先将所有边框透明，再给其中的一条边添加颜色就可以实现小三角图标 */
+    border: 12px solid transparent
+    border-top-color: #444
+    left: 50%
+    transform: translate(-50%, -48px)
+/* 评论框 */
+#twikoo .tk-content 
+    background: var(--heo-zhuti)
+    box-shadow: inset 0px 0px 3px 1px var(--heo-theme)
+    padding: 10px 15px
+    border-radius: 10px
+#twikoo .tk-content:hover 
+    background: var(--heo-zhuti)
+    box-shadow: inset 0px 0px 3px 1px var(--heo-theme)
+    padding: 10px 15px
+    border-radius: 10px
+/* 文章目录模糊 */
+#aside-content #card-toc .toc-content .toc-link.active 
+    line-height: 1.2
+    border-radius: 12px
+    border-left-color: var(--heo-hovertext)
+    background-color: var(--heo-card-bg)
+    color: var(--heo-lighttext)
+    font-weight: bold
+    font-size: 20px
+[data-theme=dark].toc .toc-item.active .toc-link .toc-text 
+    color: var(--heo-white)
+#aside-content #card-toc .toc-content .toc-item.active .toc-link 
+    opacity: 1
+    border-radius: 8px
+#aside-content #card-toc .toc-content .toc-link 
+    line-height: 1.2
+    padding: 8px
+    border-left: 0px solid transparent
+    border-radius: 12px
+    color: var(--heo-secondtext)
+    cursor: default
+#aside-content #card-toc .toc-content .toc-link:not(.active) span 
+    opacity: 0.6
+    cursor: pointer
+    filter: blur(1px)
+    transition: 0.3s
+#aside-content #card-toc:hover .toc-content .toc-link:not(.active) span 
+    filter: blur(0px)
+    opacity: 1
+#aside-content #card-toc .toc-content .toc-link:not(.active) span:hover 
+    color: var(--heo-lighttext)
+/* 网页最大宽度 */
+.layout.hide-aside 
+    max-width: 1400px
+/* 消息弹窗 */
+.snackbar-container 
+    background: var(--heo-main) !important
+    color: var(--heo-white) !important
+    border-radius: 0 !important
+    display: flex !important
+    max-width: none !important
+    min-width: 100% !important
+    margin: 0px !important
+    left: 0px !important
+    height: 60px !important
+    transform: none !important
+    -webkit-box-pack: center !important
+    -moz-box-pack: center !important
+    -o-box-pack: center !important
+    -ms-flex-pack: center !important
+    -webkit-justify-content: center !important
+    justify-content: center !important
+.snackbar-container p 
+    font-weight: bold !important
+    text-align: center !important
+    font-size: 0.8rem !important
+    display: flex !important
+    justify-content: center !important
+.snackbar-container .action 
+    color: var(--heo-white) !important
+    padding: 4px 6px !important
+    font-weight: bold
+    border-radius: 8px !important
+    transition: 0.3s
+    border: var(--style-border) !important
+.snackbar-container .action:hover 
+    color: var(--heo-main) !important
+    background: var(--heo-white) !important
+.snackbar-container::after 
+    position: absolute
+    width: 0
+    height: 100%
+    left: 0
+    top: 0
+    background: var(--heo-white)
+    opacity: 0.1
+    content: ""
+    animation: snackbar-progress 2s linear forwards
+    pointer-events: none
+@keyframes snackbar-progress 
+    from 
+        width: 0
+    to 
+        width: 100%
+/* 搜索背景模糊 */
+#search-mask 
+    backdrop-filter: blur(12px)
+    -webkit-backdrop-filter: blur(12px)
+    background: var(--heo-maskbg)
+/* 最新文章侧边栏悬浮 */
+#aside-content .aside-list>.aside-list-item 
+    padding: 8px
+    padding-top: 6px !important
+    padding-bottom: 6px !important
+    border-radius: 12px
+    transition: 0.3s
+    margin: 4px 0
+    cursor: pointer
+@media screen and (min-width: 1300px) 
+    #aside-content .aside-list>.aside-list-item:hover 
+        transform: scale(1.03)
+    #aside-content .aside-list>.aside-list-item:active 
+        transform: scale(0.97)
+#aside-content .aside-list>.aside-list-item:hover .thumbnail>img 
+    transform: scale(1)
+#aside-content .aside-list>.aside-list-item:not(:last-child) 
+    border-bottom: 0px dashed var(--heo-background) !important
+#aside-content .aside-list>.aside-list-item .thumbnail 
+    border-radius: 8px
+    border: var(--style-border)
+#aside-content .aside-list>.aside-list-item:hover 
+    background: var(--heo-main)
+    color: var(--heo-white)
+    transition: 0.3s
+    box-shadow: var(--heo-shadow-main)
+#aside-content .aside-list>.aside-list-item:hover a 
+    color: var(--heo-white) !important
+/* 侧边栏按钮文字 */
+#aside-content .card-archives ul.card-archive-list>.card-archive-list-item a,
+#aside-content .card-categories ul.card-category-list>.card-category-list-item a 
+    border-radius: 8px
+    margin: 4px 0
+    display: flex
+    flex-direction: column
+    align-content: space-between
+    border: var(--style-border)
+#aside-content .card-archives ul.card-archive-list>.card-archive-list-item a span:first-child,
+#aside-content .card-categories ul.card-category-list>.card-category-list-item a span:first-child 
+    width: auto
+#aside-content .card-archives ul.card-archive-list,
+#aside-content .card-categories ul.card-category-list 
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    flex-wrap: wrap
+span.card-archive-list-count 
+    width: auto
+    text-align: left
+    font-size: 1.1rem
+    line-height: 0.9
+    font-weight: bold
+#aside-content .card-archives ul.card-archive-list>.card-archive-list-item a span:last-child,
+#aside-content .card-categories ul.card-category-list>.card-category-list-item a span:last-child 
+    width: fit-content
+    margin-left: 4px
+.card-archive-list-date 
+    font-size: 14px
+    opacity: 0.6
+li.card-archive-list-item 
+    width: 100%
+    flex: 0 0 48%
+.card-category-list 
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+.card-category-list-item 
+    width: 45%
+.card-category-list-count 
+    display: none !important
+.card-category-list-name 
+    width: 100% !important
+    text-align: center
+/* 微信公众号 */
+#aside-content .card-widget#card-wechat 
+    background: #45704d0d
+    display: flex
+    justify-content: center
+    align-content: center
+    padding: 0
+    cursor: pointer
+    border: none
+    height: 110px
+/* 微信公众号翻转 */
+#flip-wrapper 
+    position: relative
+    width: 235px
+    height: 110px
+    z-index: 1
+/* this need to be here - i dont know why?*/
+#flip-wrapper 
+    -webkit-perspective: 1000
+    perspective: 1000
+#flip-content 
+    width: 100%
+    height: 100%
+    -webkit-transform-style: preserve-3d
+    transform-style: preserve-3d
+    transition: cubic-bezier(0, 0, 0, 1.29) 0.3s
+#flip-wrapper:hover #flip-content 
+    -webkit-transform: rotateY(180deg)
+    transform: rotateY(180deg)
+.face 
+    position: absolute
+    width: 100%
+    height: 100%
+    -webkit-backface-visibility: hidden
+    backface-visibility: hidden
+    background: url(https://s2.loli.net/2022/11/16/NThS2Y7fjuxtAXk.webp) center center no-repeat
+    background-size: 100%
+.back.face 
+    display: block
+    -webkit-transform: rotateY(180deg)
+    transform: rotateY(180deg)
+    box-sizing: border-box
+    background: url(https://s2.loli.net/2022/11/16/QnUNS8rvAXgV5dq.webp) center center no-repeat
+    background-size: 100%
+/* 标签云卡片 */
+#aside-content .card-tag-cloud a 
+    color: var(--heo-fontcolor) !important
+    font-size: 0.8rem
+    border-radius: 8px
+#aside-content .card-tag-cloud a:hover 
+    background: var(--heo-theme)
+    color: var(--heo-white) !important
+    box-shadow: var(--heo-shadow-theme)
+@media screen and (min-width: 1300px) 
+    #aside-content .card-tag-cloud a:hover 
+        transform: scale(1.03)
+    #aside-content .card-tag-cloud a:active 
+        transform: scale(0.97)
+/* 时间轴卡片 */
+#aside-content .card-archives ul.card-archive-list>.card-archive-list-item a:hover,
+#aside-content .card-categories ul.card-category-list>.card-category-list-item a:hover 
+    color: var(--heo-white)
+    background-color: var(--heo-theme)
+    box-shadow: var(--heo-shadow-theme)
+    border-radius: 8px
+    padding: 0.15rem 0.5rem
+    border: var(--style-border-hover)
+@media screen and (min-width: 1300px) 
+    #aside-content .card-archives ul.card-archive-list>.card-archive-list-item a:hover,
+    #aside-content .card-categories ul.card-category-list>.card-category-list-item a:hover 
+        transform: scale(1.03)
+    #aside-content .card-archives ul.card-archive-list>.card-archive-list-item a:active,
+    #aside-content .card-categories ul.card-category-list>.card-category-list-item a:active 
+        transform: scale(0.97)
+/* 主页百叶窗 */
+.layout#content-inner 
+    max-width: 1400px
+.author-content-item 
+    width: 53%
+    border-radius: 12px
+    background: var(--recent-post-bgcolor)
+    border: var(--style-border-always)
+    box-shadow: var(--recent-post-bgcolor)
+    position: relative
+    padding: 1rem 1rem
+    overflow: hidden
+/* 投影 */
+.recent-post-item 
+    box-shadow: 0px 0px 2px 1.5px var(--heo-theme)
+.recent-post-item:hover 
+    transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1) 0s
+    box-shadow: 0px 0px 2px 1.5px rgba(105, 47, 241, 0.336)
+.touying 
+    box-shadow: 0px 0px 2px 1.5px var(--heo-theme)
+.touying:hover 
+    box-shadow: 0px 0px 2px 1.5px rgba(105, 47, 241, 0.336)
+/* 代码展开图标 */
+#article-container .code-expand-btn:hover 
+    background: #333c3e
+#article-container .code-expand-btn:hover i 
+    color: #333c3e
+#article-container .code-expand-btn i 
+    color: rgb(0 255 255)
+/* 文章中的加粗文本颜色 */
+b,
+strong 
+    color: var(--heo-lighttext)
+/* 文章中的超链接 */
+#article-container a:not([data-fancybox=gallery]):not(.btn-beautify):not(.link-card):not(.headerlink):not(.pimgbox):not(.imgbox):not(.box):not(.cf-friends-link):not(.tag-Link):not(.pblink) 
+    text-decoration: none
+    border-bottom: 2px solid var(--heo-lighttext)
+    color: var(--heo-fontcolor)
+    font-weight: bold
+    border-radius: 4px 4px 0 0
+    padding: 0 .2em
+    font-weight: 500
+#article-container img 
+    border-radius: 12px
+    margin-bottom: 0.5rem
+    object-fit: cover
+#article-container a:not([data-fancybox=gallery]):not(.btn-beautify):not(.link-card):not(.headerlink):not(.pimgbox):not(.imgbox):not(.box):not(.cf-friends-link):not(.pblink):hover 
+    text-decoration: none
+    border-bottom: 2px solid var(--heo-none)
+    color: var(--heo-white)
+    background: var(--heo-main)
+    border-radius: .25em
+    box-shadow: var(--heo-shadow-main)
+[data-theme=light] 
+    --plasx-anheiwz: inset 350px -120px 200px 150px var(--heo-theme)
+[data-theme=dark] 
+    --plasx-anheiwz: inset 350px -120px 200px 150px var(--heo-theme)
+/* 首页最新文章 */
+.news li 
+    display: flex
+    width: 100%
+    float: left
+    height: 30px
+    overflow: hidden
+    line-height: 30px
+    margin-bottom: 3px
+    flex-direction: row
+    justify-content: space-around
+.news 
+    width: 100%
+    overflow: hidden
+    padding: 10px 10px
+.news a 
+    letter-spacing: 2px
+    float: left
+    text-align: left
+    padding-left: 0
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+    position: relative
+    font-size: 14px
+    text-indent: 10px
+    width: 100%
+    color: var(--font-color)
+.news a:hover 
+    color: var(--heo-theme) !important
+.news span 
+    text-align: right
+    font-size: 14px
+    color: rgb(196, 90, 90)
+    width: 10%
+.news>.fa-link:before 
+    color: var(--heo-theme) !important
+.div-card2 
+    width: 42%
+    height: 360px
+    border-radius: 10px
+    background-color: var(--recent-post-bgcolor)
+    color: var(--font-color)
+    padding: 10px 20px 10px 20px
+@media screen and (max-width:900px) 
+    .tags 
+        display: none
+.tagsbq 
+    background: var(--heo-zhuti) !important
+/* 版权cc描边 */
+#post .post-copyright 
+    border: 2px dashed var(--heo-theme) !important
+    border-radius: 8px !important
+    box-shadow: 0px 0px 7px 0px var(--heo-theme)
+/* 标签颜色 */
+#post .tag_share .post-meta__tags:hover 
+    background: var(--heo-zhuti) !important
+    color: var(--white)
+#post .tag_share .post-meta__tags 
+    border: 1px solid var(--heo-theme) !important
+    color: var(--heo-theme) !important
+#post .post-copyright:before 
+    color: var(--heo-theme) !important
+hr 
+    border: 2px dashed var(--heo-theme) !important
+hr:before 
+    color: var(--heo-theme) !important
+/* @font-face 
+font-family: ZhuZiAYuanJWD
+src: url(https://npm.elemecdn.com/akiblog@1.0.0/fontsdest/ZhuZiAWan.ttf)
+font-display: swap
+font-weight: lighter
+ */
+/* 分类 */
+#page .category-lists .category-list .category-list-item 
+    position: relative
+    display: inline-block
+    padding: 0 1rem
+    width: 48%
+    font-weight: 700
+    margin: 0 0.5% 2% 0.5%
+    border-radius: 8px
+    -webkit-box-shadow:  50px 50px 50px 50px inset rgba(50,50, 50,.3)
+    box-shadow: 50px 50px 50px 50px inset rgba(50,50, 50,.3)
+@media (max-width: 640px) 
+    #page .category-lists .category-list .category-list-item 
+        width: 95%
+#page .category-lists .category-list .category-list-item::before 
+    display: none
+#page .category-lists .category-list .category-list-item .category-list-link 
+    color: var(--white)
+    font-size: 1.5rem
+    margin-left: 0.4rem
+#page .category-lists .category-list .category-list-item .category-list-link::after 
+    content: ""
+    position: relative
+    width: 0
+    bottom: 0
+    display: block
+    height: 3px
+    border-radius: 3px
+    background: var(--white)
+#page .category-lists .category-list .category-list-item .category-list-link:hover::after 
+    width: 60%
+    left: 1%
+    -webkit-transition: all 0.6s
+    -moz-transition: all 0.6s
+    -o-transition: all 0.6s
+    -ms-transition: all 0.6s
+    transition: all 0.6s
+#page .category-lists .category-list .category-list-item .category-list-count 
+    color: var(--white)
+    font-size: 1.3rem
+#page .category-lists .category-list .category-list-item .category-list-count::before 
+    content: "\f02d"
+    padding-right: 15px
+    font-family: "Font Awesome 6 Free"
+#page .category-lists .category-list .category-list-item .category-list-count::after 
+    display: none
+#page .category-lists .category-list li.category-list-item a.category-list-link::before 
+    position: absolute
+    font-size: 4rem
+    line-height: 4rem
+    top: 1rem
+    right: 1rem
+    opacity: 0.7
+    box-shadow: 0 3px 8px 6px rgba(85,85,85,.06)
+    transform: rotate(-15deg)
+    -ms-transform: rotate(-15deg)
+    -moz-transform: rotate(-15deg)
+    -webkit-transform: rotate(-15deg)
+    -o-transform: rotate(-15deg)
+    -webkit-transition: all 0.6s
+    -moz-transition: all 0.6s
+    -o-transition: all 0.6s
+    -ms-transition: all 0.6s
+    transition: all 0.6s
+#page .category-lists .category-list li.category-list-item a.category-list-link:hover::before 
+    opacity: 0.9
+    transform: rotate(0)
+    -ms-transform: rotate(0)
+    -moz-transform: rotate(0)
+    -webkit-transform: rotate(0)
+    -o-transform: rotate(0)
+#page .category-lists .category-list li.category-list-item:nth-child(1) 
+    background: -webkit-linear-gradient(left, #364f6b, #3fc1c9)
+    background: -moz-linear-gradient(left, #364f6b, #3fc1c9)
+    background: -o-linear-gradient(left, #364f6b, #3fc1c9)
+    background: -ms-linear-gradient(left, #364f6b, #3fc1c9)
+    background: linear-gradient(to right, #364f6b, #3fc1c9)
+#page .category-lists .category-list li.category-list-item:nth-child(1) a.category-list-link::before 
+    content: "🖥️"
+#page .category-lists .category-list li.category-list-item:nth-child(2) 
+    background: -webkit-linear-gradient(left, #ba52ed, #ff99fe)
+    background: -moz-linear-gradient(left, #ba52ed, #ff99fe)
+    background: -o-linear-gradient(left, #ba52ed, #ff99fe)
+    background: -ms-linear-gradient(left, #ba52ed, #ff99fe)
+    background: linear-gradient(to right, #ba52ed, #ff99fe)
+#page .category-lists .category-list li.category-list-item:nth-child(2) a.category-list-link::before 
+    content: "📚"
+#page .category-lists .category-list li.category-list-item:nth-child(3) 
+    background: -webkit-linear-gradient(left, #6639a6, #3490de)
+    background: -moz-linear-gradient(left, #6639a6, #3490de)
+    background: -o-linear-gradient(left, #6639a6, #3490de)
+    background: -ms-linear-gradient(left, #6639a6, #3490de)
+    background: linear-gradient(to right, #6639a6, #3490de)
+#page .category-lists .category-list li.category-list-item:nth-child(3) a.category-list-link::before 
+    content: "💬"
+#page .category-lists .category-list li.category-list-item:nth-child(4) 
+    background: -webkit-linear-gradient(right, #38ef7d, #11998e)
+    background: -moz-linear-gradient(right, #38ef7d, #11998e)
+    background: -o-linear-gradient(right, #38ef7d, #11998e)
+    background: -ms-linear-gradient(right, #38ef7d, #11998e)
+    background: linear-gradient(to left, #38ef7d, #11998e)
+#page .category-lists .category-list li.category-list-item:nth-child(4) a.category-list-link::before 
+    content: "🌐"
+#page .category-lists .category-list li.category-list-item:nth-child(5) 
+    background: -webkit-linear-gradient(left, #b91d73, #f953c6)
+    background: -moz-linear-gradient(left, #b91d73, #f953c6)
+    background: -o-linear-gradient(left, #b91d73, #f953c6)
+    background: -ms-linear-gradient(left, #b91d73, #f953c6)
+    background: linear-gradient(to right, #b91d73, #f953c6)
+#page .category-lists .category-list li.category-list-item:nth-child(5) a.category-list-link::before 
+    content: "📝"
+#page .category-lists .category-list li.category-list-item:nth-child(6) 
+    background: -webkit-linear-gradient(left, #f12711, #f5af19)
+    background: -moz-linear-gradient(left, #f12711, #f5af19)
+    background: -o-linear-gradient(left, #f12711, #f5af19)
+    background: -ms-linear-gradient(left, #f12711, #f5af19)
+    background: linear-gradient(to right, #f12711, #f5af19)
+#page .category-lists .category-list li.category-list-item:nth-child(6) a.category-list-link::before 
+    content: "🎨"
+#page .category-lists .category-list li.category-list-item:nth-child(7) 
+    background: -webkit-linear-gradient(left, #009ad6, #1b315e)
+    background: -moz-linear-gradient(left, #009ad6, #1b315e)
+    background: -o-linear-gradient(left, #009ad6, #1b315e)
+    background: -ms-linear-gradient(left, #009ad6, #1b315e)
+    background: linear-gradient(to right, #009ad6, #1b315e)
+#page .category-lists .category-list li.category-list-item:nth-child(7) a.category-list-link::before 
+    content: "📖"
+#page .category-lists .category-list li.category-list-item:nth-child(8) 
+    background: -webkit-linear-gradient(left, #ef5b9c, #f5af19)
+    background: -moz-linear-gradient(left, #ef5b9c, #f5af19)
+    background: -o-linear-gradient(left, #ef5b9c, #f5af19)
+    background: -ms-linear-gradient(left, #ef5b9c, #f5af19)
+    background: linear-gradient(to right, #ef5b9c, #f5af19)
+#page .category-lists .category-list li.category-list-item:nth-child(8) a.category-list-link::before 
+    content: "🎭"
+#page .category-lists .category-list li.category-list-item:nth-child(9) 
+    background: -webkit-linear-gradient(left, #5b85ef, #19f536)
+    background: -moz-linear-gradient(left, #5b85ef, #19f536)
+    background: -o-linear-gradient(left, #5b85ef, #19f536)
+    background: -ms-linear-gradient(left, #5b85ef, #19f536)
+    background: linear-gradient(to right, #5b85ef, #19f536)
+#page .category-lists .category-list li.category-list-item:nth-child(9) a.category-list-link::before 
+    content: "🎓"
+#page .category-lists .category-list li.category-list-item:nth-child(10) 
+    background: -webkit-linear-gradient(left, #952f5b, #e0a82f)
+    background: -moz-linear-gradient(left, #952f5b, #e0a82f)
+    background: -o-linear-gradient(left, #952f5b, #e0a82f)
+    background: -ms-linear-gradient(left, #952f5b, #e0a82f)
+    background: linear-gradient(to right, #952f5b, #e0a82f)
+#page .category-lists .category-list li.category-list-item:nth-child(10) a.category-list-link::before 
+    content: "🥽"
+#page .category-lists .category-list li.category-list-item:nth-child(11) 
+    background: -webkit-linear-gradient(left, #5bbbef, #f519ee)
+    background: -moz-linear-gradient(left, #5bbbef, #f519ee)
+    background: -o-linear-gradient(left, #5bbbef, #f519ee)
+    background: -ms-linear-gradient(left, #5bbbef, #f519ee)
+    background: linear-gradient(to right, #5bbbef, #f519ee)
+#page .category-lists .category-list li.category-list-item:nth-child(11) a.category-list-link::before 
+    content: "🧭"
+/* 文章中暗黑模式投影 */
+#article-container 
+    text-shadow: var(--plasx-touyin)
+[data-theme=light] 
+    --plasx-touyin: nonex
+[data-theme=dark] 
+    --plasx-touyin: 0px 0px 2px #0000005e
+.linkdh 
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    flex-direction: row
+/* 首页分类条展示 */
+#category-bar 
+    padding: 0.4rem 1rem 0.4rem 0.5rem
+    background: var(--heo-card-bg)
+    border-radius: 12px
+    display: flex
+    white-space: nowrap
+    overflow: hidden
+    margin-bottom: 1rem
+    border: var(--style-border)
+@media screen and (max-width: 768px) 
+    #category-bar 
+        border-radius: 0
+#category #category-bar 
+    padding: 0
+    border: none
+#category a.category-bar-item.select a 
+    display: none
+.category-in-bar 
+    display: flex
+    white-space: nowrap
+.category-in-bar-tips 
+    margin-right: 1rem
+.category-bar-items 
+    white-space: nowrap
+    overflow-x: scroll
+    display: flex
+    flex-wrap: wrap
+.category-bar-items::-webkit-scrollbar 
+    display: none
+.category-bar-item a 
+    padding: 0.3rem 1rem
+    margin: 0 0.5rem
+    font-weight: bold
+    border-radius: 12px
+.category-bar-item:hover a 
+    background: var(--heo-main)
+    color: var(--heo-white)
+.category-bar-item.select a 
+    background: var(--heo-main)
+    color: var(--heo-white)
+    border-radius: 12px
+.category-bar-more 
+    margin-left: 1rem
+    font-weight: bold
+:root 
+    --heo-white: #fff
+    --heo-black: #000
+    --heo-none: rgba(0, 0, 0, 0)
+    --heo-gray: #999999
+    --heo-yellow: #ffc93e
+    --heo-main: var(--heo-theme)
+    --heo-main-op: var(--heo-theme-op)
+    --heo-shadow-theme: 0 8px 12px -3px var(--heo-theme-op)
+    --heo-shadow-main: 0 8px 12px -3px var(--heo-main-op)
+    --heo-shadow-blue: 0 8px 12px -3px rgba(40, 109, 234, .20)
+    --heo-shadow-white: 0 8px 12px -3px rgba(255, 255, 255, .20)
+    --heo-shadow-black: 0 0 12px 4px rgba(0, 0, 0, .05)
+    --heo-shadow-yellow: 0px 38px 77px -26px rgba(255, 201, 62, .12)
+    --heo-shadow-red: 0 8px 12px -3px #ee7d7936
+    --heo-shadow-green: 0 8px 12px -3px #87ee7936
+    --heo-logo-color: linear-gradient(215deg, #4584ff 30%, #ff7676 70%)
+    --style-border: 1px solid var(--heo-card-border)
+    --style-border-hover: 1px solid var(--heo-theme)
+[data-theme=light] 
+    --heo-theme: #425AEF
+    --heo-theme-op: #4259ef23
+    --heo-blue: #425AEF
+    --heo-red: #D8213C
+    --heo-pink: #FF7C7C
+    --heo-green: #57bd6a
+    --heo-fontcolor: #363636
+    --heo-background: #f7f9fe
+    --heo-reverse: #000
+    --heo-maskbg: rgba(255, 255, 255, 0.6)
+    --heo-maskbgdeep: rgba(255, 255, 255, 0.85)
+    --heo-hovertext: var(--heo-theme)
+    --heo-ahoverbg: #F7F7FA
+    --heo-lighttext: var(--heo-main)
+    --heo-secondtext: rgba(60, 60, 67, 0.6)
+    --heo-scrollbar: rgba(60, 60, 67, 0.4)
+    --heo-card-btn-bg: #edf0f7
+    --heo-post-blockquote-bg: #fafcff
+    --heo-post-tabs-bg: #f2f5f8
+    --heo-secondbg: #edf0f7
+    --heo-shadow-nav: 0 5px 12px -5px rgba(102, 68, 68, 0.05)
+    --heo-card-bg: #fff
+    --heo-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0.00)
+    --heo-shadow-light2black: 0 5px 12px -5px rgba(102, 68, 68, 0.00)
+    --heo-card-border: #e3e8f7
+[data-theme=dark] 
+    --heo-theme: #0084FF
+    --heo-theme-op: #0084FF23
+    --heo-blue: #0084FF
+    --heo-red: #FF3842
+    --heo-pink: #FF7C7C
+    --heo-green: #57bd6a
+    --heo-fontcolor: #F7F7FA
+    --heo-background: #18171d
+    --heo-reverse: #fff
+    --heo-maskbg: rgba(0, 0, 0, 0.6)
+    --heo-maskbgdeep: rgba(0, 0, 0, 0.85)
+    --heo-hovertext: #0A84FF
+    --heo-ahoverbg: #fff
+    --heo-lighttext: #f2b94b
+    --heo-secondtext: #a1a2b8
+    --heo-scrollbar: rgba(200, 200, 223, 0.4)
+    --heo-card-btn-bg: #30343f
+    --heo-post-blockquote-bg: #000
+    --heo-post-tabs-bg: #121212
+    --heo-secondbg: #30343f
+    --heo-shadow-nav: 0 5px 20px 0px rgba(28, 28, 28, 0.4)
+    --heo-card-bg: #1d1b26
+    --heo-shadow-lightblack: 0 5px 12px -5px rgba(102, 68, 68, 0.0)
+    --heo-shadow-light2black: 0 5px 12px -5px rgba(102, 68, 68, 0.0)
+    --heo-card-border: #42444a
+@media screen and (max-width: 768px) 
+    :root 
+        --style-border: 0px solid var(--heo-card-border)
+        --style-border-hover: 0px solid var(--heo-theme)
+/* tag-link导航合并 */
+#article-container .tag-Link 
+    background: var(--heo-secondbg)
+    border-radius: 8px !important
+    display: flex
+    border: var(--style-border)
+    flex-direction: column
+    padding: 0.5rem 1rem
+    border-width: 1px !important
+    margin-top: 1rem
+#article-container .tag-Link:hover 
+    border: var(--style-border-hover)
+#article-container .tag-Link .tag-link-tips 
+    border-bottom: var(--style-border)
+    padding-bottom: 4px
+    font-size: 0.6rem
+    color: var(--heo-gray)
+    font-weight: normal
+#article-container .tag-Link:hover .tag-link-tips 
+    color: var(--heo-white)
+#article-container .tag-Link .tag-link-bottom 
+    display: flex
+    margin-top: 0.5rem
+    align-items: center
+    justify-content: space-around
+#article-container .tag-Link .tag-link-bottom .tag-link-left 
+    width: 60px
+    min-width: 60px
+    height: 60px
+    background-size: cover
+#article-container .tag-Link .tag-link-bottom .tag-link-right 
+    margin-left: 1rem
+#article-container .tag-Link .tag-link-bottom .tag-link-right .tag-link-title 
+    font-size: 1rem
+    line-height: 1.2
+#article-container .tag-Link .tag-link-bottom .tag-link-right .tag-link-sitename 
+    font-size: 0.7rem
+    color: var(--heo-gray)
+    font-weight: normal
+    margin-top: 4px
+#article-container .tag-Link:hover .tag-link-bottom .tag-link-right .tag-link-sitename 
+    color: var(--heo-white)
+#article-container .tag-Link .tag-link-bottom i 
+    margin-left: auto
+/* 小风车旋转 */
+#article-container.post-content h1:before,
+h2:before,
+h3:before,
+h4:before,
+h5:before,
+h6:before 
+    -webkit-animation: avatar_turn_around 1s linear infinite
+    -moz-animation: avatar_turn_around 1s linear infinite
+    -o-animation: avatar_turn_around 1s linear infinite
+    -ms-animation: avatar_turn_around 1s linear infinite
+    animation: avatar_turn_around 1s linear infinite
+/* 波浪css */
+.main-hero-waves-area 
+    width: 100%
+    position: absolute
+    left: 0
+    bottom: -11px
+    z-index: 5
+.waves-area .waves-svg 
+    width: 100%
+    height: 5rem
+/* Animation */
+.parallax>use 
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite
+.parallax>use:nth-child(1) 
+    animation-delay: -2s
+    animation-duration: 7s
+    fill: #f7f9febd
+.parallax>use:nth-child(2) 
+    animation-delay: -3s
+    animation-duration: 10s
+    fill: #f7f9fe82
+.parallax>use:nth-child(3) 
+    animation-delay: -4s
+    animation-duration: 13s
+    fill: #f7f9fe36
+.parallax>use:nth-child(4) 
+    animation-delay: -5s
+    animation-duration: 20s
+    fill: #f5f5f5
+/* 黑色模式背景 */
+[data-theme="dark"] .parallax>use:nth-child(1) 
+    animation-delay: -2s
+    animation-duration: 7s
+    fill: #18171dc8
+[data-theme="dark"] .parallax>use:nth-child(2) 
+    animation-delay: -3s
+    animation-duration: 10s
+    fill: #18171d80
+[data-theme="dark"] .parallax>use:nth-child(3) 
+    animation-delay: -4s
+    animation-duration: 13s
+    fill: #18171d3e
+[data-theme="dark"] .parallax>use:nth-child(4) 
+    animation-delay: -5s
+    animation-duration: 20s
+    fill: #141414
+@keyframes move-forever 
+    0% 
+        transform: translate3d(-90px, 0, 0)
+    100% 
+        transform: translate3d(85px, 0, 0)
+/*Shrinking for mobile*/
+@media (max-width: 768px) 
+    .waves-area .waves-svg 
+        display: none
+#swiperBar 
+    background: rgba(255,255, 255, 0.0)
+    box-shadow: 0px 0px 4px 2px rgba(255,255, 255, 0.0)
+/* 首页宽屏 */
+#home_top 
+    max-width: 1370px
+    margin: auto
+    margin-top: .5rem
+    padding: 40px 0px 0px 15px
+    width: 100%
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+@media screen and (max-width: 768px) 
+    #home_top 
+        padding: 0
+        margin-top: 0
+.bannerGroup2 
+    display: flex
+    margin-right: 0.5rem
+    flex-direction: column
+    justify-content: space-between
+    height: auto
+    width: 55%
+    padding: 0px
+.home_top1 
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+.home_top2 
+    padding: 0px 0px 20px
+/* 屏蔽右侧标题名称 */
+#newYear 
+    color: white
+    padding: 0 !important
+#newYear>.item-headline 
+    display: none
+#newYear .card-widget 
+    margin-top: 0px !important
+/* 滚动右边隧道css */
+.about-statistic 
+    position: absolute
+    top: 0
+    left: 0
+    overflow: hidden
+    width: 100%
+    height: 100%
+    min-height: 300px
+    background: url(https://s2.loli.net/2022/11/21/Qv8CJ5f4Zhlca3W.webp) no-repeat top
+    background-size: cover
+    box-shadow: -47px -100px 224px 29px #001521 inset
+    color: #fff
+    content: ""
+.banner-button-group 
+    position: absolute
+    right: 1rem
+    bottom: 1rem
+.author-content-item-title 
+    margin-bottom: 0.5rem
+.banner-button 
+    z-index: 1
+    display: flex
+    width: 98px
+    height: 30px
+    border-bottom: 0 !important
+    border-radius: 20px
+    background: var(--recent-post-bgcolor)
+    color: var(--font-color)
+    cursor: pointer
+    transition: 0.3s
+    justify-content: center
+    align-items: center
+.banner-button:hover 
+    background: rgba(28,172, 168, .9)
+    color: #ffffff
+.author-content-item2 
+    position: relative
+    overflow: hidden
+    padding: 1rem 2rem
+.categoryGroup 
+    display: flex
+    width: 100%
+    height: 24%
+    min-width: 200px
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-start
+.bannerGroup 
+    display: flex
+    margin-right: 0.5rem
+    flex-direction: column
+    justify-content: flex-start
+/* 闪电 */
+.lightning 
+    position: absolute
+    z-index: 1
+    top: 0
+    width: 100%
+.lightning div 
+    position: absolute
+    overflow: hidden
+@keyframes flash_light 
+    0% 
+        height: 0px
+        opacity: 0.5
+    7.5% 
+        height: 230px
+    8%,
+    12%,
+    16% 
+        opacity: 0.5
+    10%,
+    14% 
+        opacity: 1
+    50% 
+        opacity: 0
+    100% 
+        height: 230px
+        opacity: 0
+.lightning div img 
+    display: block
+    margin: auto
+    width: 100%
+.lightning .lightning1 
+    position: absolute
+    right: 11%
+    animation: flash_light 5.7s infinite
+.lightning .lightning2 
+    position: absolute
+    left: 18%
+    animation: flash_light 5.1s infinite
+    animation-delay: -2.33s
+/* 头像微调link */
+.flink-item-icon 
+    margin-right: 0 !important
+    transition: .5s !important
+.flink-item-name,
+.flink-item-desc 
+    padding-left: 10px !important
+/* 去掉原来自带的before */
+#article-container .flink .flink-list>.flink-list-item::before 
+    content: none
+/* 鼠标经过改变背景 */
+#article-container .flink .flink-list>.flink-list-item:hover 
+    background-color: #61bcf2cc
+    box-shadow: 0 0 20px rgba(0, 0, 0, .3)
+/* 鼠标经过改变文字颜色 */
+#article-container .flink .flink-list>.flink-list-item:hover a 
+    color: white !important
+/* 鼠标经过头像滚动 */
+#article-container .flink .flink-list>.flink-list-item:hover .flink-item-icon 
+    width: 60px
+    margin-left: -70px
+    -webkit-transform: rotate(-180deg)
+    -moz-transform: rotate(-180deg)
+    -o-transform: rotate(-180deg)
+    -ms-transform: rotate(-180deg)
+    transform: rotate(-180deg)
+/* 版权栏目 */
+div#footer_deal 
+    justify-content: center
+    display: flex
+    padding-top: 2rem
+    align-items: center
+@media screen and (max-width: 768px) 
+    img.footer_mini_logo 
+        display: none
+    div#footer_deal 
+        flex-wrap: wrap
+        flex-direction: row
+a.deal_link 
+    display: flex
+    margin: 1rem 27px
+    color: rgb(255, 255, 255)
+    border-radius: 3rem
+    width: 32px
+    height: 32px
+    background: var(--heo-theme)
+    justify-content: center
+    align-items: center
+    transition: .1s
+a.deal_link:hover 
+    color: rgb(255, 183, 0)
+    background: rgba(0, 48, 46, 0.9)
+img.footer_mini_logo 
+    width: 50px
+    height: 50px
+    margin: 0 1rem
+    cursor: pointer
+    /*filter: drop-shadow(0 12px 12px #ee7d7936)*/
+    transition: cubic-bezier(0, 0, 0, 1.29) .5s
+@media screen and (min-width: 1300px) 
+    img.footer_mini_logo:hover 
+        transform: scale(1.03)
+    img.footer_mini_logo:active 
+        transform: scale(.97)
+#Jay-footer .footer-links 
+    display: flex
+    flex-direction: column
+#Jay-footer 
+    display: flex
+    flex-direction: row
+    width: 100%
+    max-width: 1200px
+    margin: 1rem auto
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-bottom: 3rem
+    padding: 0 1rem
+#Jay-footer .footer-item 
+    font-size: 1rem
+    line-height: .8rem
+    margin: .38rem 0
+    color: var(--heo-theme)
+    /*margin-right: auto*/
+#Jay-footer .footer-item:hover 
+    color: #ffae00
+#Jay-footer .footer-group 
+    min-width: 120px
+#Jay-footer .footer-title 
+    color: var(--heo-theme)
+    font-size: 1rem
+#footer_deal i 
+    font-size: 1rem
+    transition: .3s
+    line-height: 1.3rem
+    height: 1.3rem
+/* 三边栏首页 */
+.topGroup 
+    display: flex
+    height: 1300px
+    flex-wrap: wrap
+    align-content: space-between
+    justify-content: space-between
+    padding: 0px 0px 20px
+span.recent-post-top-text 
+    position: absolute
+    top: 0
+    left: -40px
+    display: flex
+    z-index: 1
+    background: var(--bywind-theme)
+    color: var(--bywind-white)
+    padding: 2px 8px
+    font-size: .6rem
+    border-radius: 12px 0 12px 0
+    transition: .3s
+    cursor: pointer
+.recent-post-san:hover .recent-post-top-text 
+    left: 0
+@media screen and (max-width: 768px) 
+    .recent-post-top-text 
+        display: none !important
+.recent-post-san 
+    display: flex
+    width: calc(100% / 2 - 20px)
+    flex-direction: column
+    align-items: flex-start
+    background: var(--recent-post-bgcolor)
+    border-radius: 12px
+    overflow: hidden
+    min-width: calc(100% / 2 - 20px)
+    height: 300px
+    max-height: 300px
+    transition: .3s
+    position: relative
+.recent-post-san:hover 
+    transform: scale(1.01)
+.recent-post-san .recent-post-info 
+    padding: 1.3rem 1.5rem 1.3rem 1.5rem !important
+    transition: .3s
+.recent-post-san .recent-post-info .article-title 
+    -webkit-line-clamp: 2
+    overflow: hidden
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    line-height: 1.5
+    justify-content: center
+    align-items: flex-end
+    align-content: center
+    padding-top: .5rem
+    font-weight: 700
+    color: var(--font-color)
+    font-size: 1rem !important
+    padding: 0 !important
+.recent-post-san:hover .recent-post-top-text 
+    left: 0
+span.recent-post-top-text 
+    position: absolute
+    top: 0
+    left: -75px
+    display: flex
+    z-index: 1
+    background: var(--heo-theme)
+    color: #fff
+    padding: 6px 20px
+    font-size: 1rem
+    border-radius: 12px 0 12px 0
+    cursor: pointer
+.recent-post-san .post_cover a 
+    height: 220px
+    overflow: hidden
+    display: flex
+.recent-post-san .post_cover img 
+    object-fit: cover
+    width: 100%
+    background: #fff
+    transition: filter 375ms ease-in .2s, transform .6s
+    border-radius: 12px 12px 0 0
+.recent-post-san:hover .post_cover img 
+    transform: scale(1.1)
+    transition: .3s
+.post_cover 
+    width: 100%
+#recent-posts>.recent-post-san 
+    display: flex
+    width: 200px
+    flex-direction: column
+    align-items: flex-start
+    margin-left: .5rem
+    background: var(--teror-card-bg)
+    border-radius: 12px
+    overflow: hidden
+    min-width: 200px
+    height: 164px
+    max-height: 164px
+    border: var(--style-border-always)
+    transition: .3s
+    position: relative
+    box-shadow: var(--teror-shadow-border)
+.recent-post-info>.article-title:hover 
+    color: var(--heo-theme)
+svg use 
+    fill: var(--heo-theme)
+/* 滑动 */
+.down-list 
+    border-radius: 12px
+    background: var(--recent-post-bgcolor)
+    margin-bottom: 20px
+    padding: 10px 20px 15px
+.down-list .tpl-tr 
+    transition: .5s all
+    width: 6000px
+.down-list .tpl-tr-wai 
+    height: 435px
+    overflow: hidden
+    width: 100%
+.down-list .list-top 
+    margin-top: 20px
+    float: left
+    width: 1000px
+.down-list .list-top 
+    margin-right: 0
+.down-list .list-top ul 
+    width: 100%
+    height: 100%
+    overflow: hidden
+.down-list .list-top li 
+    border-radius: 6px
+    display: block
+    width: calc(90% / 3 - 15px)
+    border: 1px solid #89898969
+    padding: 20px 15px
+    margin: 0 9px 9px 0
+    box-sizing: initial
+    float: left
+.down-list .list-top li .fl 
+    width: 85px
+    height: 85px
+    border-radius: 20px
+    overflow: hidden
+    margin-top: 2px
+.down-list .list-top li .fl img 
+    width: 85px
+    height: 85px
+.down-list .list-top li .fr 
+    width: 155px
+.down-list .list-top li .fr .tit h-5 
+    width: 155px
+    height: 50px
+    font-size: 14px
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
+    overflow: hidden
+    margin-bottom: 0
+    line-height: 18px
+.down-list .list-top li .fr .down 
+    width: 120px
+.down-list .list-top li .fr .down span a 
+    border-radius: 6px
+    background: var(--heo-zhuti)
+    display: block
+    border: 1px solid #9ea2a54a
+    padding: 3px 0
+    text-align: center
+    color: var(--font-color)
+.down-list .list-top li .fr .down span a:hover 
+    background: var(--heo-theme)
+    color: #f3f8ff
+    border-color: #5298ff
+    transition: all .3s
+.down-list .type 
+    float: right
+.down-list .type a 
+    color: var(--font-color)
+    display: inline-block
+    cursor: pointer
+    text-indent: 0
+    margin-left: 13px
+    font-size: 15px
+    padding: 0 10px
+    height: 30px
+    line-height: 30px
+.down-list .type .hover 
+    color: #3441ce
+    border-bottom: 1px solid #1b54bc
+    height: 42px
+.fl 
+    float: left
+.fr 
+    float: right
+img 
+    border: none
+.down-list>.title 
+    position: relative
+    height: 45px
+    line-height: 35px
+    text-indent: 15px
+    font-size: 16px
+    border-bottom: 1px solid #8989898f
+h-5>a 
+    color: var(--font-color)
+.list-top>ul 
+    margin: 0
+    padding: 0
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    display: flex
+    flex-wrap: wrap
+    padding: 0px 0px 20px
+    justify-content: space-between
+    flex-direction: row
+@media screen and (max-width:1300px) 
+    .down-list .list-top ul 
+        width: 91%
+    @media screen and (max-width:1200px) 
+        .down-list .list-top ul 
+            width: 100%
+        .down-list .list-top 
+            width: 1080px
+/* 按钮 */
+#rightside>div>button,
+#rightside>div>a 
+    background-color: var(--heo-theme) !important
+#recent-posts #category-bar-items 
+    flex-wrap: nowrap !important
+#recent-posts .category-bar-item a 
+    padding: 0.3rem 0.5rem !important
+/* 随机颜色导航 */
+#nav a:hover 
+    background: var(--heo-theme) !important
+.back-home-button:hover 
+    background: var(--heo-theme) !important
+.page .menus_item:hover>a.site-page 
+    background: var(--heo-theme) !important
+#notice .notice-logo 
+    animation: avatar_turn_around 1s linear infinite
+    display: inline-block
+/* 赞赏名单按钮 */
+a.reward-main-btn 
+    background: var(--heo-secondbg) !important
+    color: var(--heo-fontcolor) !important
+    display: flex !important
+    flex-direction: column !important
+    border-radius: 12px !important
+    padding: 4px 0 !important
+    border: var(--style-border-always) !important
+    margin: 8px !important
+    width: 100% !important
+a.reward-main-btn:hover 
+    color: var(--heo-white) !important
+    background: var(--heo-red) !important
+    background-image: url(https://blog.4t.pw/img/JgNrST23690481619450556342.gif!cover) !important
+    box-shadow: var(--heo-shadow-red) !important
+.post-reward .reward-button 
+    background: var(--heo-red) !important
+    color: var(--heo-white) !important
+    padding: 0 !important
+    width: 133px !important
+    height: 40px !important
+    line-height: 39px !important
+    border-radius: 8px !important
+    box-shadow: var(--heo-shadow-red) !important
+.reward-title 
+    font-weight: bold !important
+    color: var(--heo-red) !important
+.reward-group 
+    display: flex !important
+    margin-top: 0.5rem !important
+.post-reward .reward-main .reward-all
+    padding: 20px 30px 20px 10px !important
+.reward-link.mode 
+    background: var(--heo-green) !important
+    color: var(--heo-white) !important
+    padding: 0 !important
+    width: 173px !important
+    height: 40px !important
+    line-height: 39px !important
+    box-shadow: var(--heo-shadow-green) !important
+    border-radius: 8px !important
+    margin-left: 0.5rem !important
+    text-align: center !important
+    transition: 0.3s !important
+.reward-link.mode a 
+    color: var(--heo-white) !important
+.post-reward:hover .reward-button 
+    background: var(--heo-theme) !important
+.reward-link.mode:hover 
+    background: var(--heo-theme) !important
+    box-shadow: none !important
+.post-tools-left 
+    white-space: nowrap !important
+    display: flex !important
+    text-overflow: ellipsis !important
+    flex-wrap: wrap !important
+    margin-bottom: 0.5rem !important
+    margin-top: 80px !important
+    justify-content: center !important
+#page-header.post-bg:before 
+    backdrop-filter: saturate(130%) blur(4px)
+// 导航透明
+#page-header.nav-fixed #nav #site-name,
+#body-wrap .nav-visible #nav 
+    background: 0 0
+    box-shadow:none
+    color: rgb(208, 208, 208)
+.nav-fixed.is-top-bar .title
+    color: rgb(108, 108, 108)
+.post-bg .back-home-button
+    color: rgb(208, 208, 208)
+.post-bg.is-top-bar.nav-fixed .back-home-button
+    color: rgb(69, 69, 69)
+#body-wrap .is-top-bar.nav-visible #nav 
+    background: rgba(255,255,255,0.9)
+    box-shadow: 0 5px 6px -5px rgb(133 133 133 / 60%)
+    color: rgb(69, 69, 69)
+.post-bg #nav.show a
+    color: rgb(208, 208, 208) 
+#body-wrap .nav-visible #nav a
+    color: rgb(208, 208, 208) 
+#body-wrap .is-top-bar.nav-visible #nav a
+    color: rgb(105, 105, 105)
+[data-theme='dark'] #body-wrap .nav-visible #nav.show 
+    backdrop-filter: none
+    background: 0 0
+    border-bottom: none
+    box-shadow:none
+[data-theme='dark'] #body-wrap .is-top-bar #nav.show 
+    background: rgba(18,18,18,0.95)
+    box-shadow: 0 5px 6px -5px rgba(16, 16, 16, 0.2)
+    color: rgb(161, 161, 161)
+[data-theme='dark'] #body-wrap .is-top-bar.nav-visible #nav.show 
+    color: rgb(161, 161, 161)

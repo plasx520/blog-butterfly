@@ -1,0 +1,192 @@
+//default color:
+:root
+  --cyber-post-item-screen: rgba(61, 146, 204,0.6) //描述卡片背景
+  --cyber-post-item-font-color: #fff //字体颜色
+  --cyber-post-item-box-shadow: rgba(111, 160, 225,0.8) //边框光晕颜色
+[data-theme="dark"]
+  --cyber-post-item-screen: rgba(61, 146, 204,0.6) //描述卡片背景
+  --cyber-post-item-font-color: rgb(233, 233, 233)//字体颜色
+  --cyber-post-item-box-shadow: rgba(252, 252, 252, 0.8) //边框光晕颜色
+.icon
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+
+.recent-post-item
+  &#swiperBar
+    width: 100%;
+    position: relative
+    #cyber-swiper-container
+      width: 100%;
+      height: 260px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 15px;
+      .cyber-swiper-wrapper
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        .cyber-swiper-item
+          position: relative
+          width: 100%;
+          height: 260px;
+          display: flex;
+          flex-direction: row;
+          overflow: hidden;
+          border-radius: 15px;
+          box-shadow: 0 0 3px inset var(--cyber-post-item-box-shadow);
+          .cyber-swiper-item-cover
+            height: 100%;
+            display: flex;
+            position: absolute;  
+            top: 0
+            left: 0       
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            z-index: 0
+            img
+              object-fit: cover;
+              width: 100%;
+              height: 100%
+              z-index: 1;
+              opacity: 0.8
+          .cyber-swiper-item-time
+            width: 100%;
+            color: var(--cyber-post-item-font-color);
+            font-size: 25px;
+            text-shadow: 2px 2px 3px black;
+            background: var(--heo-theme);
+            font-family: 'UnidreamLED';
+            display: flex;
+            position: absolute;
+            height: 43px;
+            top: calc(50% - -89px);
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            span
+              margin: 0 3px
+          .cyber-swiper-item-info
+            flex-direction: column;
+            background: var(--heo-zhuti)
+            height: 100%;
+            display: flex;
+            position: absolute
+            top: 0
+            right: 0           
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 0;
+            a.cyber-swiper-item-title
+              width: 100%;
+              height: 50%;
+              color: var(--cyber-post-item-font-color);
+              text-align: center;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              .cyber-swiper-item-title-link
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                cyber_post_item_link_hover()
+            .cyber-swiper-item-description
+              color: var(--cyber-post-item-font-color);
+              display: flex;
+              text-align: start;
+              width: 100%;
+              height: 50%;
+              justify-content: center;
+              align-items: center;
+              .cyber-swiper-item-description-text
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+          .cyber-swiper-item-decoration
+            width: 180px;
+            height: 180px;
+            opacity: 1;
+            position: absolute;
+            top: calc(50% - 90px);
+            left: calc(50% - 90px);
+            z-index: -1
+            animation: avatar_turn_around 1.5s ease-in-out infinite;
+            display: inline-block;
+      .cyber-swiper-pagination
+        bottom: 5px;
+        left: 0;
+        right: 0;
+        margin: 40px auto;
+//宽屏样式
+@media screen and (min-width:768px)
+  .recent-post-item
+    &#swiperBar
+      height: 260px;
+      &::after
+        content: ""
+        display: block
+        height: 86%
+        width: 100%
+        position: absolute
+        background:var(--heo-theme)
+        z-index: 3
+        left: 0
+        top: 0
+        clip-path: polygon(50% 50%, 45px 50%, 45px 45px, 60px 45px, 65px 40px, 40px 40px, 40px calc(50% - 10px), 45px calc(50% - 10px), 45px 50%, 25px 50%, 25px calc(50% - 15px), 10px calc(50% - 15px), 10px calc(50% - 10px), 25px calc(50% - 10px), 25px calc(50% - 2.5px), 0 calc(50% - 2.5px), 0 50%, 50% 50%, 45px 50%, 45px calc(100% - 45px), 60px calc(100% - 45px), 65px calc(100% - 40px), 40px calc(100% - 40px), 40px calc(50% + 10px), 45px calc(50% + 10px), 45px 50%, 25px 50%, 25px calc(50% + 15px), 10px calc(50% + 15px), 10px calc(50% + 10px), 25px calc(50% + 10px), 25px calc(50% + 2.5px), 0 calc(50% + 2.5px), 0 50%, 50% 50%, calc(100% - 45px) 50%, calc(100% - 45px) 45px, calc(100% - 60px) 45px, calc(100% - 65px) 40px, calc(100% - 40px) 40px, calc(100% - 40px) calc(50% - 10px), calc(100% - 45px) calc(50% - 10px), calc(100% - 45px) 50%, calc(100% - 25px) 50%, calc(100% - 25px) calc(50% - 15px), calc(100% - 10px) calc(50% - 15px), calc(100% - 10px) calc(50% - 10px), calc(100% - 25px) calc(50% - 10px), calc(100% - 25px) calc(50% - 2.5px), 100% calc(50% - 2.5px), 100% 50%, 50% 50%, calc(100% - 45px) 50%, calc(100% - 45px) calc(100% - 45px), calc(100% - 60px) calc(100% - 45px), calc(100% - 65px) calc(100% - 40px), calc(100% - 40px) calc(100% - 40px), calc(100% - 40px) calc(50% + 10px), calc(100% - 45px) calc(50% + 10px), calc(100% - 45px) 50%, calc(100% - 25px) 50%, calc(100% - 25px) calc(50% + 15px), calc(100% - 10px) calc(50% + 15px), calc(100% - 10px) calc(50% + 10px), calc(100% - 25px) calc(50% + 10px), calc(100% - 25px) calc(50% + 2.5px), 100% calc(50% + 2.5px), 100% 50%, 50% 50%)
+      #cyber-swiper-container
+        .cyber-swiper-wrapper
+          .cyber-swiper-item
+            .cyber-swiper-item-cover
+              width: 100%;
+            .cyber-swiper-item-time
+              transform: rotateZ(-0deg);
+            .cyber-swiper-item-info
+              width: 100%;
+              text-shadow: 2px 2px 3px #000;
+              a.cyber-swiper-item-title
+                padding: 30px 40px;
+                font-size: 30px;
+                line-height: 50px;
+                .cyber-swiper-item-title-link
+                  -webkit-line-clamp: 2
+              .cyber-swiper-item-description
+                padding: 0px 40px 70px;
+                font-size: 16px;
+                line-height: 30px;
+                .cyber-swiper-item-description-text
+                  -webkit-line-clamp: 3
+
+@media screen and (max-width:768px)
+  .recent-post-item
+    &#swiperBar
+      height: 200px;
+      padding: 0px 0px
+      #cyber-swiper-container
+        .cyber-swiper-wrapper
+          .cyber-swiper-item
+            .cyber-swiper-item-cover
+              width: calc(50% + 50px);
+              clip-path: polygon(0 0,100% 0,calc(100% - 100px) 100%,0 100%);
+            .cyber-swiper-item-time
+              transform: rotateZ(-60deg);
+            .cyber-swiper-item-info
+              width: calc(50% + 50px);
+              clip-path: polygon(100% 0,100% 100%,0 100%,100px 0 );
+              padding: 0 0 0 60px;
+              a.cyber-swiper-item-title
+                padding: 10px 16px 0 45px;
+                font-size: 16px;
+                line-height: 20px;
+                .cyber-swiper-item-title-link
+                  -webkit-line-clamp: 2
+              .cyber-swiper-item-description
+                padding: 0px 15px 10px 5px;
+                font-size: 14px;
+                line-height: 20px;
+                .cyber-swiper-item-description-text
+                  -webkit-line-clamp: 4

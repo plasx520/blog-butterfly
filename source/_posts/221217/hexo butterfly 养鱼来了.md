@@ -559,9 +559,9 @@ inject:
 
 还有一个更为简单的方法，引入带有颜色的页脚养鱼，效果如下：
 
-[![img](https://drfs.ctcontents.com/file/14237530/748136103/7083a7/img/wenzhang/fish.png)](https://gcore.jsdelivr.net/gh/CNhuazhu/Image/fish.png)
+![img](https://drfs.ctcontents.com/file/14237530/748136103/7083a7/img/wenzhang/fish.png)
 
-只需要在`_config.butterfly.yml`文件中，找到`inject`，在`bottom`处直接引入：https://uuuuu.cf/js/fishes.js
+只需要在`_config.butterfly.yml`文件中，找到`inject`，在`bottom`处直接引入：https://blog.4t.pw/js/wz/fishes.js
 
 ```
 - <script defer src="https://blog.4t.pw/js/wz/fishes.js"></script> # 页脚养鱼(彩色)

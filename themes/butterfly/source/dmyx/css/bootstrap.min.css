@@ -1,0 +1,28 @@
+.dmyxcss .btn {
+    background: var(--heo-zhuti) !important;
+    color: var(--heo-white) !important;
+    border-radius: 8px !important;
+    margin: 10px;
+    width: calc(100% / 5 - 20px);
+    height: 35px;
+    cursor: pointer;
+    border: 1px solid var(--heo-theme);
+}
+.dmyxcss .shezhi {
+    display: flex;
+    text-align:center;
+}
+.dmyxcss .row{
+    display: flex;
+    text-decoration:none;
+    text-align:center;
+}
+.dmyxcss{
+    background: #3d3d3d;
+    border: 3px solid var(--heo-theme);
+}
+.dmyxcss h1{
+background: var(--heo-zhuti) !important;
+color: var(--heo-white) !important;
+text-align: center;
+}

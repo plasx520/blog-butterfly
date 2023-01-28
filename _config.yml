@@ -66,7 +66,7 @@ prismjs:
 #order_by：发布订单。（默认情况下按日期降序排列）
 index_generator:
   path: ''
-  per_page: 12
+  per_page: 8
   order_by: -date
   pagination_dir: page
 # Category & Tag
@@ -166,11 +166,11 @@ baidusitemap:
 plugins:
   - hexo-algoliasearch
 algolia:
-  applicationID: ""
-  apiKey: ""
-  adminApiKey: ""
+  applicationID: "KPAKI5YHZ8"
+  apiKey: "031790ee5a399a40981430251606ff78"
+  adminApiKey: "a65b9c9ae3e2ab89127312941b3f08bd"
   chunkSize: 5000
-  indexName: ""
+  indexName: "hexo"
   fields:
     - content:strip:truncate,0,200
     - tags

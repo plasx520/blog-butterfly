@@ -6,6 +6,7 @@ tags:
   - 辅助
   - 命令
 categories: 辅助
+swiper_index: 100
 keywords: 'hexo,hexo辅助工具,hexo快捷键,文檔'
 description: hexo命令较为麻烦，所以简单化
 top_img: https://s2.loli.net/2022/11/19/qFsn9wJgeCRZk7A.webp

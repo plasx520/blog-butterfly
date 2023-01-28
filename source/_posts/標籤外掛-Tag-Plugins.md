@@ -9,7 +9,7 @@ description: 標籤外掛(Tag Plugins)
 abbrlink: 2df239ce
 date: 2020-01-05 21:41:03
 top_img:
-cover: https://cdn1.tianli0.top/gh/jerryc127/CDN/img/Tag-Plugins-cover.png
+cover: https://jsd.onmicrosoft.cn/gh/jerryc127/CDN/img/Tag-Plugins-cover.png
 comments: true
 ---
 

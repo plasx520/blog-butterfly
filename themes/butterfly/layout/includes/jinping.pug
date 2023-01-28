@@ -1,0 +1,12 @@
+if is_home()
+    .topGroup
+        if site.data.shuanbian
+            each i in site.data.shuanbian
+                .recent-post-san.touying
+                    .post_cover.left_radius
+                        a(href=url_for(i.link), title=i.title)
+                            span.recent-post-top-text(onclick=`pjax.loadUrl("`+i.link+`")`)=i.xiao
+                            img.post_bg.entered.loaded(src=url_for(i.cover) onerror="this.onerror=null,this.src='/img/404.png'")
+                    .recent-post-info(onclick=`pjax.loadUrl("`+i.link+`")`)
+                        a.article-title(href=url_for(i.link), title=i.title)= i.title
+                        a(href=url_for(i.link))= i.riqi

@@ -8,7 +8,7 @@ categories:
 abbrlink: '89757140'
 date: 2018-07-24 23:31:06
 mathjax: true
-cover: https://cdn1.tianli0.top/gh/jerryc127/CDN/img/Markdown-Style-test-cover.png
+cover: https://jsd.onmicrosoft.cn/gh/jerryc127/CDN/img/Markdown-Style-test-cover.png
 keywords: 'hexo,butterfly,主題,doc,教程,文檔,Markdown'
 comments: true
 ---

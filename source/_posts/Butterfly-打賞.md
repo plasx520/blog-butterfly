@@ -2,6 +2,7 @@
 title: Butterfly 打賞
 abbrlink: 6ad51b4
 date: 2020-05-28 22:42:48
+swiper_index: 100
 tags: 
   - butterfly
   - 打賞
@@ -9,7 +10,7 @@ categories: Thx
 keywords: 'hexo,butterfly,主題,打賞'
 description: 非常感謝網友的打賞
 top_img:
-cover: https://cdn1.tianli0.top/gh/jerryc127/CDN/img/butterfly-donate-cover.png
+cover: https://jsd.onmicrosoft.cn/gh/jerryc127/CDN/img/butterfly-donate-cover.png
 comments: true
 ---
 

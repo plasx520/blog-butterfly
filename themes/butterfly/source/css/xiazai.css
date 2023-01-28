@@ -5,7 +5,7 @@
 	--arrowB: polygon(0% 37.5%,100% 37.5%,100% 62.5%,100% 62.5%,50% 62.5%,0% 62.5%,0% 62.5%);
 }
 .bianju {padding: 20px 20px 20px 0px;display: flex;}
-button {
+#article-container button2 {
 	padding: 15px 20px 15px 20px;
 	font: 1em/1.5 Hind, sans-serif;
 	background: var(--heo-theme);
@@ -21,26 +21,26 @@ button {
 	appearance: none;
 	-webkit-tap-highlight-color: transparent;
 }
-button:focus {
+#article-container button2:focus {
 	outline: transparent;
 }
-button::-moz-focus-inner {
+#article-container button2::-moz-focus-inner {
 	border: 0;
 }
-button:not(:disabled):focus, button:not(:disabled):hover {
+#article-container button2:not(:disabled):focus, #article-container button2:not(:disabled):hover {
 	background: #0b46da;
 }
-button:not(:disabled):active {
+#article-container button2:not(:disabled):active {
 	transform: translateY(1px);
 }
-button:disabled {
+#article-container button2:disabled {
 	cursor: not-allowed;
 }
-button span, button:before, button:after {
+#article-container button2 span, #article-container button2:before, #article-container button2:after {
 	display: inline-block;
 	pointer-events: none;
 }
-button:before, button:after {
+#article-container button2:before, #article-container button2:after {
 	border-radius: 0.25em;
 	opacity: 0;
 	top: 1em;
@@ -49,22 +49,22 @@ button:before, button:after {
 	transform-origin: 0.25em 50%;
 	z-index: 2;
 }
-button:before {
+#article-container button2:before {
 	transform: rotate(-180deg);
 	width: 0.8em;
 }
-button:after {
+#article-container button2:after {
 	width: 1.2em;
 }
-button:before, button:after, .dl-icon:before, .dl-icon:after {
+#article-container button2:before, #article-container button2:after, .dl-icon:before, .dl-icon:after {
 	content: "";
 	display: block;
 	position: absolute;
 }
-button:before, button:after, .dl-icon:before {
+#article-container button2:before, #article-container button2:after, .dl-icon:before {
 	background: currentColor;
 }
-button span + span {
+#article-container button2 span + span {
 	margin: auto;
 }
 .dl-icon {

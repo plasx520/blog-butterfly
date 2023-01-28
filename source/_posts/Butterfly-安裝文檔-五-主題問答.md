@@ -9,7 +9,7 @@ tags:
 categories: Docs文檔
 keywords: 'hexo,butterfly,主題,doc,教程,文檔'
 description: Butterfly安裝文檔-主題問答
-cover: https://cdn1.tianli0.top/gh/jerryc127/CDN/img/butterfly-doc-05-cover.png
+cover: https://jsd.onmicrosoft.cn/gh/jerryc127/CDN/img/butterfly-doc-05-cover.png
 abbrlink: 98d20436
 comments: true
 ---
@@ -157,7 +157,7 @@ at Promise.settlePromiseFromHandler (F:\hexo\nodemodules\bluebird\js\release\pro
 
 渲染結果:
 
-![](https://cdn1.tianli0.top/gh/jerryc127/CDN/img/73515338-e6874d80-442f-11ea-9d07-725d37002985.png)
+![](https://jsd.onmicrosoft.cn/gh/jerryc127/CDN/img/73515338-e6874d80-442f-11ea-9d07-725d37002985.png)
 
 > cheerio版本錯誤，請安裝0.22.0版本
 > 

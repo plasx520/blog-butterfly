@@ -38,6 +38,7 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
     if page.type !== '404'
       #body-wrap(class=pageType)
         include ./header/index.pug
+        include ./index1.pug
         main#content-inner.layout(class=hideAside)
           if body
             div!= body
@@ -55,6 +56,7 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
         else
           - var footer_bg = ''
 
+        !=partial('includes/footer2', {}, {cache: true})
         footer#footer(style=footer_bg)
           !=partial('includes/footer', {}, {cache: true})
 

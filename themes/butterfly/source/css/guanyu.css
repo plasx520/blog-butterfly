@@ -849,13 +849,13 @@
   }
   
   .site-card-group > a .info span {
-    padding: 20px 10% 60px 10%;
+    padding: 40px 10% 26px 10%;
     font-size: 80px;
     width: 100%;
     text-align: center;
     -webkit-box-shadow: 0 0 10px rgb(0 0 0 / 30%);
     box-shadow: 0 0 10px rgb(0 0 0 / 30%);
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     color: var(--font-color);
     white-space: nowrap;
     overflow: hidden;
