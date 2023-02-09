@@ -2,6 +2,8 @@
 
 # 安装前提
 整个打包了https://github.com/plasx520/blog-butterfly/releases/tag/0.0.4
+如果下载打包下面步骤不用管
+因为是自己用好多内容没有配置文件可以直接修改代码https://blog.4t.pw/posts/1868f51e.html
 安装 Hexo 相当简单，只需要先安装下列应用程序即可：
 
 - [Node.js](http://nodejs.org/) (Node.js 版本需不低于 10.13，建议使用 Node.js 12.0 及以上版本)
